@@ -1,0 +1,15 @@
+{
+  "formTitle": "Enquire Now",
+  "formSubtitle": "Get 100% Free Counseling",
+  "nameLabel": "Name *",
+  "namePlaceholder": "Enter Your Name",
+  "phoneLabel": "Phone *",
+  "phonePlaceholder": "Enter Your Number",
+  "emailLabel": "Email *",
+  "emailPlaceholder": "Enter Your Email",
+  "courseLabel": "Course *",
+  "coursePlaceholder": "Enter Course Name",
+  "stateLabel": "State *",
+  "statePlaceholder": "Enter State Name",
+  "buttonText": "Submit"
+}

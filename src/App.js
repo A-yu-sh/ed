@@ -73,7 +73,7 @@ function App() {
     <div className="App">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo-image" />
         </div>
         <nav>
           <ul className="nav-list">

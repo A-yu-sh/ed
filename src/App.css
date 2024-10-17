@@ -14,12 +14,13 @@
   align-items: center;
   padding: 10px 30px;
   background-color: #f9f9f9;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.logo-image {
+  width: 200px;
+  height: 70px;
 }
 
-.logo img {
-  height: 105px;
-  width: auto;
-}
 .nav-list {
   display: flex;
   justify-content: end;

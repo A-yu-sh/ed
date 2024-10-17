@@ -26,6 +26,7 @@ import DUlogo from "../src/assets/BannerSlide2.png";
 import AUlogo from "../src/assets/BannerSlide3.png";
 import Ignoulogoo from "../src/assets/BannerSlide4.png";
 import Icon from "../src/assets/s4-removebg-preview.png";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 // Slideshow Component
 function UniversitySlideshow() {
@@ -81,7 +82,10 @@ function App() {
               className="nav-item"
               onMouseEnter={() => handleMouseEnter("course")}
               onMouseLeave={handleMouseLeave}>
-              COURSES <span className="dropdown-arrow">▼</span>
+              COURSES{" "}
+              <span className="dropdown-arrow">
+                <MdKeyboardArrowDown />
+              </span>
               {activeDropdown === "course" && (
                 <div className="dropdown-content">
                   <Course />
@@ -92,7 +96,11 @@ function App() {
               className="nav-item"
               onMouseEnter={() => handleMouseEnter("university")}
               onMouseLeave={handleMouseLeave}>
-              UNIVERSITY <span className="dropdown-arrow">▼</span>
+              UNIVERSITY{" "}
+              <span className="dropdown-arrow">
+                {" "}
+                <MdKeyboardArrowDown />
+              </span>
               {activeDropdown === "university" && (
                 <ul className="dropdown">
                   <University />
@@ -103,7 +111,11 @@ function App() {
               className="nav-item"
               onMouseEnter={() => handleMouseEnter("PHD")}
               onMouseLeave={handleMouseLeave}>
-              PHD <span className="dropdown-arrow">▼</span>
+              PHD{" "}
+              <span className="dropdown-arrow">
+                {" "}
+                <MdKeyboardArrowDown />
+              </span>
               {activeDropdown === "PHD" && (
                 <ul className="dropdown">
                   <Phd />

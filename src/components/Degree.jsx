@@ -38,14 +38,16 @@ const SubjectBoxes = () => {
   ];
 
   return (
-    <div className="subject-container">
-      {subjects.map((subject, index) => (
-        <div key={index} className="subject-box">
-          {/* Render the image instead of emoji */}
-          <img src={subject.icon} alt={subject.name} className="icon" />
-          <div className="subject-name">{subject.name}</div>
-        </div>
-      ))}
+    <div>
+      <div className="subject-container">
+        {subjects.map((subject, index) => (
+          <div key={index} className="subject-box">
+            {/* Render the image instead of emoji */}
+            <img src={subject.icon} alt={subject.name} className="icon" />
+            <div className="subject-name">{subject.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

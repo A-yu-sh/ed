@@ -38,6 +38,8 @@
 }
 
 .nav-item {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   position: relative;
   padding: 10px;
   cursor: pointer;
@@ -48,10 +50,10 @@
 }
 
 .dropdown {
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
   position: absolute;
   /* top: 100%; */
-  left: -590%;
+  left: -640%;
   width: 98.5vw; /* Full viewport width */
   height: 400vh; /* Full viewport height */
   /* background-color: white; */
@@ -157,9 +159,10 @@
 }
 
 .hero-content h1 {
-  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: -20px;
   color: yellow;
   top: -10px; /* Raise the <h1> slightly */
   position: relative;
@@ -167,13 +170,15 @@
 
 .hero-content h3,
 .hero-content p {
-  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: -20px;
   top: -5px; /* Slightly raise the <h3> and <p> tags */
   position: relative;
 }
 
 .search-box {
-  margin: 15px 0; /* Increase margin for better spacing */
+  margin-top: 5%; /* Increase margin for better spacing */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -191,11 +196,11 @@
 
 .search-box button {
   background-color: #ffa500;
-  padding: 12px 20px; /* Increase padding for larger button size */
+  padding: 6px 12px; /* Increase padding for larger button size */
   font-size: 16px; /* Increase font size */
   cursor: pointer;
   border-radius: 10px; /* Increase border radius */
-  margin-left: 15px; /* Increase margin between input and button */
+  margin-left: 4px; /* Increase margin between input and button */
   border: none;
   width: auto; /* Allow the button width to grow naturally */
   flex-shrink: 0;
@@ -229,8 +234,9 @@
 
 /* Adjust icon size */
 .s-icon {
-  height: 13px;
-  width: 18px;
+  border-radius: 8px;
+  height: 25px;
+  width: 25px;
   align-content: center;
   margin-left: 0px;
 }
@@ -242,6 +248,7 @@
   }
 
   .search-box {
+    border-radius: 0;
     flex-direction: column;
     align-items: stretch;
   }
@@ -1621,7 +1628,6 @@ h2 {
 /* Courses Grid Styling */
 
 .courses-container {
-  /* margin-right: 20px; */
   display: flex;
   padding: 20px;
   background-color: rgb(255, 255, 255);

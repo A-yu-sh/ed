@@ -27,6 +27,7 @@ import AUlogo from "../src/assets/BannerSlide3.png";
 import Ignoulogoo from "../src/assets/BannerSlide4.png";
 import Icon from "../src/assets/s4-removebg-preview.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 // Slideshow Component
 function UniversitySlideshow() {
@@ -53,6 +54,7 @@ function UniversitySlideshow() {
 function App() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [showComparePage, setShowComparePage] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleMouseEnter = (menu) => {
     setActiveDropdown(menu);

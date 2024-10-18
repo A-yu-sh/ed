@@ -87,7 +87,7 @@ function App() {
                 <MdKeyboardArrowDown />
               </span>
               {activeDropdown === "course" && (
-                <div className="dropdown-content">
+                <div className="dropdown">
                   <Course />
                 </div>
               )}

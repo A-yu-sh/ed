@@ -6,13 +6,15 @@
 /* Header */
 .header {
   position: sticky;
+
   top: 0; /* Sticks the header to the top */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three equal columns */
   z-index: 1000;
   /* justify-content: start; */
   align-items: center;
-  padding: 10px 30px;
+  width: 99.3%;
+  padding: 10px 15px;
   background-color: #f9f9f9;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -46,19 +48,23 @@
 }
 
 .dropdown {
+  margin-top: 0.7rem;
   position: absolute;
-  top: 100%;
-  left: -400%;
-  background-color: white;
+  /* top: 100%; */
+  left: -590%;
+  width: 98.5vw; /* Full viewport width */
+  height: 400vh; /* Full viewport height */
+  /* background-color: white; */
   list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px 18px;
+  margin-right: 5rem;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   z-index: 1;
 }
 
 .dropdown li {
-  padding: 8px 16px;
+  margin: 2rem;
+  padding: 25px;
   cursor: pointer;
 }
 
@@ -389,14 +395,14 @@
 }
 
 /* Course.jsx Section */
-.courses-container {
+/* .courses-container {
   display: flex;
   padding: 20px;
-}
+} */
 
 .sidebar {
   width: 250px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 10px;
@@ -438,20 +444,20 @@
 
 /* Courses Grid Styling */
 
-.courses-container {
+/* .courses-container {
   display: flex;
   padding: 20px;
   background-color: #f1f1f1;
-}
+} */
 
 /* Sidebar Styling */
-.sidebar {
-  width: 250px; /* Fixed width for sidebar */
+/* .sidebar {
+  width: 250px; 
   margin-right: 20px;
-  background-color: #f8f9fa;
+  background-color: #248df6;
   padding: 20px;
   border-radius: 10px;
-}
+} */
 
 /* "Online Courses" header with blue background */
 .online-courses-header {
@@ -509,7 +515,7 @@
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px;
+  gap: 10px;
   width: calc(
     100% - 270px
   ); /* Adjust width to fill the space next to the sidebar */
@@ -518,7 +524,7 @@
 .course-card {
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px 9px;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
@@ -1159,9 +1165,9 @@ h2 {
     width: 100%;
   }
 
-  .courses-container {
+  /* .courses-container {
     flex-direction: row;
-  }
+  } */
 
   .courses-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1191,9 +1197,9 @@ h2 {
   width: 100%;
 }
 
-.sidebar {
+/* .sidebar {
   padding: 15px;
-}
+} */
 
 .course-card h2 {
   font-size: 18px;
@@ -1565,18 +1571,18 @@ h2 {
   }
 }
 /* Course.jsx Section */
-.courses-container {
+/* .courses-container {
   display: flex;
   padding: 20px;
-}
+} */
 
-.sidebar {
+/* .sidebar {
   width: 250px;
   margin-right: 20px;
-  background-color: #f8f9fa;
+  background-color: #0077ee;
   padding: 20px;
   border-radius: 10px;
-}
+} */
 
 .sidebar h3 {
   font-size: 20px;
@@ -1615,16 +1621,25 @@ h2 {
 /* Courses Grid Styling */
 
 .courses-container {
+  /* margin-right: 20px; */
   display: flex;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: rgb(255, 255, 255);
+}
+
+.university-courses-container {
+  display: flex;
+  justify-content: start;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Sidebar Styling */
 .sidebar {
   width: 250px; /* Fixed width for sidebar */
   margin-right: 20px;
-  background-color: #f8f9fa;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 10px;
 }
@@ -1692,10 +1707,12 @@ h2 {
 }
 
 .course-card {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  padding: 20px;
-  text-align: center;
+  padding: 50px;
+  /* margin-left: 25px;
+  margin-right: 25px; */
+  /* text-align: center; */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }

@@ -53,7 +53,7 @@
   margin-top: 0.6rem;
   position: absolute;
   /* top: 100%; */
-  left: -590%;
+  left: -640%;
   width: 98.5vw; /* Full viewport width */
   height: 400vh; /* Full viewport height */
   /* background-color: white; */
@@ -407,13 +407,13 @@
   padding: 20px;
 } */
 
-.sidebar {
+/* .sidebar {
   width: 250px;
-  /* margin-right: 20px; */
-  background-color: #f8f9fa;
+   margin-right: 20px; 
+  background-color: #0058b0;
   padding: 20px;
   border-radius: 10px;
-}
+} */
 
 .sidebar h3 {
   font-size: 20px;
@@ -528,19 +528,20 @@
   ); /* Adjust width to fill the space next to the sidebar */
 }
 
-.course-card {
-  background-color: white;
+/* .course-card {
+  background-color: rgb(255, 0, 0);
   border-radius: 10px;
   padding: 25px 9px;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+} 
+*/
 
-.course-card:hover {
+/* .course-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
-}
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); 
+} */
 
 .course-icon {
   font-size: 36px;
@@ -548,16 +549,16 @@
   color: #003366; /* Icon color */
 }
 
-.course-card h2 {
+/* .course-card h2 {
   font-size: 18px;
-  color: #003366;
+  color: #000000;
   margin-bottom: 10px;
-}
-
+} */
+/* 
 .course-card p {
   font-size: 14px;
-  color: #666;
-}
+  color: #ff0000;
+} */
 
 .course-actions {
   display: flex;
@@ -1627,10 +1628,21 @@ h2 {
 
 /* Courses Grid Styling */
 
+.courses-courses-container {
+  display: flex;
+  justify-content: start;
+  background-color: rgb(255, 255, 255);
+}
+
 .courses-container {
+  background-color: white;
+  position: absolute;
+  left: 3%;
+  width: 212.5vh;
+  /* margin-left: 200px; */
   display: flex;
   padding: 20px;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(246, 246, 246); */
 }
 
 .university-courses-container {
@@ -1716,6 +1728,7 @@ h2 {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 50px;
+
   /* margin-left: 25px;
   margin-right: 25px; */
   /* text-align: center; */

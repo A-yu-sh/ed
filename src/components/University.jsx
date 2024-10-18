@@ -33,12 +33,12 @@ function Course() {
           Bachelor Courses <span className="duration-badge orange">3 Year</span>
         </p>
         <p>
-          Top MBA Specialization{" "}
+          Top MBA Specialization
           <span className="duration-badge green">2 Year</span>
         </p>
         <p>
-          Post Graduate Programs{" "}
-          <span className="duration-badge orange">10 Months</span>
+          PG Program
+          <span className="duration-badge orange">10Month</span>
         </p>
         <p>Certificate Courses</p>
       </div>

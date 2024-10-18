@@ -20,41 +20,45 @@ function Course() {
   ];
 
   return (
-    <div className="courses-container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <div class="online-courses-header">Online Courses</div>
+    <div className="courses-courses-container">
+      {" "}
+      <div className="courses-container">
+        {/* Sidebar */}
+        <div className="sidebar">
+          <div class="online-courses-header">Online Courses</div>
 
-        <p>Distance Courses</p>
-        <p>
-          Master Courses <span className="duration-badge green">2 Year</span>
-        </p>
-        <p>
-          Bachelor Courses <span className="duration-badge orange">3 Year</span>
-        </p>
-        <p>
-          Top MBA Specialization{" "}
-          <span className="duration-badge green">2 Year</span>
-        </p>
-        <p>
-          Post Graduate Programs{" "}
-          <span className="duration-badge orange">10 Months</span>
-        </p>
-        <p>Certificate Courses</p>
-      </div>
+          <p>Distance Courses</p>
+          <p>
+            Master Courses <span className="duration-badge green">2 Year</span>
+          </p>
+          <p>
+            Bachelor Courses{" "}
+            <span className="duration-badge orange">3 Year</span>
+          </p>
+          <p>
+            Top MBA Specialization{" "}
+            <span className="duration-badge green">2 Year</span>
+          </p>
+          <p>
+            Post Graduate{" "}
+            <span className="duration-badge orange">10 Months</span>
+          </p>
+          <p>Certificate Courses</p>
+        </div>
 
-      {/* Courses grid */}
-      <div className="courses-grid">
-        {courses.map((course) => (
-          <div key={course.id} className="course-card">
-            <h2>{course.title}</h2>
-            <p>{course.subtitle}</p>
-            <div className="course-actions">
-              <button className="explore-btn">Explore</button>
-              <button className="view-btn">View Universities</button>
+        {/* Courses grid */}
+        <div className="courses-grid">
+          {courses.map((course) => (
+            <div key={course.id} className="course-card">
+              <h2>{course.title}</h2>
+              <p>{course.subtitle}</p>
+              <div className="course-actions">
+                <button className="explore-btn">Explore</button>
+                <button className="view-btn">View Universities</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

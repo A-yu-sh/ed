@@ -28,6 +28,7 @@ import Ignoulogoo from "../src/assets/BannerSlide4.png";
 import Icon from "../src/assets/s4-removebg-preview.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
+import AutoSlideshow from "./components/AutomaticSlideShow";
 
 // Slideshow Component
 function UniversitySlideshow() {
@@ -179,7 +180,7 @@ function App() {
                   <p>NIRF Ranked Universities 2024</p>
                 </div>
               </div>
-              <UniversitySlideshow />
+              <AutoSlideshow />
             </div>
           </section>
 

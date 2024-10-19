@@ -295,17 +295,44 @@
   }
 }
 
+/* .form {
+  margin-top: -100px;
+} */
+
 /* Form Section */
-.form-section {
-  background-color: #f9f9f9;
+/* .form-section {
+} */
+
+.Total_Form {
+  font-family: "Poppins", sans-serif;
+  margin-top: -100px;
   padding: 35px;
   border-radius: 15px;
   max-width: 450px;
   width: 90%;
-  height: 650px;
-  margin: 10px; /* Center the form section */
+  /* height: 500px; */
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
   box-sizing: border-box;
+}
+.md-logo {
+  margin-top: 4px;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.Enquiry {
+  margin-top: -20px;
+  line-height: 7px;
+  color: black;
+}
+.label {
+  color: black;
+  display: flex;
+  justify-content: start;
+}
+.asterisk {
+  color: red;
 }
 
 /* Adjusting gap between form and hero section */
@@ -314,18 +341,23 @@
 }
 
 /* Header styling */
-.form-section h2 {
+/* .form-section h2 {
   color: red;
   text-align: center;
-}
+} */
+
+/* .form {
+  margin: -1000px;
+} */
 
 /* Form Group Styling */
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .input-container {
   position: relative;
+  margin-top: 5px;
 }
 
 /* Input Styling */
@@ -358,6 +390,7 @@
   cursor: pointer;
   border-radius: 6px;
   font-size: 16px;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 

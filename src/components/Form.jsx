@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import NameImg from "../assets/nameicon-removebg-preview.png";
 import PhoneImg from "../assets/phone-removebg-preview.png";
 import EmailImg from "../assets/email-removebg-preview.png";
@@ -12,7 +13,60 @@ import {
   MdLocationOn,
 } from "react-icons/md";
 
+const indianStates = [
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal",
+  "Andaman and Nicobar Islands",
+  "Chandigarh",
+  "Dadra and Nagar Haveli and Daman and Diu",
+  "Delhi",
+  "Lakshadweep",
+  "Puducherry",
+];
+
 function Form() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phoneNo: "",
+    email: "",
+    course: "",
+    state: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
   return (
     <div className="Total_Form">
       <div className="Enquiry">
@@ -67,8 +121,20 @@ function Form() {
               State <span className="asterisk">*</span>
             </label>
             <div className="input-container">
-              <input type="text" placeholder="Enter State Name" />
-              {/* <img src={StateImg} alt="State" className="f-icon" /> */}
+              <select
+                name="state"
+                className="select-state-container"
+                value={formData.state}
+                onChange={handleChange}
+                required>
+                <option value="">Select Your State</option>
+                {indianStates.map((state) => (
+                  <option key={state} value={state}>
+                    {state}
+                  </option>
+                ))}
+              </select>
+              {/* <img src={CourseImg} alt="Course" className="f-icon" /> */}
             </div>
           </div>
           <button className="submit-btn">Submit</button>
@@ -79,3 +145,24 @@ function Form() {
 }
 
 export default Form;
+
+{
+  /* <div className="mb-4">
+          <select
+            name="state"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={formData.state}
+            onChange={handleChange}
+            required>
+            <option value="">Select Your State</option>
+            {indianStates.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
+          {errors.state && (
+            <span className="text-red-500 text-sm">{errors.state}</span>
+          )}
+        </div> */
+}

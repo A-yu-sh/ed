@@ -365,6 +365,14 @@
   margin-top: 5px;
 }
 
+.select-state-container {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 /* Input Styling */
 .input-container input {
   width: 100%;

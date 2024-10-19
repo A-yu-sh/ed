@@ -43,12 +43,7 @@ const AutoSlideshow = () => {
       <style>
         {`
           .slideshow-container {
-    
-
             position: relative;
-            
-           
-         
           }
 
           .slide {
@@ -64,6 +59,7 @@ const AutoSlideshow = () => {
           }
 
           .slide img {
+          border-radius:10px;
             object-fit: scale-down;
           }
         

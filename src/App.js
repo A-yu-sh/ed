@@ -197,6 +197,10 @@ function App() {
                   <p>NIRF Ranked Universities 2024</p>
                 </div>
               </div>
+              <div className="leading">
+                <span className="leading-univ">Top Leading – Universities</span>
+              </div>
+
               {/* <UniversitySlideshow /> */}
               {/* <AutoSlideshow /> */}
               <LogoSlider />

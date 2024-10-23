@@ -1,5 +1,6 @@
 /* General page styles */
 .App {
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -1291,6 +1292,7 @@ h2 {
   padding: 10px; /* Add padding for better spacing */
   border-radius: 10px; /* Rounded corners */
   margin: 5px; /* Add margin between boxes */
+  margin-bottom: 10px;
 }
 
 .icon-box img {
@@ -2048,4 +2050,17 @@ h2 {
     width: 100%; /* Full width on extra small screens */
     max-width: none; /* Remove max width restriction */
   }
+}
+.leading {
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.leading .leading-univ {
+  color: yellow;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0;
+  margin: 10px;
+  margin-top: 15px;
 }

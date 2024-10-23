@@ -4,7 +4,7 @@ import i1 from "../assets/University logo Folder/Acharya Nagarjuna University lo
 import i2 from "../assets/University logo Folder/Aligarh Mushlim University logo.png";
 import i3 from "../assets/University logo Folder/Amity University Logo.png";
 import i4 from "../assets/University logo Folder/Amrita university logo.png";
-import i5 from "../assets/University logo Folder/Andhra University (A++) logo.png";
+import i5 from "../assets/University logo Folder/AndhraUniversitylogo.png";
 import i6 from "../assets/University logo Folder/Chindagar University Logo.png";
 import i7 from "../assets/University logo Folder/DPU University Logo.jpeg";
 import i8 from "../assets/University logo Folder/Ignou logo.png";

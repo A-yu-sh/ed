@@ -155,7 +155,7 @@
   max-width: 700px;
   padding: 5px;
   position: relative;
-  top: -20px; /* Slightly raise the hero content */
+  top: -40px; /* Slightly raise the hero content */
 }
 
 .hero-content h1 {
@@ -703,8 +703,8 @@
 @media (min-width: 768px) {
   .icon {
     font-size: 4rem; /* Adjusted size for desktop */
-    height: 100px;
-    width: 90px;
+    height: 65px;
+    width: 80px;
   }
 }
 
@@ -1475,7 +1475,7 @@ h2 {
 
 /* Add '>' before each list item */
 .footer-section ul li::before {
-  content: ">"; /* The symbol */
+  content: "•"; /* The symbol */
   position: absolute;
   left: 0; /* Position the symbol to the left of the text */
   color: white; /* Same color as the text */

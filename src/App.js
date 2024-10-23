@@ -29,25 +29,42 @@ import Icon from "../src/assets/s4-removebg-preview.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import AutoSlideshow from "./components/AutomaticSlideShow";
+import LogoSlider from "./components/AutomaticSlideShow";
 
-// Slideshow Component
+// UniversitySlideshow Component
+// UniversitySlideshow Component
 function UniversitySlideshow() {
-  const images = [B1logo, B2logo, C1logo, DUlogo, AUlogo, Ignoulogoo];
+  // Array of university logos
+  const images = [B1logo, B2logo, C1logo, DUlogo, Ignoulogoo];
 
   return (
     <div className="slideshow-container">
-      {/* Yellow State Box */}
+      {/* State Box Header */}
       <div className="state-box">
-        <p>Top Leading - Universities</p>{" "}
-        {/* Replace with the desired state name */}
+        <p>Top Leading Universities</p>
       </div>
-      <Slide>
-        {images.map((image, index) => (
-          <div key={index} className="each-slide">
-            <img src={image} alt={`University ${index + 1}`} />
-          </div>
-        ))}
-      </Slide>
+
+      {/* Sliding Images Section */}
+      <div className="sliding-images">
+        <Slide
+          duration={3000} // 3 seconds per slide
+          transitionDuration={500} // Half a second transition
+          infinite={true}
+          slidesToShow={4}
+          slidesToScroll={1}
+          indicators={false}
+          arrows={false}
+          autoplay={true}
+          pauseOnHover={false}>
+          {images.map((image, index) => (
+            <div key={index} className="each-slide">
+              <div className="column">
+                <img src={image} className="logo-small" />
+              </div>
+            </div>
+          ))}
+        </Slide>
+      </div>
     </div>
   );
 }
@@ -180,13 +197,15 @@ function App() {
                   <p>NIRF Ranked Universities 2024</p>
                 </div>
               </div>
-              <AutoSlideshow />
+              {/* <UniversitySlideshow /> */}
+              {/* <AutoSlideshow /> */}
+              <LogoSlider />
             </div>
           </section>
 
           <SubjectBoxes />
           <UniversityGrid />
-          <MbaSpecialization />
+          {/* <MbaSpecialization /> */}
           <CouncelExpert />
           <TalkToExperts />
           <LogoBar />

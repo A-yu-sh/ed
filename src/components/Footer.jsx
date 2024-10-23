@@ -1,10 +1,10 @@
 import React from "react";
 
-import facebookIcon from "../assets/Facebook icon.png";
-import instagramIcon from "../assets/insta icon .jpg";
+import facebookIcon from "../assets/facebook.png";
+import instagramIcon from "../assets/instagram.png";
 import twitterIcon from "../assets/X Tweeter.png";
-import linkedinIcon from "../assets/Linked in icon .jpg";
-import youtubeIcon from "../assets/Youtube icon .jpg";
+import linkedinIcon from "../assets/linkedin.png";
+import youtubeIcon from "../assets/youtube.png";
 
 function Footer() {
   return (

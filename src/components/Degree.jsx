@@ -1,21 +1,21 @@
 import React from "react";
 
 // Import images from assets (ensure these paths are correct in your project)
-import mbaIcon from "../assets/logo1.png";
-import mcaIcon from "../assets/logo2.png";
-import bbaIcon from "../assets/logo3.png";
-import bcaIcon from "../assets/logo4.png";
-import bcomIcon from "../assets/logo5.png";
-import mcomIcon from "../assets/logo6.png";
-import baIcon from "../assets/logo 7.png";
-import maIcon from "../assets/logo 8.png";
-import mscIcon from "../assets/logo9.png";
-import diplomaIcon from "../assets/logo10.png";
-import bscIcon from "../assets/logo11.png";
-import bjmcIcon from "../assets/logo12.png";
-import mjmcIcon from "../assets/logo13.png";
-import pgpIcon from "../assets/logo14.png";
-import certificateIcon from "../assets/logo15.png";
+import mbaIcon from "../assets/10.png";
+import mcaIcon from "../assets/5.png";
+import bbaIcon from "../assets/2.png";
+import bcaIcon from "../assets/9.png";
+import bcomIcon from "../assets/3.png";
+import mcomIcon from "../assets/4.png";
+import baIcon from "../assets/11.png";
+import maIcon from "../assets/6.png";
+import mscIcon from "../assets/8.png";
+import diplomaIcon from "../assets/12.png";
+import bscIcon from "../assets/14.png";
+import bjmcIcon from "../assets/7.png";
+import mjmcIcon from "../assets/1.png";
+import pgpIcon from "../assets/15.png";
+import certificateIcon from "../assets/13.png";
 
 const SubjectBoxes = () => {
   // Updated subjects array with image imports

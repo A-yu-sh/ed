@@ -11,7 +11,7 @@ import i8 from "../assets/University logo Folder/Ignou logo.png";
 import i9 from "../assets/University logo Folder/Jain logo.png";
 import i10 from "../assets/University logo Folder/Jamia University (A) logo.png";
 import i11 from "../assets/University logo Folder/LPU logo.jpeg";
-import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
+// import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
 import i13 from "../assets/University logo Folder/Manipal logo.png";
 import i14 from "../assets/University logo Folder/Mizoram University Logo.png";
 import i15 from "../assets/University logo Folder/SGVU logo.png";
@@ -42,7 +42,7 @@ const LogoSlider = () => {
     i9,
     i10,
     i11,
-    i12,
+    // i12,
     i13,
     i14,
     i15,

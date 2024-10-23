@@ -103,8 +103,7 @@ function Footer() {
           <a
             href="https://www.facebook.com"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <img
               src={facebookIcon}
               alt="Facebook"
@@ -114,8 +113,7 @@ function Footer() {
           <a
             href="https://www.instagram.com"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <img
               src={instagramIcon}
               alt="Instagram"
@@ -125,8 +123,7 @@ function Footer() {
           <a
             href="https://www.twitter.com"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <img
               src={twitterIcon}
               alt="Twitter"
@@ -136,8 +133,7 @@ function Footer() {
           <a
             href="https://www.linkedin.com"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <img
               src={linkedinIcon}
               alt="LinkedIn"
@@ -147,8 +143,7 @@ function Footer() {
           <a
             href="https://www.youtube.com"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <img
               src={youtubeIcon}
               alt="YouTube"

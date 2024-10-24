@@ -31,17 +31,19 @@
 
 .nav-list {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   list-style: none;
-  margin-left: 2rem;
-  margin: 0;
-  padding: 0;
+  margin-left: 1rem;
+  /* margin: 0;
+  padding: 0; */
 }
 
 .nav-item {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   position: relative;
+  display: flex;
+  justify-content: center;
   padding: 10px;
   cursor: pointer;
 }
@@ -156,13 +158,13 @@
   max-width: 700px;
   padding: 5px;
   position: relative;
-  top: -40px; /* Slightly raise the hero content */
+  top: -00px; /* Slightly raise the hero content */
 }
 
 .hero-content h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-weight: bold;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-weight: bolder; */
+  font-size: 2px;
   margin-bottom: -20px;
   color: yellow;
   top: -10px; /* Raise the <h1> slightly */
@@ -1295,6 +1297,16 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Style for the underline below the image */
+.icon-box::after {
+  content: ""; /* Creates a pseudo-element */
+  display: block; /* Ensures the line takes up space */
+  width: 130%; /* Set the width of the underline */
+  height: 1px; /* Set the thickness of the underline */
+  background-color: #ffffff; /* Set the underline color */
+  margin-top: 30px; /* Adds margin and centers the underline */
+}
+
 .icon-box img {
   width: 60px; /* Uniform icon size */
   height: 50px; /* Ensure square size for icons */
@@ -1687,8 +1699,7 @@ h2 {
   background-color: white;
   position: absolute;
   left: 3%;
-  width: 212.5vh;
-  /* margin-left: 200px; */
+  width: 1500px;
   display: flex;
   padding: 20px;
   /* background-color: rgb(246, 246, 246); */

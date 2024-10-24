@@ -11,7 +11,7 @@ import i8 from "../assets/University logo Folder/Ignou logo.png";
 import i9 from "../assets/University logo Folder/Jain logo.png";
 import i10 from "../assets/University logo Folder/Jamia University (A) logo.png";
 import i11 from "../assets/University logo Folder/LPU logo.jpeg";
-// import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
+import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
 import i13 from "../assets/University logo Folder/Manipal logo.png";
 import i14 from "../assets/University logo Folder/Mizoram University Logo.png";
 import i15 from "../assets/University logo Folder/SGVU logo.png";
@@ -42,7 +42,7 @@ const LogoSlider = () => {
     i9,
     i10,
     i11,
-    // i12,
+    i12,
     i13,
     i14,
     i15,
@@ -56,9 +56,13 @@ const LogoSlider = () => {
     i23,
     i24,
     i25,
+    i25,
+    i25,
+    i25,
   ];
 
   // Auto-scroll effect with 2-second interval
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -176,13 +180,13 @@ export default LogoSlider;
 //     // },
 //   ];
 
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setCurrentSlide((prev) => (prev + 1) % slides.length);
-//     }, 3000); // Changes slide every 1 second
+// useEffect(() => {
+//   const timer = setInterval(() => {
+//     setCurrentSlide((prev) => (prev + 1) % slides.length);
+//   }, 3000); // Changes slide every 1 second
 
-//     return () => clearInterval(timer);
-//   }, [slides.length]);
+//   return () => clearInterval(timer);
+// }, [slides.length]);
 
 //   return (
 //     <div className="slideshow-container">

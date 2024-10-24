@@ -4,7 +4,7 @@ function Course() {
   const courses = [
     {
       id: 1,
-      title: "MBA",
+      title: "MBAA",
       subtitle: "Master of Business Administration",
       duration: "2 Year",
     },

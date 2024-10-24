@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-left: 1rem;
+  margin-left: 15px;
   /* margin: 0;
   padding: 0; */
 }
@@ -1693,6 +1693,7 @@ h2 {
   display: flex;
   justify-content: start;
   background-color: rgb(255, 255, 255);
+  margin-top: 25px;
 }
 
 .courses-container {

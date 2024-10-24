@@ -7,8 +7,8 @@ import AI2Img from "../assets/AI4.jpeg";
 // Array containing details of all counselors
 const counselors = [
   {
-    name: "Amelia Grece",
-    experience: "3 Years of Experience",
+    name: "3 Years of Experience",
+    experience: "Amelia Grece",
     guidance: "Guiding for Skill Development",
     qualifications: [
       "MBA HR & Marketing (AKTU, Lucknow)",
@@ -17,70 +17,67 @@ const counselors = [
     image: DImg,
   },
   {
-    name: "Olivia James",
-    experience: "5 Years of Experience",
+    name: "5 Years of Experience",
+    experience: "Olivia James",
     guidance: "Software Development",
     qualifications: [
       "BSC in Computer science (North Bengal university)",
       "MCA. (Siliguri Institute of Technology)",
     ],
-    image: AImg, // Replaced with imported image for Aman
+    image: AImg,
   },
   {
-    name: "Nilesh Guha",
-    experience: "14 Years of Experience",
+    name: "14 Years of Experience",
+    experience: "Nilesh Guha",
     guidance: "Guiding Marketing Students",
     qualifications: [
       "MBA Marketing (Sikkim Manipal University, Gangtok)",
       "BCOM (Delhi University)",
     ],
-    image: A1Img, // Replace with actual image link
+    image: A1Img,
   },
   {
-    name: " Henry William ",
-    experience: "4 Years of Experience",
+    name: "4 Years of Experience",
+    experience: "Henry William",
     guidance: "MERN Stack Developers",
     qualifications: [
       "BCA. (Siliguri Institute of Technology)",
-      "MCA.  (Siliguri Institute of Technology)",
+      "MCA. (Siliguri Institute of Technology)",
     ],
-    image: AI2Img, // Replace with actual image link
+    image: AI2Img,
   },
   {
-    name: "John Doe",
-    experience: "8 Years of Experience",
+    name: "8 Years of Experience",
+    experience: "John Doe",
     guidance: "Guiding Psychology Students",
     qualifications: [
       "M.A. Psychology (Stanford University)",
       "B.A. Psychology (Yale University)",
     ],
-    image: DImg, // Replace with actual image link
+    image: DImg,
   },
 ];
 
 const CounselorExpert = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Index to track the currently displayed counselor cards
-  const itemsToShow = 3; // Number of cards to show at a time
+  const itemsToShow = 4; // Number of cards to show at a time
 
-  // Function to show next set of counselors
-  const nextCounselors = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + itemsToShow) % counselors.length
-    );
+  // Function to show next set of counselors, one at a time
+  const nextCounselor = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % counselors.length);
   };
 
-  // Function to show previous set of counselors
-  const prevCounselors = () => {
+  // Function to show previous set of counselors, one at a time
+  const prevCounselor = () => {
     setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - itemsToShow + counselors.length) % counselors.length
+      (prevIndex) => (prevIndex - 1 + counselors.length) % counselors.length
     );
   };
 
   // Auto-slide functionality to change the counselor cards every 3 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
-      nextCounselors();
+      nextCounselor();
     }, 3000);
 
     return () => clearInterval(intervalId);
@@ -97,7 +94,7 @@ const CounselorExpert = () => {
 
       {/* Navigation Buttons and Counselor Cards Container */}
       <div className="counselor-navigation">
-        <button className="nav-button" onClick={prevCounselors}>
+        <button className="nav-button" onClick={prevCounselor}>
           &lt;
         </button>
 
@@ -110,7 +107,7 @@ const CounselorExpert = () => {
             ))}
         </div>
 
-        <button className="nav-button" onClick={nextCounselors}>
+        <button className="nav-button" onClick={nextCounselor}>
           &gt;
         </button>
       </div>
@@ -123,8 +120,7 @@ const CounselorExpert = () => {
               key={idx}
               className={`dot ${
                 idx === Math.floor(currentIndex / itemsToShow) ? "active" : ""
-              }`}
-            ></span>
+              }`}></span>
           )
         )}
       </div>
@@ -142,11 +138,11 @@ const CounselorCard = ({ counselor }) => {
       {/* Counselor's experience */}
       <div className="experience-badge">{counselor.experience}</div>
 
-      {/* Counselor's name */}
-      <h3 className="name-title">{counselor.name}</h3>
-
-      {/* Field of guidance */}
-      <p className="sub-title">{counselor.guidance}</p>
+      {/* Name and guidance wrapped in a new div with a border */}
+      <div className="name-guidance-container">
+        <h3 className="name-title">{counselor.name}</h3>
+        <p className="sub-title">{counselor.guidance}</p>
+      </div>
 
       {/* Qualifications */}
       <div className="education-details">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 // Import statements for all university logos
 import i1 from "../assets/University logo Folder/Acharya Nagarjuna University logo.jpeg";
 import i2 from "../assets/University logo Folder/Aligarh Mushlim University logo.png";
@@ -26,10 +26,22 @@ import i23 from "../assets/University logo Folder/Uttranchal University Logo.png
 import i24 from "../assets/University logo Folder/VGU Logo.png";
 import i25 from "../assets/University logo Folder/Vignans University Logo.png";
 
+/**
+ * LogoSlider Component
+ * A responsive, infinite-scrolling carousel that displays university logos
+ * Features:
+ * - Automatic scrolling
+ * - Infinite loop effect
+ * - Smooth transitions
+ * - Responsive design
+ */
 const LogoSlider = () => {
+  // State to track the current position of the slider
   const [currentIndex, setCurrentIndex] = useState(0);
+  // State to control transition animation
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Array of all university logos
+  // Base array of all university logos
   const logos = [
     i1,
     i2,
@@ -56,80 +68,102 @@ const LogoSlider = () => {
     i23,
     i24,
     i25,
-    i25,
-    i25,
-    i25,
   ];
 
-  // Auto-scroll effect with 2-second interval
+  // Number of logos visible at once in the slider
+  const itemsPerView = 4;
 
+  // Create an extended array by adding first few logos at the end
+  // This creates the illusion of infinite scrolling
+  const extendedLogos = [...logos, ...logos.slice(0, itemsPerView)];
+
+  /**
+   * Handles the transition end event of the slider
+   * When the last set of logos is reached, it seamlessly resets to the beginning
+   */
+  const handleTransitionEnd = useCallback(() => {
+    if (currentIndex >= logos.length) {
+      // Temporarily disable transition
+      setIsTransitioning(true);
+
+      // Reset to the start
+      setCurrentIndex(0);
+
+      // Re-enable transition after a brief delay
+      // This prevents visible jumping when resetting
+      setTimeout(() => setIsTransitioning(false), 50);
+    }
+  }, [currentIndex, logos.length]);
+
+  /**
+   * Sets up the automatic scrolling effect
+   * Moves the slider one position every 2 seconds
+   */
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex + 4 >= logos.length ? 0 : prevIndex + 4
-      );
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }, 2000);
 
+    // Cleanup interval on component unmount
     return () => clearInterval(timer);
   }, []);
 
   // Styling configuration object
-  // Styling configuration object
   const style = {
-    // Container for the entire slider
+    // Main container styles
     sliderContainer: {
-      maxWidth: "800px", // CUSTOMIZE: Increased maximum width
+      maxWidth: "1920px",
       overflow: "hidden",
       position: "relative",
-      padding: "5px 0", // CUSTOMIZE: Further reduced vertical padding
-      margin: "0 auto", // Centers the container
+      padding: "5px 0",
+      margin: "0 auto",
       backgroundColor: "#ffffff",
-      marginTop: "20px", // CUSTOMIZE: Added margin top to the slider
+      marginTop: "40px", // Spacing from top elements
       borderRadius: "10px",
     },
-    // Container for all logos that handles the sliding animation
+    // Container for the scrolling logos
     logoContainer: {
       display: "flex",
-      transition: "transform 0.5s ease",
-      transform: `translateX(-${currentIndex * (100 / 4)}%)`,
+      // Calculate the exact translation based on current index and visible items
+      transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+      // Toggle transition based on whether we're resetting position
+      transition: isTransitioning ? "none" : "transform 0.5s ease",
     },
-    // Wrapper for individual logo items
+    // Individual logo wrapper styles
     logoWrapper: {
-      minWidth: "25%",
-      padding: "0 5px", // CUSTOMIZE: Increased horizontal padding
+      minWidth: `${100 / itemsPerView}%`, // Each wrapper takes up 1/4 of the container
+      padding: "0 5px",
       boxSizing: "border-box",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "60px", // CUSTOMIZE: Further reduced height
+      height: "60px",
     },
-    // Individual logo styling
+    // Individual logo image styles
     logo: {
-      width: "250px", // CUSTOMIZE: Increased logo width
-      height: "45px", // CUSTOMIZE: Reduced logo height
+      width: "250px",
+      height: "45px",
       objectFit: "contain",
-      padding: "3px", // CUSTOMIZE: Reduced padding
+      padding: "3px",
       transition: "transform 0.3s ease",
-      mixBlendMode: "multiply",
+      mixBlendMode: "multiply", // Helps with logo visibility on white background
       filter: "brightness(1.1)",
       WebkitFilter: "brightness(1.1)",
-      borderRadius: "10px", // CUSTOMIZE: Added border radius for logos
-      "&:hover": {
-        transform: "scale(1.05)",
-      },
+      borderRadius: "10px",
     },
   };
 
   return (
     <div style={style.sliderContainer}>
-      <div style={style.logoContainer}>
-        {logos.map((logo, index) => (
+      <div style={style.logoContainer} onTransitionEnd={handleTransitionEnd}>
+        {extendedLogos.map((logo, index) => (
           <div key={index} style={style.logoWrapper}>
             <img
               src={logo}
-              alt={`University Logo ${index + 1}`}
+              alt={`University Logo ${(index % logos.length) + 1}`}
               style={{
                 ...style.logo,
+                // Performance optimizations for smoother animations
                 WebkitBackfaceVisibility: "hidden",
                 backfaceVisibility: "hidden",
                 isolation: "isolate",

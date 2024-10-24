@@ -200,12 +200,12 @@ function App() {
               <div className="leading">
                 <span className="leading-univ">Top Leading – Universities</span>
               </div>
-              <LogoSlider />
+
               {/* <UniversitySlideshow /> */}
               {/* <AutoSlideshow /> */}
             </div>
           </section>
-
+          <LogoSlider />
           <SubjectBoxes />
           <UniversityGrid />
           {/* <MbaSpecialization /> */}

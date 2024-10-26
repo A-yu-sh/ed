@@ -20,9 +20,9 @@ function Course() {
   ];
 
   return (
-    <div className="courses-courses-container">
+    <div className="univ-courses-container">
       {" "}
-      <div className="courses-container">
+      <div className="univ-container">
         {/* Sidebar */}
         <div className="sidebar">
           <div class="online-courses-header">Online Courses</div>

@@ -117,7 +117,6 @@ const LogoSlider = () => {
       position: "relative",
       padding: "5px 0",
       margin: "0 auto",
-      backgroundColor: "#ffffff",
       marginTop: "40px", // Spacing from top elements
       borderRadius: "10px",
     },

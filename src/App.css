@@ -58,7 +58,7 @@
   left: -640%;
   width: 98.5vw; /* Full viewport width */
   height: 400vh; /* Full viewport height */
-  /* background-color: white; */
+
   list-style: none;
   padding: 25px 18px;
   margin-right: 5rem;
@@ -176,6 +176,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-bottom: -20px;
+  color: white;
   top: -5px; /* Slightly raise the <h3> and <p> tags */
   position: relative;
 }
@@ -2394,7 +2395,7 @@ p {
   /* top: 100%; */
   left: -150%;
   width: 15vw; /* Full viewport width */
-
+  height: 00vh; /* Full viewport height */
   background-color: white;
   list-style: none;
   padding: 25px 18px;

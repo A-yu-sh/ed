@@ -1,6 +1,5 @@
 /* General page styles */
 .App {
-  display: inline;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
@@ -2387,4 +2386,19 @@ p {
   display: flex;
   padding: 20px;
   /* background-color: rgb(246, 246, 246); */
+}
+
+.PHD-dropdown {
+  margin-top: 3rem;
+  position: absolute;
+  /* top: 100%; */
+  left: -150%;
+  width: 15vw; /* Full viewport width */
+
+  background-color: white;
+  list-style: none;
+  padding: 25px 18px;
+  margin-right: 5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }

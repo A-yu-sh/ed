@@ -125,7 +125,7 @@ const UniversityGrid = ({ onCompareClick }) => {
           .university-image {
             width: 180px;
             height: 180px;
-            object-fit: contain;
+            object-fit: cover;
             margin-bottom: 1.5rem;
             transition: transform 0.3s ease;
             padding: 0.5rem;

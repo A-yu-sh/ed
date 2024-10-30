@@ -77,7 +77,7 @@
   background-color: #e0e0e0;
 }
 
-/* PhD Dropdown styles */
+/* PhD Dropdown styles
 .phd-dropdown-content {
   background-color: white;
   padding: 10px;
@@ -102,7 +102,7 @@
 .phd-dropdown-content p:hover {
   color: #00b96b;
   transform: translateX(5px);
-}
+} */
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -180,8 +180,7 @@
   top: -5px; /* Slightly raise the <h3> and <p> tags */
   position: relative;
 }
-
-.search-box {
+.hero-content .search-box {
   margin-top: 5%; /* Increase margin for better spacing */
   display: flex;
   align-items: center;
@@ -1135,6 +1134,8 @@ h2 {
 .experts-image img {
   transform: scale(1.2); /* Scale the image up by 20% */
   margin-left: -20px; /* Slightly move the image to the left */
+  height: 400px;
+  width: 430px;
 }
 
 /* Button Styles */
@@ -2386,19 +2387,4 @@ p {
   display: flex;
   padding: 20px;
   /* background-color: rgb(246, 246, 246); */
-}
-
-.PHD-dropdown {
-  margin-top: 2rem;
-  position: absolute;
-  /* top: 100%; */
-  left: -150%;
-  width: 15vw; /* Full viewport width */
-
-  /* background-color: white; */
-  list-style: none;
-  padding: 25px 18px;
-  margin-right: 5rem;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  z-index: 1;
 }

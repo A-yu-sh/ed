@@ -4,7 +4,7 @@ import Form from "./components/Form";
 import SubjectBoxes from "./components/Degree";
 import UniversityGrid from "./components/Universitygrid";
 import logo from "./assets/TopLogo.png";
-import MbaSpecialization from "./components/MbaSpecialization";
+
 import CouncelExpert from "./components/CouncelExpert";
 import TalkToExperts from "./components/TalkToExperts";
 import { Slide } from "react-slideshow-image";
@@ -23,15 +23,13 @@ import B1logo from "../src/assets/Banner5.png";
 import B2logo from "../src/assets/Banner6 new.png";
 import C1logo from "../src/assets/BannerSlide1.png";
 import DUlogo from "../src/assets/BannerSlide2.png";
-import AUlogo from "../src/assets/BannerSlide3.png";
+
 import Ignoulogoo from "../src/assets/BannerSlide4.png";
 import Icon from "../src/assets/s4-removebg-preview.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { RxHamburgerMenu } from "react-icons/rx";
-import AutoSlideshow from "./components/AutomaticSlideShow";
+
 import LogoSlider from "./components/AutomaticSlideShow";
 
-// UniversitySlideshow Component
 // UniversitySlideshow Component
 function UniversitySlideshow() {
   // Array of university logos
@@ -181,7 +179,7 @@ function App() {
               <div className="icons">
                 <div className="icon-box">
                   <img src={Tlogo4} alt="Top 10 MBA Universities" />
-                  <p>Top 10 MBA Universities</p>
+                  <p>NAAC 'A' GRADE</p>
                 </div>
                 <div className="icon-box">
                   <img src={Tlogo3} alt="UGC-DEB Approved Universities" />
@@ -197,9 +195,9 @@ function App() {
                   <p>NIRF Ranked Universities 2024</p>
                 </div>
               </div>
-              {/* <div className="leading">
+              <div className="leading">
                 <span className="leading-univ">Top Leading – Universities</span>
-              </div> */}
+              </div>
 
               {/* <UniversitySlideshow /> */}
               {/* <AutoSlideshow /> */}

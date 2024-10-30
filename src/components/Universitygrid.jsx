@@ -1,11 +1,11 @@
 import React from "react";
-import JuImage from "../assets/Acharya Nagarjuna University.png";
-import VGUImage from "../assets/Aligar Muslim University.png";
-import DUImage from "../assets/Jamia University (A).png";
-import AmityImage from "../assets/Andhra University (A++).png";
-import AmritaImage2 from "../assets/Mizoram Central University Online Courses (A).png";
-import HONImage from "../assets/University of Hyderabad  Online Courses (A).png";
-import SImage from "../assets/Sambalpur University (A+).png";
+import JuImage from "../assets/Acharya Nagarjuna.jpg";
+import VGUImage from "../assets/Aligarh Muslim.jpg";
+import DUImage from "../assets/Jamia-Milia-Islamia.jpg";
+import AmityImage from "../assets/Andhra University.jpg";
+import AmritaImage2 from "../assets/Mizoram Central University.png";
+import HONImage from "../assets/University of Hyderabad.png";
+import SImage from "../assets/Sambalpur.png";
 import PCImage from "../assets/Amrita university Sixe Fix.png";
 import PC2Image from "../assets/JU.jpeg";
 import PC3Image2 from "../assets/Chindagar University Size fix.png";
@@ -24,40 +24,35 @@ import i4 from "../assets/University logo Folder/Amrita university logo.png";
 import i5 from "../assets/University logo Folder/AndhraUniversitylogo.png";
 import i6 from "../assets/University logo Folder/Chindagar University Logo.png";
 import i7 from "../assets/University logo Folder/DPU University Logo.jpeg";
-
+import i8 from "../assets/University logo Folder/Ignou logo.png";
 import i9 from "../assets/University logo Folder/Jain logo.png";
 import i10 from "../assets/University logo Folder/Jamia University (A) logo.png";
-
+import i11 from "../assets/University logo Folder/LPU logo.jpeg";
 import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
 import i13 from "../assets/University logo Folder/Manipal logo.png";
-
+import i14 from "../assets/University logo Folder/Mizoram University Logo.png";
 import i15 from "../assets/University logo Folder/SGVU logo.png";
 import i16 from "../assets/University logo Folder/SMU logo.jpeg";
 import i17 from "../assets/University logo Folder/Sambalpur University (A+) logo.jpeg";
 import i18 from "../assets/University logo Folder/Sharda University Logo.png";
 import i19 from "../assets/University logo Folder/Shobhit University Logo.jpeg";
-
-import i22 from "../assets/University logo Folder/AndhraUniversitylogo.png";
-
-import G1 from "../assets/Goverment Collage image/Andhra University.jpg";
-import G2 from "../assets/Goverment Collage image/Acharya Nagarjuna.jpg";
-import G3 from "../assets/Goverment Collage image/Aligarh Muslim.jpg";
-import G4 from "../assets/Goverment Collage image/Jamia-Milia-Islamia.jpg";
-import G5 from "../assets/Goverment Collage image/Mizoram Central University.png";
-import G6 from "../assets/Goverment Collage image/Sambalpur.png";
-import G7 from "../assets/Goverment Collage image/University of Hyderabad.png";
+import i20 from "../assets/University logo Folder/Shooline Logo.png";
+import i21 from "../assets/University logo Folder/UPES University Logo.jpeg";
+import i22 from "../assets/University logo Folder/University of Hyderabad  Online Courses (A) logo.jpeg";
+import i23 from "../assets/University logo Folder/Uttranchal University Logo.png";
+import i24 from "../assets/University logo Folder/VGU Logo.png";
+import i25 from "../assets/University logo Folder/Vignans University Logo.png";
 
 const universities = [
-  { name: "Acharya Nagarjuna University", image: G2, logo: i1 },
-  { name: "University of Hyderabad", image: G7, logo: i1 },
-  { name: "Aligar Muslim University", image: G3, logo: i2 },
-  { name: "Jamia University ", image: G4, logo: i10 },
-  { name: "Andhra University  ", image: G1, logo: i5 },
-  { name: "University of Hyderabad   ", image: G7, logo: i22 },
-  { name: "Sambalpur University ", image: G6, logo: i17 },
+  { name: "Acharya Nagarjuna University", image: JuImage, logo: i1 },
+  { name: "Aligar Muslim University", image: VGUImage, logo: i2 },
+  { name: "Jamia University ", image: DUImage, logo: i10 },
+  { name: "Andhra University  ", image: AmityImage, logo: i5 },
+  { name: "University of Hyderabad   ", image: AmritaImage2, logo: i22 },
+  { name: "Sambalpur University ", image: SImage, logo: i17 },
   { name: "Amrita University ", image: PCImage, logo: i4 },
   { name: "Jain University ", image: PC2Image, logo: i9 },
-  { name: "Chandigarh University  ", image: PC3Image2, logo: i6 },
+  { name: "Chindagar University  ", image: PC3Image2, logo: i6 },
   { name: "DPU University ", image: PC4Image, logo: i7 },
   { name: "Amity University ", image: PC5Image, logo: i3 },
   { name: "Mangalayanta University ", image: PC6Image, logo: i12 },
@@ -130,7 +125,7 @@ const UniversityGrid = ({ onCompareClick }) => {
           .university-image {
             width: 180px;
             height: 180px;
-            object-fit: cover;
+            object-fit: contain;
             margin-bottom: 1.5rem;
             transition: transform 0.3s ease;
             padding: 0.5rem;
@@ -140,6 +135,7 @@ const UniversityGrid = ({ onCompareClick }) => {
             width: 80px;
             height: 80px;
             object-fit: contain;
+ 
             background: white;
             padding: 0.5rem;
             margin-top: -1rem;

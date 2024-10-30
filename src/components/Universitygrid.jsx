@@ -126,7 +126,7 @@ const UniversityGrid = ({ onCompareClick }) => {
             width: 180px;
             height: 180px;
             object-fit: cover;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             transition: transform 0.3s ease;
             padding: 0.5rem;
           }
@@ -168,6 +168,11 @@ const UniversityGrid = ({ onCompareClick }) => {
             text-transform: uppercase;
             letter-spacing: 1.5px;
             box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+          }
+          
+          .text{
+          font-size: 18px;
+          color: #2C3E50;
           }
 
           .compare:hover {
@@ -248,7 +253,9 @@ const UniversityGrid = ({ onCompareClick }) => {
               alt={`${university.name} logo`}
               className="university-logo"
             /> */}
-            <div>{university.name}</div>
+            <div>
+              <h4 className="text">{university.name}</h4>
+            </div>
           </div>
         ))}
       </div>

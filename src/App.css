@@ -2395,7 +2395,7 @@ p {
   /* top: 100%; */
   left: -150%;
   width: 15vw; /* Full viewport width */
-  height: 00vh; /* Full viewport height */
+  height: 30vh; /* Full viewport height */
   background-color: white;
   list-style: none;
   padding: 25px 18px;

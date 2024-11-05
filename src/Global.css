@@ -2424,3 +2424,153 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
+
+/* Course.jsx Section */
+.sidebar h3 {
+  font-size: 20px;
+  color: #00b96b;
+}
+
+.sidebar p {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar p {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.duration-badge {
+  font-size: 12px;
+  font-weight: bold;
+  /* margin-left: 5px; */
+  padding: 2px 0px;
+  border-radius: 5px;
+}
+
+.green {
+  background-color: linear-gradient(#00b96b, #00471b);
+  color: white;
+}
+
+.orange {
+  background-color: #ff5722;
+  color: white;
+}
+
+/* "Online Courses" header with blue background */
+.online-courses-header {
+  background-color: #003366; /* Blue background */
+  color: white; /* White text */
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: left; /* Align text to the left */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  color: #00b96b;
+}
+
+.sidebar p {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer; /* Add pointer cursor on hover */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar p:hover {
+  color: #00b96b; /* Change text color on hover */
+  transform: translateX(5px); /* Slight right shift on hover */
+}
+
+.duration-badge {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.green {
+  background-color: linear-gradient(#00471b, #00b96b);
+  color: white;
+  text-align: left;
+}
+
+.orange {
+  background-color: #ff5722;
+  color: white;
+  text-align: left;
+}
+
+/* Courses Grid Styling */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px;
+  width: calc(
+    100% - 270px
+  ); /* Adjust width to fill the space next to the sidebar */
+}
+.course-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #003366; /* Icon color */
+}
+.course-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.explore-btn,
+.view-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.explore-btn {
+  background-color: #ff5722;
+}
+
+.view-btn {
+  background-color: #28a745;
+}
+
+.explore-btn:hover,
+.view-btn:hover {
+  opacity: 0.9;
+}
+
+.course-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+}
+
+.course-icon {
+  width: 45px;
+  height: 45px;
+  padding: 6px; /* Space between the image and the circular background */
+  background-color: white; /* White background color */
+  border-radius: 30%; /* Make the background circular */
+  margin-right: 5px; /* Space between image and title text */
+  box-shadow: 0 4px 8px rgba(76, 236, 7, 0.716); /* Shadow effect on the white background */
+}
+
+.course-subtitle {
+  font-weight: bold;
+  font-size: 20px;
+}

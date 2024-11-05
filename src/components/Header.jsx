@@ -9,6 +9,7 @@ import University from "../components/University";
 import Phd from "../components/Phd";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -86,9 +87,12 @@ function Header() {
           </ul>
         </nav>
 
-        <button className="compare-btn" onClick={handleCompareClick}>
+        <Link
+          to="/compare"
+          className="compare-btn"
+          onClick={handleCompareClick}>
           COMPARE
-        </button>
+        </Link>
       </header>
     </div>
   );

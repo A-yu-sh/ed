@@ -4,6 +4,7 @@ import Home from "./Home";
 import Intro from "./components/pHD_Section/1.Intro";
 import Header from "./components/Header";
 import FilterSection from "./components/SideFilter";
+import Compare from "./components/Compare";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/phd" element={<Intro />} />
-        <Route path="/filter" element={<FilterSection />} />
+        <Route path="/compare" element={<Compare />} />
       </Routes>
     </div>
   );

@@ -36,7 +36,9 @@ function Header() {
     <div className="App">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="Logo" className="logo-image" />
+          <Link to="/">
+            <img src={logo} alt="Logo" className="logo-image" />
+          </Link>
         </div>
         <nav>
           <ul className="nav-list">

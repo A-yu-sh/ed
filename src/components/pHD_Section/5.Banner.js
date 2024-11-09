@@ -3,19 +3,14 @@ import image from "../../assets/Graduated-Girl.jpg";
 
 const Banner = () => {
   return (
-    <div className="mt-44">
-      <div className="grid grid-cols-2 bg-gray-200">
-        <div className="">
-          <img src={image} className="object-cover h-[80vh] w-[100vh]" />
-        </div>
-        <div>
-          <div className="mt-32 flex justify-start">
-            <h1 className="text-black text-2xl font-bold text-center sm:text-center md:text-center lg:text-center md:m-auto sm:m-auto lg:m-auto">
+    <div className="mt-44 bg-gray-100">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-20 container mx-auto">
+        <div className="order-2 md:order-1 flex items-center justify-center">
+          <div>
+            <h1 className="text-black text-3xl md:text-4xl font-bold text-center md:text-left">
               We guarantee your PhD admission for 2024.
             </h1>
-          </div>
-          <div className="flex justify-start p-10 mt-10 text-lg leading-7">
-            <p className="max-w-[110ch] text-center sm:text-center md:text-center lg:text-center">
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mt-6 max-w-[80ch] text-center md:text-left">
               Aimlay provides a streamlined and efficient PhD admission process,
               tailored to support working professionals throughout their
               academic journey. Earning a PhD (Doctor of Philosophy) requires
@@ -30,6 +25,13 @@ const Banner = () => {
               commitments.
             </p>
           </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <img
+            src={image}
+            alt="Graduated Girl"
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
       </div>
     </div>

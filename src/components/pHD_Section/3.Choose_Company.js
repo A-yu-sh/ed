@@ -9,21 +9,21 @@ const Choose_Company = () => {
           Why to choose Aimlay for your PhD Admission 2024?
         </h1>
       </div>
-      <div className="flex justify-center space-x-3 mt-20 ">
+      <div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 mt-20">
         {data.map((item) => {
           return (
             <div
               key={item.id}
-              className="inline-block border-2 border-black p-5">
-              <div className="text-center ">
-                <div className="flex justify-center ">
-                  <img src={item.image} className="" />
+              className=" border-2 border-black p-3 md:p-5 w-full md:w-auto flex flex-col items-center">
+              <div className="text-center">
+                <div className="flex justify-center">
+                  <img src={item.image} className="w-24 md:w-32" />
                 </div>
 
-                <div className="text-black text-2xl font-medium max-w-[30ch]">
+                <div className="text-black text-xl md:text-2xl font-medium max-w-[25ch] md:max-w-[30ch] mt-4 md:mt-6">
                   {item.title}
                 </div>
-                <div className="text-black text-lg justify-start max-w-[40ch] mt-14">
+                <div className="text-black text-base md:text-lg max-w-[35ch] md:max-w-[40ch] mt-4 md:mt-6">
                   {item.body}
                 </div>
               </div>
@@ -36,4 +36,3 @@ const Choose_Company = () => {
 };
 
 export default Choose_Company;
-// We confirm the validity of your degree by

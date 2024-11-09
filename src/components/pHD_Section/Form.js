@@ -55,9 +55,8 @@ const ContactForm = () => {
   const validateForm = () => {
     let formErrors = {};
     if (!formData.fullName) formErrors.fullName = "Full name is required";
-    if (formData.phoneNo != Number)
-      formErrors.phoneNo = "Please Enter a valid Phone Number";
-    if (!formData.phoneNo) formErrors.phoneNo = "Phone number is required";
+    if (isNaN(formData.phoneNo) || !formData.phoneNo)
+      formErrors.phoneNo = "Please enter a valid phone number";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
       formErrors.email = "Valid email is required";
     if (!formData.lastEducationQualification)
@@ -90,9 +89,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="relative bg-gray-100 py-2 px-8 mt-7 md:mt-1 rounded-lg max-w-lg mx-auto shadow-md">
-      <h2 className="text-3xl font-bold mb-1 text-center text-gray-700">
-        Connect with Aimlay
+    <div className="bg-white py-10 px-6 lg:px-10 mt-7 md:mt-1 rounded-lg max-w-lg mx-auto shadow-lg">
+      <h2 className="text-3xl font-semibold mb-1 text-center text-gray-800">
+        Connect with Us
       </h2>
       <h3 className="text-xl mb-6 text-center text-gray-600">
         Enter Your Details
@@ -103,7 +102,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="fullName"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter Full Name"
             value={formData.fullName}
             onChange={handleChange}
@@ -116,11 +115,10 @@ const ContactForm = () => {
 
         {/* Phone No */}
         <div className="mb-4 flex items-center">
-          <img src="india-flag.png" alt="India Flag" className="w-6 h-6 mr-2" />
           <input
             type="tel"
             name="phoneNo"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Phone No."
             value={formData.phoneNo}
             onChange={handleChange}
@@ -136,7 +134,7 @@ const ContactForm = () => {
           <input
             type="email"
             name="email"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="E-Mail"
             value={formData.email}
             onChange={handleChange}
@@ -152,7 +150,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="lastEducationQualification"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Last Education Qualification"
             value={formData.lastEducationQualification}
             onChange={handleChange}
@@ -170,7 +168,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="phdStreamSubject"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="PhD Stream/Subject"
             value={formData.phdStreamSubject}
             onChange={handleChange}
@@ -188,7 +186,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="profession"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Profession"
             value={formData.profession}
             onChange={handleChange}
@@ -204,7 +202,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="budget"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Budget"
             value={formData.budget}
             onChange={handleChange}
@@ -219,7 +217,7 @@ const ContactForm = () => {
         <div className="mb-4">
           <select
             name="state"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={formData.state}
             onChange={handleChange}
             required>
@@ -239,7 +237,7 @@ const ContactForm = () => {
         <div className="mb-4">
           <textarea
             name="message"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Message"
             value={formData.message}
             onChange={handleChange}
@@ -249,7 +247,7 @@ const ContactForm = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-black mb-2 transition duration-300">
+          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
           SUBMIT
         </button>
       </form>

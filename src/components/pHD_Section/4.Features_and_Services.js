@@ -9,17 +9,19 @@ const Features_and_Services = () => {
           Features and Services for PhD Admission 2024
         </h1>
       </div>
-      <div className="flex justify-center  ">
-        <div className="grid grid-cols-5 mx-2">
+      <div className="flex justify-center mt-10 ">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mx-2">
           {features.map((item) => {
             return (
-              <div key={item.id} className="border-2 border-gray-200 mx-2 my-2">
-                <div className="">
-                  <img src={item.image} className="m-2  " />
-                  <div className="text-black text-xl ">
-                    <h1 className="flex justify-center ">{item.title}</h1>
-                  </div>
+              <div
+                key={item.id}
+                className="border-2 border-gray-200 rounded-lg p-4 flex flex-col items-center">
+                <div className="mb-4">
+                  <img src={item.image} className="w-20 h-20 object-contain" />
                 </div>
+                <h1 className="text-black text-xl font-medium text-center">
+                  {item.title}
+                </h1>
               </div>
             );
           })}

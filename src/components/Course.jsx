@@ -68,6 +68,7 @@ function Course() {
             <p>Certificate Courses</p>
           </div>
           {/* Courses grid */}
+          {/* <div className="courses-grid-container"> */}
           <div className="courses-grid">
             {courses.map((course) => (
               <div key={course.id} className="course-card">
@@ -84,6 +85,7 @@ function Course() {
               </div>
             ))}
           </div>
+          {/* </div> */}
         </div>
       </div>
     </div>

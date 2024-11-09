@@ -17,31 +17,32 @@ import PC8Image from "../assets/SGVU University.png";
 import PC9Image from "../assets/Sharda University.png";
 import PC10Image from "../assets/Shobhit University.png";
 import PC11Image from "../assets/SMU Collage.png";
-import i1 from "../assets/University logo Folder/Acharya Nagarjuna University logo.jpeg";
-import i2 from "../assets/University logo Folder/Aligarh Mushlim University logo.png";
+import i1 from "../assets/GOVT logo/Acharya_Nagarjuna_University_crest.png";
+import i2 from "../assets/GOVT logo/Aligarh_Muslim_University_logo.png";
 import i3 from "../assets/University logo Folder/Amity University Logo.png";
 import i4 from "../assets/University logo Folder/Amrita university logo.png";
-import i5 from "../assets/University logo Folder/AndhraUniversitylogo.png";
+import i5 from "../assets/GOVT logo/Andhra University.jpg";
 import i6 from "../assets/University logo Folder/Chindagar University Logo.png";
 import i7 from "../assets/University logo Folder/DPU University Logo.jpeg";
 import i8 from "../assets/University logo Folder/Ignou logo.png";
 import i9 from "../assets/University logo Folder/Jain logo.png";
-import i10 from "../assets/University logo Folder/Jamia University (A) logo.png";
+import i10 from "../assets/GOVT logo/jamia-millia-islamia-logo-hd-png-vector-free-download-121.png";
 import i11 from "../assets/University logo Folder/LPU logo.jpeg";
 import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
 import i13 from "../assets/University logo Folder/Manipal logo.png";
 import i14 from "../assets/University logo Folder/Mizoram University Logo.png";
 import i15 from "../assets/University logo Folder/SGVU logo.png";
 import i16 from "../assets/University logo Folder/SMU logo.jpeg";
-import i17 from "../assets/University logo Folder/Sambalpur University (A+) logo.jpeg";
+import i17 from "../assets/GOVT logo/Sambalpur_University_logo.png";
 import i18 from "../assets/University logo Folder/Sharda University Logo.png";
 import i19 from "../assets/University logo Folder/Shobhit University Logo.jpeg";
 import i20 from "../assets/University logo Folder/Shooline Logo.png";
 import i21 from "../assets/University logo Folder/UPES University Logo.jpeg";
-import i22 from "../assets/University logo Folder/University of Hyderabad  Online Courses (A) logo.jpeg";
+import i22 from "../assets/GOVT logo/University_of_Hyderabad_Logo.png";
 import i23 from "../assets/University logo Folder/Uttranchal University Logo.png";
 import i24 from "../assets/University logo Folder/VGU Logo.png";
 import i25 from "../assets/University logo Folder/Vignans University Logo.png";
+import { Link } from "react-router-dom";
 
 const universities = [
   { name: "Acharya Nagarjuna University", image: JuImage, logo: i1 },
@@ -52,7 +53,7 @@ const universities = [
   { name: "Sambalpur University ", image: SImage, logo: i17 },
   { name: "Amrita University ", image: PCImage, logo: i4 },
   { name: "Jain University ", image: PC2Image, logo: i9 },
-  { name: "Chindagar University  ", image: PC3Image2, logo: i6 },
+  { name: "Chandigarh University  ", image: PC3Image2, logo: i6 },
   { name: "DPU University ", image: PC4Image, logo: i7 },
   { name: "Amity University ", image: PC5Image, logo: i3 },
   { name: "Mangalayanta University ", image: PC6Image, logo: i12 },
@@ -260,9 +261,9 @@ const UniversityGrid = ({ onCompareClick }) => {
         ))}
       </div>
       <div className="compare-button-container">
-        <button className="compare" onClick={onCompareClick}>
+        <Link to="/compare" className="compare" onClick={onCompareClick}>
           Compare Universities
-        </button>
+        </Link>
       </div>
     </div>
   );

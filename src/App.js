@@ -9,7 +9,6 @@ import Compare from "./components/Compare";
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/phd" element={<Intro />} />

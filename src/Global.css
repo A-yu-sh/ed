@@ -1779,7 +1779,7 @@ h2 {
   padding: 50px;
 
   /* margin-left: 25px;
-    margin-right: 25px; */
+  margin-right: 25px; */
   /* text-align: center; */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
@@ -2396,6 +2396,7 @@ html {
   background-color: white;
   flex: 1; /* Takes up available space */
   overflow-x: hidden; /* Prevents horizontal overflow */
+  margin-left: -385.5px;
 }
 .c-container {
   position: relative; /* Changed to relative */
@@ -2403,13 +2404,14 @@ html {
   height: 610px;
   width: 1525px; /* Prevents container from exceeding viewport width */
   margin: 23px auto 0; /* Centers the container horizontally */
-  margin-left: 85.5px; /* Adjust left padding instead of positioning */
+  margin-left: -675.5px; /* Adjust left padding instead of positioning */
   background-color: white;
   overflow-x: hidden;
 }
 
 .courses-container {
   display: flex;
+  margin-left: -385.5px;
   padding: 20px;
   /* background-color: rgb(246, 246, 246); */
 }
@@ -2570,6 +2572,7 @@ html {
   padding: 6px; /* Space between the image and the circular background */
   background-color: white; /* White background color */
   border-radius: 30%; /* Make the background circular */
+
   margin-right: 5px; /* Space between image and title text */
   box-shadow: 0 4px 8px rgba(76, 236, 7, 0.716); /* Shadow effect on the white background */
 }
@@ -2577,4 +2580,54 @@ html {
 .course-subtitle {
   font-weight: bold;
   font-size: 20px;
+}
+
+/* .courses-grid-container {
+  max-height: 400px; 
+  overflow-y: auto;
+  max-width: 1200px;
+} */
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0; /* Sticks the header to the top */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Three equal columns */
+    z-index: 1000;
+    /* justify-content: start; */
+    align-items: start;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  .logo {
+    display: flex;
+    justify-content: start;
+  }
+  .logo-image {
+    width: 200px;
+    height: 70px;
+  }
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .nav-list {
+    display: list-item;
+  }
+  .header li {
+    display: list-item;
+  }
+  .compare-btn {
+    display: none;
+  }
+  .responsive-slider {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
 }

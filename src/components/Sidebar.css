@@ -1,0 +1,6 @@
+/* CSS for responsive button display */
+@media (max-width: 768px) {
+  .filterButton {
+    display: block !important;
+  }
+}

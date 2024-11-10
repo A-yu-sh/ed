@@ -19,11 +19,8 @@ import Tlogo2 from "./assets/Tlogo2.png";
 import Tlogo3 from "./assets/Tlogo3.png";
 import Tlogo4 from "./assets/Tlogo4.png";
 import Phd from "./components/Phd";
-import B1logo from "../src/assets/Banner5.png";
-import B2logo from "../src/assets/Banner6 new.png";
 import C1logo from "../src/assets/BannerSlide1.png";
 import DUlogo from "../src/assets/BannerSlide2.png";
-
 import Ignoulogoo from "../src/assets/BannerSlide4.png";
 import Icon from "../src/assets/s4-removebg-preview.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -68,222 +65,211 @@ function Home() {
       ) : (
         <div>
           <section className="hero">
-            <Form />
-            <div className="hero-content">
-              <h3>#India'sMostTrusted</h3>
-              <h1>DISTANCE EDUCATION CENTRE</h1>
-              <p>
-                We simplify the journey to obtaining distance and online degrees
-              </p>
-              <div className="search-box">
-                <input
-                  type="text"
-                  placeholder="Search courses & University e.g. BA MBA MA BBA BCA MCA"
-                />
-                <button>
-                  <img src={Icon} alt="" className="s-icon" />
-                </button>
-              </div>
-              <div className="icons">
-                <div className="icon-box">
-                  <img src={Tlogo4} alt="Top 10 MBA Universities" />
-                  <p>NAAC 'A' GRADE</p>
+            <div className="hero-left">
+              <Form />
+            </div>
+            <div className="hero-right">
+              <div className="hero-content">
+                <h3>#India'sTopReliable</h3>
+                <h1>DISTANCE EDUCATION SCHOOL</h1>
+                <p>We Ease the Process to Achieve Distance & Online Degree</p>
+                <div className="search-box">
+                  <input
+                    type="text"
+                    placeholder="Search Course & University e.g. BA MBA MA BBA"
+                  />
+                  <button>
+                    <img src={Icon} alt="" className="s-icon" />
+                  </button>
                 </div>
-                <div className="icon-box">
-                  <img src={Tlogo3} alt="UGC-DEB Approved Universities" />
-                  <p>UGC-DEB Approved Universities 2024</p>
-                </div>
-                <div className="icon-box">
-                  <img src={Tlogo2} alt="Top 10 MCA Universities" />
-                  <p>Top 10 MCA Universities</p>
-                </div>
-                <div className="icon-box">
-                  <img src={Tlogo} alt="NIRF Ranked Universities" />
-                  <p>NIRF Ranked Universities 2024</p>
+                <div className="icons">
+                  <div className="icon-box">
+                    <img src={Tlogo4} alt="Top 10 MBA Universities" />
+                    <p>Top 10 MBA Universities in India</p>
+                  </div>
+                  <div className="icon-box">
+                    <img src={Tlogo3} alt="UGC-DEB Approved Universities" />
+                    <p>UGC-DEB Approved Universities 2024</p>
+                  </div>
+                  <div className="icon-box">
+                    <img src={Tlogo2} alt="Top 10 MCA Universities" />
+                    <p>Top 10 MCA Universities in India</p>
+                  </div>
+                  <div className="icon-box">
+                    <img src={Tlogo} alt="NIRF Ranked Universities" />
+                    <p>NIRF Ranked Universities 2024</p>
+                  </div>
                 </div>
               </div>
             </div>
+          </section>
 
-            <style jsx>{`
+          <style jsx>{`
+            .hero {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
+              padding: 30px 20px;
+              color: white;
+            }
+
+            .hero-left {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 20px;
+              border-radius: 8px;
+              margin-top: -60px;
+              color: white;
+            }
+
+            .hero-right {
+              display: flex;
+              align-items: center;
+              justify-content: start;
+              margin-top: -90px;
+              text-align: center;
+            }
+
+            .hero-content h3 {
+              font-size: 18px;
+              color: #ccc;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
+
+            .hero-content h1 {
+              font-size: 36px;
+              font-weight: 700;
+              color: #fff44f;
+              margin: 0;
+              text-transform: uppercase;
+            }
+
+            .hero-content p {
+              font-size: 16px;
+              color: #ffffff;
+              margin-top: 10px;
+              line-height: 1.5;
+              text-align: center;
+            }
+
+            .search-box {
+              display: flex;
+              margin-top: 20px;
+              max-width: 600px;
+              width: 100%;
+            }
+
+            .search-box input {
+              padding: 10px;
+              font-size: 16px;
+              border: 1px solid #ddd;
+              border-radius: 5px 0 0 5px;
+              flex: 1;
+              height: 45px;
+            }
+
+            .search-box button {
+              background-color: #ff7f00;
+              border: none;
+              padding: 10px 15px;
+              border-radius: 0 5px 5px 0;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+            }
+
+            .search-box button img {
+              width: 20px;
+              height: 20px;
+            }
+
+            .icons {
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+              margin-top: 20px;
+              width: 100%;
+              max-width: 800px;
+            }
+
+            .icon-box {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              color: white;
+              font-size: 14px;
+            }
+
+            .icon-box img {
+              width: 50px;
+              height: 50px;
+              margin-bottom: 10px;
+            }
+
+            /* Responsive layout for smaller screens */
+            @media (max-width: 768px) {
               .hero {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 20px;
-                background-color: #f8f8f8;
+                grid-template-columns: 1fr;
               }
 
-              .hero-content {
-                flex: 1;
-                padding: 20px;
-                order: 2;
+              .hero-left,
+              .hero-right {
+                width: 100%;
               }
-
-              .total-form {
-                flex: 1;
-                order: 1;
-              }
-
               .hero-content h3 {
-                font-size: 20px;
-                color: #ffffff;
+                margin-top: 100px;
+                font-size: 28px;
+                text-align: center;
+                color: white;
               }
 
               .hero-content h1 {
-                font-size: 36px;
-                font-weight: bold;
-                color: #fff44f;
-                margin-top: 10px;
-              }
-
-              .hero-content p {
-                font-size: 16px;
-                color: #ffffff;
-                margin-top: 10px;
-                line-height: 1.5;
-              }
-
-              .search-box {
-                display: flex;
-                margin-top: 20px;
-                position: relative;
+                margin-top: 30px;
+                font-size: 28px;
               }
 
               .search-box input {
-                padding: 10px;
-                font-size: 16px;
-                border: 1px solid #ddd;
-                border-radius: 5px 0 0 5px; /* Round only left corners */
-                flex: 7; /* Adjust input size */
-                height: 40px; /* Set height of input */
-              }
-
-              .search-box button {
-                background-color: #ff7f00;
-                border: none;
-                padding: 0 5px;
-                border-radius: 0 5px 5px 0; /* Round only right corners */
-                cursor: pointer;
-                flex: 0.1; /* Adjust button size */
-                height: 40px; /* Set height of button equal to input */
-                display: flex;
-                align-items: center; /* Vertically align content in button */
-                justify-content: center; /* Center the content horizontally */
-              }
-
-              .search-box button img {
-                width: 20px; /* Adjust size of icon */
-                height: 20px; /* Ensure the icon is centered */
-              }
-
-              /* Adjust for small devices */
-              @media (max-width: 768px) {
-                .search-box input {
-                  flex: 8; /* Larger input width on small devices */
-                  font-size: 14px; /* Slightly smaller text */
-                  padding: 8px; /* Reduced padding */
-                  height: 36px; /* Reduced height on small devices */
-                  margin-bottom: 3.5px;
-                }
-
-                .search-box button {
-                  flex: 0.1; /* Smaller button on small devices */
-                  padding: 8px;
-                  height: 36px; /* Adjust height to match input */
-                }
+                font-size: 14px;
+                padding: 8px;
+                height: 40px;
               }
 
               .icons {
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
                 gap: 15px;
               }
 
-              .icon-box {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 45%;
-                text-align: center;
+              .hero-left {
+                order: 2; /* Move form below content */
               }
 
-              .icon-box img {
-                width: 40px;
-                margin-bottom: 10px;
+              .hero-right {
+                order: 1; /* Keep content at top */
+              }
+            }
+
+            /* Layout for desktop/laptop */
+            @media (min-width: 769px) {
+              .hero {
+                grid-template-columns: 1fr 1fr;
               }
 
-              .icon-box p {
-                font-size: 14px;
-                color: #333;
+              .hero-left {
+                order: 1; /* Form on the left */
               }
 
-              /* Responsive layout for mobile */
-              @media (max-width: 768px) {
-                .hero {
-                  flex-direction: column;
-                  align-items: center;
-                }
-
-                .hero-content {
-                  order: 1;
-                  text-align: center;
-                }
-
-                .total-form {
-                  order: 2;
-                  width: 100%;
-                  margin-top: 20px;
-                }
-
-                .hero-content h1 {
-                  font-size: 28px;
-                }
-
-                .search-box {
-                  flex-direction: row;
-                  margin-top: 15px;
-                }
-
-                .search-box input {
-                  flex: 1;
-                }
-
-                .icons {
-                  flex-direction: column;
-                  align-items: center;
-                }
-
-                .icon-box {
-                  width: 100%;
-                  display: flex;
-                  align-items: center;
-                  text-align: left;
-                  padding: 10px;
-
-                  border-radius: 5px;
-                  margin-bottom: 10px;
-                }
-
-                .icon-box img {
-                  width: 150px; /* Set width */
-                  height: 130px; /* Set height */
-                  margin-right: 10px;
-                }
-
-                .icon-box p {
-                  font-size: 20px;
-                  margin: 0;
-                  color: #ffffff;
-                }
+              .hero-right {
+                order: 2; /* Content on the right */
               }
-            `}</style>
-          </section>
+            }
+          `}</style>
 
           <LogoSlider />
           <SubjectBoxes />
           <UniversityGrid />
-          {/* <MbaSpecialization /> */}
           <CouncelExpert />
           <TalkToExperts />
           <LogoBar />

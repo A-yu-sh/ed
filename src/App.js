@@ -10,6 +10,7 @@ import Contact from "./components/Footer_Pages/Contact";
 import Privacy from "./components/Footer_Pages/PrivacyPolicy";
 import Terms from "./components/Footer_Pages/TermsAndConditions";
 import Ubox from "./components/Convocation_SlideShow";
+import FilterPage from "./components/FilterPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Privacy-Policy" element={<Privacy />} />
         <Route path="/Terms-and-Conditions" element={<Terms />} />
         <Route path="/Terms" element={<Ubox />} />
+        <Route path="/filter" element={<FilterPage />} />
       </Routes>
     </div>
   );

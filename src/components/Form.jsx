@@ -254,7 +254,7 @@ function Form() {
           }
 
           .form {
-            max-width: 100%; /* Form takes full width */
+            max-width: 150%; /* Form takes full width */
           }
 
           .enquiry-header h2 {

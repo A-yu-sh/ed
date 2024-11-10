@@ -189,7 +189,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           @media (max-width: 1200px) {
             .grid-container {
-              grid-template-columns: repeat(3, 1fr);
+              grid-template-columns: repeat(2, 1fr);
             }
           }
 
@@ -203,12 +203,13 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .grid-container {
+              
               grid-template-columns: repeat(2, 1fr);
               gap: 1rem;
             }
 
             .grid-item {
-              padding: 1rem;
+              padding: 1.5rem 1rem;
             }
 
             .university-image {
@@ -226,13 +227,15 @@ const UniversityGrid = ({ onCompareClick }) => {
             .grid-container {
               grid-template-columns: 1fr;
             }
-              .grid-item {
-              padding: 0rem;
-            }
 
             .university-image {
-              width: 200px;
-              height: 200px;
+              width: 120px;
+              height: 120px;
+            }
+
+            .university-logo {
+              width: 50px;
+              height: 50px;
             }
           }
         `}
@@ -252,11 +255,6 @@ const UniversityGrid = ({ onCompareClick }) => {
               alt={university.name}
               className="university-image"
             />
-            {/* <img
-              src={university.logo}
-              alt={`${university.name} logo`}
-              className="university-logo"
-            /> */}
             <div>
               <h4 className="text">{university.name}</h4>
             </div>

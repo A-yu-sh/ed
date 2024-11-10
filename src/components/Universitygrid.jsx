@@ -189,7 +189,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           @media (max-width: 1200px) {
             .grid-container {
-              grid-template-columns: repeat(2, 1fr);
+              grid-template-columns: repeat(3, 1fr);
             }
           }
 
@@ -255,8 +255,84 @@ const UniversityGrid = ({ onCompareClick }) => {
             .text {
               font-size: 12px;
             }
-              
           }
+            
+
+/*djhhjsdgchsdvfhgsdvc*/
+
+          .grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Media queries adjustments */
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .university-grid {
+    padding: 1rem;
+  }
+  .university-grid h1 {
+    font-size: 1.75rem;
+  }
+  .university-grid p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for medium screens */
+    gap: 0.75rem;
+  }
+  .grid-item {
+    padding: 0.75rem;
+  }
+  .university-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0.5rem;
+  }
+  .university-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .text {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+  .compare {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .university-grid h1 {
+    font-size: 1.5rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* Adjust to 1 column for very small screens */
+  }
+  .grid-item {
+    padding: 0.5rem;
+  }
+  .university-image {
+    width: 100px;
+    height: 100px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}
         `}
       </style>
 

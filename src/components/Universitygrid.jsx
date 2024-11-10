@@ -208,7 +208,7 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .grid-item {
-              padding: 1.5rem 1rem;
+              padding: 1rem 1rem;
             }
 
             .university-image {
@@ -217,8 +217,8 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .university-logo {
-              width: 30px;
-              height: 30px;
+              width: 60px;
+              height: 60px;
             }
           }
 
@@ -228,8 +228,8 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .university-image {
-              width: 20px;
-              height: 20px;
+              width: 200px;
+              height: 200px;
             }
           }
         `}

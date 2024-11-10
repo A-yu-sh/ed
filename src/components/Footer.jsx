@@ -5,6 +5,7 @@ import instagramIcon from "../assets/instagram.png";
 import twitterIcon from "../assets/X Tweeter.png";
 import linkedinIcon from "../assets/linkedin.png";
 import youtubeIcon from "../assets/youtube.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -157,13 +158,13 @@ function Footer() {
               <a href="/home">Home</a>
             </li>
             <li>
-              <a href="/about-us">About Us</a>
+              <Link to="/about-us">About Us</Link>
             </li>
             <li>
               <a href="/blogs">Blogs</a>
             </li>
             <li>
-              <a href="/contact-us">Contact Us</a>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li>
               <a href="/pay-online">Pay Online</a>
@@ -178,10 +179,10 @@ function Footer() {
               <a href="/refund-policy">Refund Policy</a>
             </li>
             <li>
-              <a href="/privacy-policy">Privacy Policy</a>
+              <Link to="/Privacy-Policy">Privacy Policy</Link>
             </li>
             <li>
-              <a href="/terms-conditions">Terms & Conditions</a>
+              <Link to="/Terms-and-Conditions">Terms & Conditions</Link>
             </li>
           </ul>
           <p className="footer-address">

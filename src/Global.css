@@ -422,9 +422,9 @@
   transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
+/* .submit-btn:hover {
   background-color: #0056b3;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

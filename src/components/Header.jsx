@@ -86,7 +86,7 @@ function Header() {
             
           .compare-btn {
             padding: 10px 15px;
-            background-color: #007bff;
+              background-color: #ffa500;
             color: white;
             border: none;
             border-radius: 4px;
@@ -199,7 +199,9 @@ function Header() {
                 )}
               </li>
             </ul>
-            <button className="compare-btn">Compare</button>
+            <Link to="/compare" className="compare-btn">
+              Compare
+            </Link>
           </nav>
 
           <button className="hamburger-btn" onClick={toggleMobileMenu}>

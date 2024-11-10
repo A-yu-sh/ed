@@ -182,8 +182,8 @@ function Form() {
           display: flex;
           flex-direction: column;
           width: 100%;
-          max-width: 380px; /* Further reduced form size */
-          background-color: #fff; /* White background for form */
+          max-width: 380px;
+          background-color: #fff;
           padding: 15px;
           border-radius: 8px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -191,7 +191,7 @@ function Form() {
 
         .enquiry-header {
           text-align: center;
-          margin-bottom: 15px; /* Reduced space between title and form */
+          margin-bottom: 15px;
         }
 
         .enquiry-header h2 {
@@ -200,7 +200,7 @@ function Form() {
         }
 
         .form-group {
-          margin-bottom: 8px; /* Reduced space between inputs */
+          margin-bottom: 8px;
         }
 
         .label {
@@ -218,8 +218,8 @@ function Form() {
 
         .input-container input,
         .input-container select {
-          padding: 8px;
-          font-size: 16px;
+          padding: 6px;
+          font-size: 14px;
           border: 1px solid #ddd;
           border-radius: 5px;
           margin-top: 4px;
@@ -229,7 +229,7 @@ function Form() {
         .submit-btn {
           padding: 8px 16px;
           font-size: 16px;
-          background-color: #ff7f00; /* Orange button */
+          background-color: #ff7f00;
           color: white;
           border: none;
           border-radius: 5px;
@@ -247,20 +247,23 @@ function Form() {
           color: red;
         }
 
+        /* Responsive styles */
         @media (max-width: 600px) {
+          .total-form {
+            padding: 10px;
+          }
+
           .form {
-            padding: 12px;
-            width: 100%;
+            max-width: 100%; /* Form takes full width */
+          }
+
+          .enquiry-header h2 {
+            font-size: 32px;
           }
 
           .submit-btn {
             font-size: 14px;
-            padding: 6px 14px;
-          }
-
-          .input-container input,
-          .input-container select {
-            font-size: 16px; /* Increased input font size */
+            padding: 10px;
           }
         }
       `}</style>

@@ -9,6 +9,7 @@ import About from "./components/Footer_Pages/About_Us";
 import Contact from "./components/Footer_Pages/Contact";
 import Privacy from "./components/Footer_Pages/PrivacyPolicy";
 import Terms from "./components/Footer_Pages/TermsAndConditions";
+import Ubox from "./components/Convocation_SlideShow";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/Privacy-Policy" element={<Privacy />} />
         <Route path="/Terms-and-Conditions" element={<Terms />} />
+        <Route path="/Terms" element={<Ubox />} />
       </Routes>
     </div>
   );

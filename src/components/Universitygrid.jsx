@@ -189,7 +189,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           @media (max-width: 1200px) {
             .grid-container {
-              grid-template-columns: repeat(3, 1fr);
+              grid-template-columns: repeat(2, 1fr);
             }
           }
 

@@ -50,11 +50,16 @@ function Header() {
             max-width: 1200px;
             width: 100%;
           }
+          .logo{
+             display:flex;
+          justify-content: start;
+          }
           .logo-image {
             max-height: 50px;
           }
           .nav {
             display: flex;
+            
           }
           .nav-list {
             display: flex;
@@ -69,24 +74,28 @@ function Header() {
             align-items: center;
             gap: 4px;
             cursor: pointer;
+            justify-content: center;
           }
           .nav-item-content {
             display: flex;
-            align-items: center;
+            justify-content: start;
+            align-items: start;
             gap: 4px;
+            justify-content: center;
           }
           .dropdown {
             position: absolute;
-            margin-top: 24px;
-            left: 2%;
+            top: 50%;
+            left: -90%;
             width: 100vw;
             padding: 10px;
             border-radius: 4px;
+            z-index:1000;
           }
           .univ-dropdown {
             position: absolute;
-            margin-top: 24px;
-            left: -710%;
+            margin-top: 675px;
+            left: -770%;
             width: 100vw;
             padding: 10px;
             border-radius: 4px;
@@ -160,8 +169,9 @@ function Header() {
               border-radius: 4px;
             }
             .mobile-dropdown-content p {
-              text-align: center;
+              text-align: start;
               margin: 8px 0;
+              border-bottom: 1px solid #ccc;
             }
             .close-mobile-menu {
               align-self: flex-end;

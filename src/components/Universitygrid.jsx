@@ -115,17 +115,17 @@ const UniversityGrid = ({ onCompareClick }) => {
       }
       .grid-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
+        
         padding: 0; /* Remove padding for smaller screens */
       }
       .grid-item {
-        padding: 1rem; /* Reduce padding for grid items */
+        padding: 0.5rem; /* Reduce padding for grid items */
       }
     }
 
     @media (max-width: 480px) {
       .university-grid {
-        padding: 0.5rem; /* Further reduce padding */
+        padding: 0.1rem; /* Further reduce padding */
       }
       .grid-container {
         padding: 0; /* Ensure no padding */

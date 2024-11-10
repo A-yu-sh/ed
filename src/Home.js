@@ -118,7 +118,6 @@ function Home() {
           <CouncelExpert />
           <TalkToExperts />
           <LogoBar />
-          <Footer />
         </div>
       )}
     </div>

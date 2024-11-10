@@ -41,7 +41,7 @@ function Header() {
             padding: 10px 20px;
             display: flex;
             justify-content: center;
-            height:90px;
+            height: 90px;
           }
           .header-container {
             display: grid;
@@ -65,32 +65,54 @@ function Header() {
           }
           .nav-item {
             position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+          }
+          .nav-item-content {
+            display: flex;
+            align-items: center;
+            gap: 4px;
           }
           .dropdown {
             position: absolute;
-            margin-top:24px;
+            margin-top: 24px;
             left: 2%;
-            width:100vw;
+            width: 100vw;
             padding: 10px;
             border-radius: 4px;
           }
-
           .univ-dropdown {
             position: absolute;
-            margin-top:24px;
+            margin-top: 24px;
             left: -710%;
-            width:100vw;
+            width: 100vw;
             padding: 10px;
             border-radius: 4px;
           }
-            
           .compare-btn {
             padding: 10px 15px;
-              background-color: #ffa500;
+            background-color: #ffa500;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-left: 20px;
+          }
+          .mobile-nav-item button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 8px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: inherit;
+          }
+          .mobile-nav-item svg {
+            margin-left: 8px;
           }
           @media (max-width: 768px) {
             .header-container {
@@ -129,18 +151,17 @@ function Header() {
             }
             .mobile-nav-item {
               display: flex;
-              align-items: center;
-              justify-content: space-between;
+              flex-direction: column;
               width: 100%;
             }
             .mobile-dropdown-content {
-            
               padding: 10px;
               margin-top: 5px;
               border-radius: 4px;
             }
-            .mobile-dropdown-content p{
-            text-align: center;
+            .mobile-dropdown-content p {
+              text-align: center;
+              margin: 8px 0;
             }
             .close-mobile-menu {
               align-self: flex-end;
@@ -168,7 +189,10 @@ function Header() {
                 className="nav-item"
                 onMouseEnter={() => handleMouseEnter("course")}
                 onMouseLeave={handleMouseLeave}>
-                COURSES <MdKeyboardArrowDown />
+                <div className="nav-item-content">
+                  COURSES
+                  <MdKeyboardArrowDown />
+                </div>
                 {activeDropdown === "course" && (
                   <div className="dropdown">
                     <Course />
@@ -180,7 +204,10 @@ function Header() {
                 className="nav-item"
                 onMouseEnter={() => handleMouseEnter("university")}
                 onMouseLeave={handleMouseLeave}>
-                UNIVERSITY <MdKeyboardArrowDown />
+                <div className="nav-item-content">
+                  UNIVERSITY
+                  <MdKeyboardArrowDown />
+                </div>
                 {activeDropdown === "university" && (
                   <div className="univ-dropdown">
                     <University />
@@ -191,7 +218,10 @@ function Header() {
                 className="nav-item"
                 onMouseEnter={() => handleMouseEnter("phd")}
                 onMouseLeave={handleMouseLeave}>
-                PHD <MdKeyboardArrowDown />
+                <div className="nav-item-content">
+                  PHD
+                  <MdKeyboardArrowDown />
+                </div>
                 {activeDropdown === "phd" && (
                   <div className="dropdown">
                     <Phd />
@@ -216,15 +246,15 @@ function Header() {
             </span>
             <ul className="mobile-nav-list">
               <li className="mobile-nav-item">
-                <button onClick={() => toggleMobileDropdown("course")}>
-                  COURSES
-                  {activeMobileDropdown === "course" ? (
+                <button onClick={() => toggleMobileDropdown("online")}>
+                  Online Courses
+                  {activeMobileDropdown === "online" ? (
                     <MdKeyboardArrowUp />
                   ) : (
                     <MdKeyboardArrowDown />
                   )}
                 </button>
-                {activeMobileDropdown === "course" && (
+                {activeMobileDropdown === "online" && (
                   <div className="mobile-dropdown-content">
                     <p>Master of Business Administration</p>
                     <p>Master of Commerce</p>
@@ -235,6 +265,92 @@ function Header() {
                   </div>
                 )}
               </li>
+
+              <li className="mobile-nav-item">
+                <button
+                  onClick={() => toggleMobileDropdown("Distance-Courses")}>
+                  Distance Courses
+                  {activeMobileDropdown === "Distance-Courses" ? (
+                    <MdKeyboardArrowUp />
+                  ) : (
+                    <MdKeyboardArrowDown />
+                  )}
+                </button>
+                {activeMobileDropdown === "Distance-Courses" && (
+                  <div className="mobile-dropdown-content">
+                    <p>Master of Business Administration</p>
+                    <p>Master of Commerce</p>
+                    <p>Master of Computer Application</p>
+                    <p>Master of Arts</p>
+                    <p>Master of Science</p>
+                    <p>Master of Journalism & Mass Media Communications</p>
+                  </div>
+                )}
+              </li>
+
+              <li className="mobile-nav-item">
+                <button onClick={() => toggleMobileDropdown("master-courses")}>
+                  Master Courses
+                  {activeMobileDropdown === "master-courses" ? (
+                    <MdKeyboardArrowUp />
+                  ) : (
+                    <MdKeyboardArrowDown />
+                  )}
+                </button>
+                {activeMobileDropdown === "master-courses" && (
+                  <div className="mobile-dropdown-content">
+                    <p>Master of Business Administration</p>
+                    <p>Master of Commerce</p>
+                    <p>Master of Computer Application</p>
+                    <p>Master of Arts</p>
+                    <p>Master of Science</p>
+                    <p>Master of Journalism & Mass Media Communications</p>
+                  </div>
+                )}
+              </li>
+
+              <li className="mobile-nav-item">
+                <button
+                  onClick={() => toggleMobileDropdown("bachelor-courses")}>
+                  Bachelor Courses
+                  {activeMobileDropdown === "bachelor-courses" ? (
+                    <MdKeyboardArrowUp />
+                  ) : (
+                    <MdKeyboardArrowDown />
+                  )}
+                </button>
+                {activeMobileDropdown === "bachelor-courses" && (
+                  <div className="mobile-dropdown-content">
+                    <p>Bachelor of Business Administration</p>
+                    <p>Bachelor of Commerce</p>
+                    <p>Bachelor of Computer Application</p>
+                    <p>Bachelor of Arts</p>
+                    <p>Bachelor of Science</p>
+                    <p>Bachelor of Journalism & Mass Media Communications</p>
+                  </div>
+                )}
+              </li>
+
+              <li className="mobile-nav-item">
+                <button onClick={() => toggleMobileDropdown("MBA")}>
+                  MBA Specialization
+                  {activeMobileDropdown === "MBA" ? (
+                    <MdKeyboardArrowUp />
+                  ) : (
+                    <MdKeyboardArrowDown />
+                  )}
+                </button>
+                {activeMobileDropdown === "MBA" && (
+                  <div className="mobile-dropdown-content">
+                    <p>MBA in Marketing</p>
+                    <p>MBA in Finance</p>
+                    <p>MBA in Human Resource Management</p>
+                    <p>MBA in Entrepreneurship</p>
+                    <p>MBA in Insurance</p>
+                  </div>
+                )}
+              </li>
+
               <li className="mobile-nav-item">
                 <button onClick={() => toggleMobileDropdown("university")}>
                   UNIVERSITY
@@ -246,12 +362,12 @@ function Header() {
                 </button>
                 {activeMobileDropdown === "university" && (
                   <div className="mobile-dropdown-content">
-                    <p>Master of Business Administration</p>
-                    <p>Master of Commerce</p>
-                    <p>Master of Computer Application</p>
-                    <p>Master of Arts</p>
-                    <p>Master of Science</p>
-                    <p>Master of Journalism & Mass Media Communications</p>
+                    <p>Jamia Milia Islamia</p>
+                    <p>Aligar Muslim University</p>
+                    <p>University of Hyderabad</p>
+                    <p>Acharya Nagarjuna University</p>
+                    <p>Andhra University</p>
+                    <p>Sambalpur University</p>
                   </div>
                 )}
               </li>

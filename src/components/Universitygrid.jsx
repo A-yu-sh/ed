@@ -189,7 +189,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           @media (max-width: 1200px) {
             .grid-container {
-              grid-template-columns: repeat(2, 1fr);
+              grid-template-columns: repeat(3, 1fr);
             }
           }
 
@@ -255,6 +255,95 @@ const UniversityGrid = ({ onCompareClick }) => {
             .text {
               font-size: 12px;
             }
+              .grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.grid-item {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Add a minimum height and width to maintain consistency */
+  min-width: 200px;
+  min-height: 250px;
+}
+
+/* Media queries adjustments */
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .university-grid {
+    padding: 1rem;
+  }
+  .university-grid h1 {
+    font-size: 1.75rem;
+  }
+  .university-grid p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .grid-item {
+    padding: 1rem;
+    /* Maintain minimum size */
+    min-width: 150px;
+    min-height: 200px;
+  }
+  .university-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0.5rem;
+  }
+  .university-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .text {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .university-grid h1 {
+    font-size: 1.5rem;
+  }
+  .grid-item {
+    padding: 0.5rem;
+    /* Maintain minimum size */
+    min-width: 120px;
+    min-height: 180px;
+  }
+  .university-image {
+    width: 100px;
+    height: 100px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}
           }
         `}
       </style>

@@ -136,7 +136,6 @@ const UniversityGrid = ({ onCompareClick }) => {
             width: 80px;
             height: 80px;
             object-fit: contain;
- 
             background: white;
             padding: 0.5rem;
             margin-top: -1rem;
@@ -149,6 +148,12 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           .grid-item:hover .university-logo {
             transform: scale(1.1);
+          }
+
+          .text {
+            font-size: 18px;
+            color: #2C3E50;
+            text-align: center;
           }
 
           .compare-button-container {
@@ -169,11 +174,6 @@ const UniversityGrid = ({ onCompareClick }) => {
             text-transform: uppercase;
             letter-spacing: 1.5px;
             box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
-          }
-          
-          .text{
-          font-size: 18px;
-          color: #2C3E50;
           }
 
           .compare:hover {
@@ -199,37 +199,61 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .university-grid h1 {
-              font-size: 2rem;
+              font-size: 1.75rem;
+            }
+
+            .university-grid p {
+              font-size: 1rem;
+              margin-bottom: 1.5rem;
             }
 
             .grid-container {
-              grid-template-columns: repeat(2, 1fr); /* Two cards per row on smaller screens */
-              gap: 1rem;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 0.75rem;
             }
 
             .grid-item {
-              padding: 1rem 0.5rem;
+              padding: 0.75rem;
             }
 
             .university-image {
-              width: 150px;
-              height: 150px;
+              width: 120px;
+              height: 120px;
+              margin-bottom: 0.5rem;
             }
 
             .university-logo {
-              width: 60px;
-              height: 60px;
+              width: 40px;
+              height: 40px;
+            }
+
+            .text {
+              font-size: 14px;
+              margin-top: 0.5rem;
+            }
+
+            .compare {
+              padding: 1rem 2rem;
+              font-size: 1rem;
             }
           }
 
           @media (max-width: 480px) {
-            .grid-container {
-              grid-template-columns: 1fr; /* One card per row on very small screens */
+            .university-grid h1 {
+              font-size: 1.5rem;
+            }
+
+            .grid-item {
+              padding: 0.5rem;
             }
 
             .university-image {
-              width: 200px;
-              height: 200px;
+              width: 100px;
+              height: 100px;
+            }
+
+            .text {
+              font-size: 12px;
             }
           }
         `}
@@ -249,11 +273,6 @@ const UniversityGrid = ({ onCompareClick }) => {
               alt={university.name}
               className="university-image"
             />
-            {/* <img
-              src={university.logo}
-              alt={`${university.name} logo`}
-              className="university-logo"
-            /> */}
             <div>
               <h4 className="text">{university.name}</h4>
             </div>

@@ -225,7 +225,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           @media (max-width: 480px) {
             .grid-container {
-              grid-template-columns: 1fr;
+              grid-template-columns: 2fr;
             }
 
             .university-image {

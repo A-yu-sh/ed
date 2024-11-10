@@ -69,78 +69,173 @@ const UniversityGrid = ({ onCompareClick }) => {
     <div className="university-grid">
       <style>
         {`
-    .university-grid {
-      padding: 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-      background-color: #f8f9fa;
-      border-radius: 16px; /* Optional: Add border radius to the background */
-      overflow: hidden; /* Ensures no overflow */
-    }
+          .university-grid {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+          }
 
-    /* Other styles remain the same... */
+          .university-grid h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-      padding: 0 1rem; /* Add padding to the grid container */
-    }
+          .university-grid p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+          }
 
-    .grid-item {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1.5rem;
-      position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
+          .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+          }
 
-    /* Media Queries */
-    @media (max-width: 1200px) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
+          .grid-item {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+          }
 
-    @media (max-width: 768px) {
-      .university-grid {
-        padding: 1rem;
-      }
-      .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        
-        padding: 0; /* Remove padding for smaller screens */
-      }
-      .grid-item {
-        padding: 0.5rem; /* Reduce padding for grid items */
-      }
-    }
+          .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          }
 
-    @media (max-width: 480px) {
-      .university-grid {
-        padding: 0.1rem; /* Further reduce padding */
-      }
-      .grid-container {
-        padding: 0; /* Ensure no padding */
-      }
-      .grid-item {
-        padding: 0.5rem; /* Further reduce padding */
-      }
-    }
+          .university-image {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+            padding: 0.5rem;
+          }
 
-    @media (max-width: 320px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  `}
+          .university-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+ 
+            background: white;
+            padding: 0.5rem;
+            margin-top: -1rem;
+            transition: transform 0.3s ease;
+          }
+
+          .grid-item:hover .university-image {
+            transform: scale(1.05);
+          }
+
+          .grid-item:hover .university-logo {
+            transform: scale(1.1);
+          }
+
+          .compare-button-container {
+            text-align: center;
+            margin-top: 2rem;
+          }
+
+          .compare {
+            background: linear-gradient(45deg, #ff6b00, #ff8533);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+          }
+          
+          .text{
+          font-size: 18px;
+          color: #2C3E50;
+          }
+
+          .compare:hover {
+            background: linear-gradient(45deg, #ff8533, #ff6b00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+          }
+
+          .compare:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(255, 107, 0, 0.4);
+          }
+
+          @media (max-width: 1200px) {
+            .grid-container {
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+
+          @media (max-width: 768px) {
+            .university-grid {
+              padding: 1rem;
+            }
+
+            .university-grid h1 {
+              font-size: 2rem;
+            }
+
+            .grid-container {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 1rem;
+            }
+
+            .grid-item {
+              padding: 0.2rem;
+            }
+
+            .university-image {
+              width: 150px;
+              height: 150px;
+            }
+
+            .university-logo {
+              width: 60px;
+              height: 60px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .grid-container {
+              grid-template-columns: 1fr;
+            }
+              .grid-item {
+              padding: 0rem;
+            }
+
+            .university-image {
+              width: 200px;
+              height: 200px;
+            }
+          }
+        `}
       </style>
 
       <h1>Online & Distance Education Universities</h1>
@@ -157,6 +252,11 @@ const UniversityGrid = ({ onCompareClick }) => {
               alt={university.name}
               className="university-image"
             />
+            {/* <img
+              src={university.logo}
+              alt={`${university.name} logo`}
+              className="university-logo"
+            /> */}
             <div>
               <h4 className="text">{university.name}</h4>
             </div>

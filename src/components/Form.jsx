@@ -54,82 +54,217 @@ function Form() {
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <div className="Total_Form">
-      <div className="Enquiry">
-        <h2>Enquire Now</h2>
-        <p>Get 100% Free Counseling</p>
+    <>
+      <div className="total-form">
+        <div className="form-section">
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="enquiry-header">
+              <h2>Enquire Now</h2>
+              <p>Get 100% Free Counseling</p>
+            </div>
+            <div className="form-group">
+              <label className="label">
+                <MdPerson className="md-logo" />
+                Name <span className="asterisk">*</span>
+              </label>
+              <div className="input-container">
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label className="label">
+                <MdPhone className="md-logo" />
+                Phone <span className="asterisk">*</span>
+              </label>
+              <div className="input-container">
+                <input
+                  type="text"
+                  placeholder="Enter Your Number"
+                  name="phoneNo"
+                  value={formData.phoneNo}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label className="label">
+                <MdEmail className="md-logo" />
+                Email <span className="asterisk">*</span>
+              </label>
+              <div className="input-container">
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label className="label">
+                <MdSchool className="md-logo" />
+                Course <span className="asterisk">*</span>
+              </label>
+              <div className="input-container">
+                <input
+                  type="text"
+                  placeholder="Enter Course Name"
+                  name="course"
+                  value={formData.course}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label className="label">
+                <MdLocationOn className="md-logo" />
+                State <span className="asterisk">*</span>
+              </label>
+              <div className="input-container">
+                <select
+                  name="state"
+                  value={formData.state}
+                  onChange={handleChange}
+                  required>
+                  <option value="">Select Your State</option>
+                  {indianStates.map((state) => (
+                    <option key={state} value={state}>
+                      {state}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <button className="submit-btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
-      <div className="form-section">
-        <form className="form">
-          <div className="form-group">
-            <label className="label">
-              <MdPerson className="md-logo" />
-              Name <span className="asterisk">*</span>
-            </label>
-            <div className="input-container">
-              <input type="text" placeholder="Enter Your Name" />
-            </div>
-          </div>
-          <div className="form-group">
-            <label className="label">
-              <MdPhone className="md-logo" />
-              Phone <span className="asterisk">*</span>
-            </label>
-            <div className="input-container">
-              <input type="text" placeholder="Enter Your Number" />
-            </div>
-          </div>
-          <div className="form-group">
-            <label className="label">
-              <MdEmail className="md-logo" />
-              Email <span className="asterisk">*</span>
-            </label>
-            <div className="input-container">
-              <input type="email" placeholder="Enter Your Email" />
-            </div>
-          </div>
-          <div className="form-group">
-            <label className="label">
-              <MdSchool className="md-logo" />
-              Course <span className="asterisk">*</span>
-            </label>
-            <div className="input-container">
-              <input type="text" placeholder="Enter Course Name" />
-            </div>
-          </div>
-          <div className="form-group">
-            <label className="label">
-              <MdLocationOn className="md-logo" />
-              State <span className="asterisk">*</span>
-            </label>
-            <div className="input-container">
-              <select
-                name="state"
-                className="select-state-container"
-                value={formData.state}
-                onChange={handleChange}
-                required>
-                <option value="">Select Your State</option>
-                {indianStates.map((state) => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <button className="submit-btn">Submit</button>
-        </form>
-      </div>
-    </div>
+
+      <style jsx>{`
+        .total-form {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+
+        .form-section {
+          display: flex;
+          justify-content: center;
+          margin-top: 5px;
+        }
+
+        .form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 380px; /* Further reduced form size */
+          background-color: #fff; /* White background for form */
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .enquiry-header {
+          text-align: center;
+          margin-bottom: 15px; /* Reduced space between title and form */
+        }
+
+        .enquiry-header h2 {
+          font-size: 40px;
+          font-weight: bold;
+        }
+
+        .form-group {
+          margin-bottom: 8px; /* Reduced space between inputs */
+        }
+
+        .label {
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          margin-bottom: 4px;
+          color: #333;
+        }
+
+        .input-container {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .input-container input,
+        .input-container select {
+          padding: 8px;
+          font-size: 16px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          margin-top: 4px;
+          width: 100%;
+        }
+
+        .submit-btn {
+          padding: 8px 16px;
+          font-size: 16px;
+          background-color: #ff7f00; /* Orange button */
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 100%;
+          margin-top: 15px;
+        }
+
+        .submit-btn:hover {
+          background-color: #e66a00;
+        }
+
+        .asterisk {
+          color: red;
+        }
+
+        @media (max-width: 600px) {
+          .form {
+            padding: 12px;
+            width: 100%;
+          }
+
+          .submit-btn {
+            font-size: 14px;
+            padding: 6px 14px;
+          }
+
+          .input-container input,
+          .input-container select {
+            font-size: 16px; /* Increased input font size */
+          }
+        }
+      `}</style>
+    </>
   );
 }
 

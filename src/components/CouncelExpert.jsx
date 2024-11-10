@@ -3,12 +3,31 @@ import DImg from "../assets/AI2.jpg";
 import AImg from "../assets/AI3.jpg";
 import A1Img from "../assets/AI1.jpg";
 import AI2Img from "../assets/AI4.jpeg";
+
 const CounselorExpert = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const itemsToShow = 4;
+  const [itemsToShow, setItemsToShow] = useState(4);
 
-  // Create a larger array of duplicates for smoother infinite scroll
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setItemsToShow(2);
+      } else {
+        setItemsToShow(4);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const counselors = [
     {
       name: "Amelia Grece",
@@ -61,6 +80,7 @@ const CounselorExpert = () => {
       image: DImg,
     },
   ];
+
   const extendedCounselors = [...counselors, ...counselors, ...counselors];
 
   const moveNext = useCallback(() => {
@@ -68,11 +88,10 @@ const CounselorExpert = () => {
       setIsTransitioning(true);
       setActiveIndex((prev) => {
         if (prev >= counselors.length - 1) {
-          // When we reach the end of the first set
           setTimeout(() => {
             setIsTransitioning(false);
             setActiveIndex(0);
-          }, 1000); // Match this with the CSS transition duration
+          }, 1000);
           return prev + 1;
         }
         setTimeout(() => {
@@ -81,7 +100,7 @@ const CounselorExpert = () => {
         return prev + 1;
       });
     }
-  }, [isTransitioning]);
+  }, [isTransitioning, counselors.length]);
 
   useEffect(() => {
     const intervalId = setInterval(moveNext, 3000);
@@ -172,12 +191,56 @@ const CounselorExpert = () => {
         backgroundColor: "#218838",
       },
     },
+    // Media queries applied through inline styles
+    title: {
+      fontSize: window.innerWidth <= 768 ? "1.5rem" : "2rem",
+      marginBottom: "1rem",
+    },
+    description: {
+      fontSize: window.innerWidth <= 768 ? "0.9rem" : "1rem",
+      marginBottom: "2rem",
+      padding: "0 20px",
+    },
   };
+
+  // Additional styles for mobile
+  if (window.innerWidth <= 768) {
+    styles.img = {
+      ...styles.img,
+      width: "80px",
+      height: "80px",
+    };
+    styles.name = {
+      ...styles.name,
+      fontSize: "1rem",
+    };
+    styles.experience = {
+      ...styles.experience,
+      fontSize: "0.9rem",
+    };
+    styles.guidance = {
+      ...styles.guidance,
+      fontSize: "0.8rem",
+    };
+    styles.qualifications = {
+      ...styles.qualifications,
+      fontSize: "0.8rem",
+    };
+    styles.connectButton = {
+      ...styles.connectButton,
+      padding: "8px 16px",
+      fontSize: "0.8rem",
+    };
+    styles.cardContent = {
+      ...styles.cardContent,
+      padding: "15px",
+    };
+  }
 
   return (
     <div style={styles.container}>
-      <h2>Meet Our Expert Counselors</h2>
-      <p>
+      <h2 style={styles.title}>Meet Our Expert Counselors</h2>
+      <p style={styles.description}>
         Our counselors are experts in their respective fields and are here to
         guide you in your educational journey.
       </p>

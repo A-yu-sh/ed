@@ -203,7 +203,7 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .grid-container {
-              grid-template-columns: repeat(2, 1fr);
+              grid-template-columns: repeat(2, 1fr); /* Two cards per row on smaller screens */
               gap: 1rem;
             }
 
@@ -224,7 +224,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 
           @media (max-width: 480px) {
             .grid-container {
-              grid-template-columns: 1fr;
+              grid-template-columns: 1fr; /* One card per row on very small screens */
             }
 
             .university-image {

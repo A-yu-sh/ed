@@ -157,31 +157,58 @@ function Footer() {
             <li>
               <a href="/home">Home</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <Link to="/about-us">About Us</Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <a href="/blogs">Blogs</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <Link to="/contact">Contact Us</Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <a href="/pay-online">Pay Online</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <a href="/reviews">Reviews</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <a href="/disclaimer">Disclaimer</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <a href="/refund-policy">Refund Policy</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <Link to="/Privacy-Policy">Privacy Policy</Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
               <Link to="/Terms-and-Conditions">Terms & Conditions</Link>
             </li>
           </ul>

@@ -147,7 +147,7 @@ const styles = {
     padding: "20px",
     backgroundColor: "#f7f7f7",
     borderRight: "1px solid #ddd",
-    height: "100vh",
+    height: "150vh",
     overflowY: "auto",
     fontFamily: "Arial, sans-serif",
     position: "",

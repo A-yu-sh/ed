@@ -51,6 +51,30 @@ const universities = [
     advantage: "Harvard Certifications",
     image: i1, // Replace with actual image URL // Replace with actual image URL
   },
+  {
+    name: "Amity University",
+    fee: "42,500/- Semester",
+    location: "Noida, Uttar Pradesh",
+    approvals: "UGC | NRIF 32 | NAAC A+",
+    advantage: "Industry Mentorship",
+    image: i1, // Replace with actual image URL
+  },
+  {
+    name: "Amrita University",
+    fee: "35,000/- Semester",
+    location: "Coimbatore, Tamil Nadu",
+    approvals: "UGC | NAAC A++ | NIRF 7",
+    advantage: "Certification Training",
+    image: i1, // Replace with actual image URL // Replace with actual image URL
+  },
+  {
+    name: "Chandigarh University",
+    fee: "30,000/- Semester",
+    location: "Ajitgarh, Punjab",
+    approvals: "UGC | NAAC A+ | NIRF 20",
+    advantage: "Harvard Certifications",
+    image: i1, // Replace with actual image URL // Replace with actual image URL
+  },
 ];
 
 const FilterPage = () => {

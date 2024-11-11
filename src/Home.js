@@ -101,6 +101,10 @@ function Home() {
                     <p>NIRF Ranked Universities 2024</p>
                   </div>
                 </div>
+                <div className="top-Leading">
+                  <h3>Top Leading Universities</h3>
+                </div>
+
                 <LogoSlider />
               </div>
             </div>
@@ -129,7 +133,7 @@ function Home() {
               display: flex;
               align-items: center;
               justify-content: start;
-              margin-top: -90px;
+              margin-top: -50px;
               text-align: center;
             }
 
@@ -212,6 +216,15 @@ function Home() {
               margin-bottom: 10px;
             }
 
+            .top-Leading h3 {
+              font-size: 20px;
+              font-weight: 700;
+              color: #fff44f;
+              margin-top: 10px;
+              margin-bottom: -5px;
+              text-transform: uppercase;
+            }
+
             /* Responsive layout for smaller screens */
             @media (max-width: 768px) {
               .hero {
@@ -277,6 +290,7 @@ function Home() {
               }
             }
           `}</style>
+
           <UnderSlider />
           <SubjectBoxes />
           <UniversityGrid />

@@ -29,6 +29,7 @@ import LogoSlider from "./components/AutomaticSlideShow";
 import { Routes, Route } from "react-router-dom";
 import Intro from "./components/pHD_Section/1.Intro";
 import Header from "./components/Header";
+import UnderSlider from "./components/UnderHeroSlider";
 
 function Home() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -100,6 +101,7 @@ function Home() {
                     <p>NIRF Ranked Universities 2024</p>
                   </div>
                 </div>
+                <LogoSlider />
               </div>
             </div>
           </section>
@@ -266,8 +268,7 @@ function Home() {
               }
             }
           `}</style>
-
-          <LogoSlider />
+          <UnderSlider />
           <SubjectBoxes />
           <UniversityGrid />
           <CouncelExpert />

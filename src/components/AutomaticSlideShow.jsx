@@ -119,6 +119,7 @@ const LogoSlider = () => {
       margin: "0 auto",
       marginTop: "40px", // Spacing from top elements
       borderRadius: "10px",
+      backgroundColor: "white", // Added white background
     },
     // Container for the scrolling logos
     logoContainer: {

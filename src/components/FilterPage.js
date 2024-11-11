@@ -189,6 +189,7 @@ const styles = {
     border: "1px solid #ddd",
     borderRadius: "8px",
     margin: "10px 0",
+    marginTop: "30px",
     overflow: "hidden",
     flexDirection: "column",
     "@media(min-width: 600px)": {

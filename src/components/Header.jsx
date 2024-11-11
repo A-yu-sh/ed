@@ -230,7 +230,7 @@ function Header() {
                 onMouseEnter={() => handleMouseEnter("phd")}
                 onMouseLeave={handleMouseLeave}>
                 <div className="nav-item-content">
-                  PHD
+                  HonorEdge
                   <MdKeyboardArrowDown />
                 </div>
                 {activeDropdown === "phd" && (
@@ -383,9 +383,9 @@ function Header() {
                 )}
               </li>
               <li className="mobile-nav-item">
-                <button onClick={() => toggleMobileDropdown("phd")}>
-                  PHD
-                  {activeMobileDropdown === "phd" ? (
+                <button onClick={() => toggleMobileDropdown("HonorEdge")}>
+                  HonorEdge
+                  {activeMobileDropdown === "HonorEdge" ? (
                     <MdKeyboardArrowUp />
                   ) : (
                     <MdKeyboardArrowDown />

@@ -12,6 +12,8 @@ import Accordion from "./8.Accordion";
 import "../../App.css";
 import Footer from "../Footer";
 import Header from "../Header";
+import UnderSlider from "../UnderHeroSlider";
+import PHDUnderSlider from "./SlideShow";
 
 const Intro = () => {
   return (
@@ -61,7 +63,7 @@ const Intro = () => {
           </svg>
         </div>
       </div>
-
+      <PHDUnderSlider />
       <Admission_Content />
       <Choose_Company />
       <Features_and_Services />

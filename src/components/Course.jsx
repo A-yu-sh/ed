@@ -43,8 +43,8 @@ function Course() {
 
   return (
     <div className="c-container">
-      <div className="univ-courses-container">
-        <div className="univ-container">
+      <div className="courses-courses-container">
+        <div className="courses-container">
           {/* Sidebar */}
           <div className="sidebar">
             <div className="online-courses-header">Online Courses</div>

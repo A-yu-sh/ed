@@ -219,6 +219,7 @@ const styles = {
     marginTop: "100px",
     marginBottom: "30px",
     position: "relative",
+    marginTop: "130px",
   },
   searchInput: {
     width: "100%",
@@ -266,7 +267,8 @@ const styles = {
     fontSize: "24px",
     cursor: "pointer",
     zIndex: 1000,
-    marginTop: "55px",
+    marginTop: "75px",
+    marginBottom: "75px",
   },
   closeButton: {
     position: "absolute",

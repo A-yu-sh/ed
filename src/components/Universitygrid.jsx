@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import JuImage from "../assets/Acharya Nagarjuna.jpg";
 import VGUImage from "../assets/Aligarh Muslim.jpg";
@@ -40,10 +40,42 @@ const universities = [
 ];
 
 const UniversityGrid = ({ onCompareClick }) => {
+  const [showMore, setShowMore] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const updateView = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", updateView);
+    updateView();
+
+    return () => window.removeEventListener("resize", updateView);
+  }, []);
+
+  const displayedUniversities =
+    showMore || !isMobile ? universities : universities.slice(0, 5);
+
   return (
     <div className="university-grid">
       <style>
         {`
+        .compare{
+        background: #FF6E05;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            margin-top: 1rem;
+        }
           .university-grid {
             padding: 2rem;
             max-width: 1400px;
@@ -110,35 +142,26 @@ const UniversityGrid = ({ onCompareClick }) => {
             transform: scale(1.05);
           }
 
-          .compare-button-container {
-            text-align: center;
-            margin-top: 2rem;
-          }
-
-          .compare {
-            background: linear-gradient(45deg, #ff6b00, #ff8533);
+          .view-more-button {
+            background: #FF6E05;
             color: white;
             border: none;
-            padding: 1.2rem 3rem;
-            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            margin-top: 1rem;
           }
 
-          .compare:hover {
-            background: linear-gradient(45deg, #ff8533, #ff6b00);
+          .view-more-button:hover {
+            background: #0056b3;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
-          }
-
-          .compare:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 10px rgba(255, 107, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
           }
 
           @media (max-width: 1200px) {
@@ -157,8 +180,9 @@ const UniversityGrid = ({ onCompareClick }) => {
             }
 
             .grid-container {
-              grid-template-columns: repeat(2, 1fr);
-              gap: 1rem;
+              grid-template-columns: 1fr;
+              display: flex;
+              justify-content: center;
             }
 
             .grid-item {
@@ -174,7 +198,8 @@ const UniversityGrid = ({ onCompareClick }) => {
           @media (max-width: 480px) {
             .grid-container {
               grid-template-columns: 1fr;
-              justify-items: center;
+              display: flex;
+              justify-content: center;
             }
 
             .university-image {
@@ -192,7 +217,7 @@ const UniversityGrid = ({ onCompareClick }) => {
         your educational journey.
       </p>
       <div className="grid-container">
-        {universities.map((university, index) => (
+        {displayedUniversities.map((university, index) => (
           <div key={index} className="grid-item">
             <img
               src={university.image}
@@ -203,6 +228,15 @@ const UniversityGrid = ({ onCompareClick }) => {
           </div>
         ))}
       </div>
+      {isMobile && (
+        <div className="compare-button-container">
+          <button
+            className="view-more-button"
+            onClick={() => setShowMore(!showMore)}>
+            {showMore ? "View Less" : "View More"}
+          </button>
+        </div>
+      )}
       <div className="compare-button-container">
         <Link to="/compare" className="compare" onClick={onCompareClick}>
           Compare Universities

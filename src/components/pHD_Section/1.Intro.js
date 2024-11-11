@@ -71,7 +71,6 @@ const Intro = () => {
       <Post_Banner />
       <Image_Banner />
       <Accordion />
-      <Footer />
     </div>
   );
 };

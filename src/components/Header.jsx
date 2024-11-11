@@ -391,7 +391,7 @@ function Header() {
                     <MdKeyboardArrowDown />
                   )}
                 </button>
-                {activeMobileDropdown === "phd" && (
+                {activeMobileDropdown === "HonorEdge" && (
                   <div className="mobile-dropdown-content">
                     <p>
                       <PhdHeader />

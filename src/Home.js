@@ -153,21 +153,23 @@ function Home() {
               color: #ffffff;
               margin-top: 10px;
               line-height: 1.5;
-              text-align: center;
+              text-align: start;
             }
 
             .search-box {
               display: flex;
+              align-items: center;
               margin-top: 20px;
               max-width: 600px;
               width: 100%;
+              gap: 10px;
             }
 
             .search-box input {
               padding: 10px;
               font-size: 16px;
               border: 1px solid #ddd;
-              border-radius: 5px 0 0 5px;
+              border-radius: 5px;
               flex: 1;
               height: 45px;
             }
@@ -176,7 +178,7 @@ function Home() {
               background-color: #ff7f00;
               border: none;
               padding: 10px 15px;
-              border-radius: 0 5px 5px 0;
+              border-radius: 5px;
               cursor: pointer;
               display: flex;
               align-items: center;
@@ -230,12 +232,28 @@ function Home() {
               .hero-content h1 {
                 margin-top: 30px;
                 font-size: 28px;
+                text-align: center;
+              }
+              .hero-content p {
+                text-align: center;
+              }
+
+              .search-box {
+                width: 80%; /* Adjust width for smaller screens */
+                margin: 0 auto; /* Center the search box */
+                gap: 5px;
               }
 
               .search-box input {
                 font-size: 14px;
                 padding: 8px;
                 height: 40px;
+                border-radius: 5px; /* Fully rounded */
+              }
+
+              .search-box button {
+                padding: 8px 10px;
+                border-radius: 5px; /* Fully rounded */
               }
 
               .icons {
@@ -244,27 +262,18 @@ function Home() {
                 gap: 15px;
               }
 
+              .icon-box img {
+                width: 45px;
+                height: 45px;
+                margin-bottom: 10px;
+              }
+
               .hero-left {
                 order: 2; /* Move form below content */
               }
 
               .hero-right {
                 order: 1; /* Keep content at top */
-              }
-            }
-
-            /* Layout for desktop/laptop */
-            @media (min-width: 769px) {
-              .hero {
-                grid-template-columns: 1fr 1fr;
-              }
-
-              .hero-left {
-                order: 1; /* Form on the left */
-              }
-
-              .hero-right {
-                order: 2; /* Content on the right */
               }
             }
           `}</style>

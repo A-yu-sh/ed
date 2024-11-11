@@ -112,7 +112,7 @@ const LogoSlider = () => {
   const style = {
     // Main container styles
     sliderContainer: {
-      maxWidth: "100vw",
+      maxWidth: "80vw",
       overflow: "hidden",
       position: "relative",
       padding: "5px 0",

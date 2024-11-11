@@ -10,6 +10,7 @@ import logo from "../assets/TopLogo.png";
 import Course from "../components/Course";
 import University from "../components/University";
 import Phd from "../components/Phd";
+import PhdHeader from "../components/Phd";
 
 function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -392,7 +393,9 @@ function Header() {
                 </button>
                 {activeMobileDropdown === "phd" && (
                   <div className="mobile-dropdown-content">
-                    <p>PhD Content</p>
+                    <p>
+                      <PhdHeader />
+                    </p>
                   </div>
                 )}
               </li>

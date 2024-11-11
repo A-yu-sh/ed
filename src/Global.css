@@ -79,6 +79,34 @@
   background-color: #e0e0e0;
 }
 
+.phd-dropdown-content {
+  background-color: white;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 250px;
+  width: 100%;
+  line-height: 20px;
+  box-sizing: border-box;
+  margin-top: 25px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 767px) {
+  .phd-dropdown-content {
+    max-width: 100%; /* Set the maximum width to 100% for mobile devices */
+    height: auto; /* Set the height to auto to allow the content to expand */
+    margin-top: 10px; /* Reduce the top margin for mobile devices */
+  }
+
+  .phd-dropdown-content p {
+    margin-bottom: 20px; /* Reduce the bottom margin for mobile devices */
+  }
+}
+
 /* PhD Dropdown styles
   .phd-dropdown-content {
     background-color: white;

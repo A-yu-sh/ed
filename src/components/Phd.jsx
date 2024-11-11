@@ -1,16 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../Global.css";
 
-function Phd() {
+function PhdHeader() {
   return (
     <div className="phd-dropdown-content">
-      
-        <p>PhD Admission</p>
-        <p>UGC NET Preparation</p>
-        <p>Honorary Doctorate</p>
-        <p>Thesis Writing</p>
-      
+      <Link to="/phd">PhD Admission</Link>
+      <Link to="/phd">UGC NET Preparation</Link>
+      <Link to="/phd">Honorary Doctorate</Link>
+      <Link to="/phd">Thesis Writing</Link>
     </div>
   );
 }
 
-export default Phd;
+export default PhdHeader;

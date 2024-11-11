@@ -199,10 +199,6 @@ function Form() {
           font-weight: bold;
         }
 
-        .form-group {
-          margin-bottom: 8px;
-        }
-
         .label {
           display: flex;
           align-items: center;

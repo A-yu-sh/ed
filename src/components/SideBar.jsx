@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch, FaFilter, FaTimes } from "react-icons/fa";
 import "./Sidebar.css"; // Import the CSS file
+
 import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
@@ -29,18 +30,14 @@ const Sidebar = () => {
     <>
       {/* Filter Button for Mobile View */}
       {isMobile && (
-        <button style={styles.filterButton} onClick={toggleSidebar}>
-          <MdMenu />
-        </button>
+        <button style={styles.filterButton} onClick={toggleSidebar}></button>
       )}
 
       {/* Sidebar */}
       <div style={{ ...styles.sidebar, ...(isOpen ? styles.sidebarOpen : {}) }}>
         {/* Close Button (visible in mobile view) */}
         {isMobile && (
-          <button style={styles.closeButton} onClick={toggleSidebar}>
-            <FaTimes />
-          </button>
+          <button style={styles.closeButton} onClick={toggleSidebar}></button>
         )}
 
         {/* Search Bar */}

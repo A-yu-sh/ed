@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "./SideBar";
+import i1 from "../assets/Aligarh Muslim.jpg";
 
 const universities = [
   {
@@ -8,7 +9,7 @@ const universities = [
     location: "Noida, Uttar Pradesh",
     approvals: "UGC | NRIF 32 | NAAC A+",
     advantage: "Industry Mentorship",
-    image: "https://via.placeholder.com/200x150", // Replace with actual image URL
+    image: i1, // Replace with actual image URL
   },
   {
     name: "Amrita University",
@@ -16,7 +17,7 @@ const universities = [
     location: "Coimbatore, Tamil Nadu",
     approvals: "UGC | NAAC A++ | NIRF 7",
     advantage: "Certification Training",
-    image: "https://via.placeholder.com/200x150", // Replace with actual image URL
+    image: i1, // Replace with actual image URL
   },
   {
     name: "Chandigarh University",
@@ -24,7 +25,7 @@ const universities = [
     location: "Ajitgarh, Punjab",
     approvals: "UGC | NAAC A+ | NIRF 20",
     advantage: "Harvard Certifications",
-    image: "https://via.placeholder.com/200x150", // Replace with actual image URL
+    image: i1, // Replace with actual image URL
   },
   {
     name: "Amity University",
@@ -32,7 +33,7 @@ const universities = [
     location: "Noida, Uttar Pradesh",
     approvals: "UGC | NRIF 32 | NAAC A+",
     advantage: "Industry Mentorship",
-    image: "https://via.placeholder.com/200x150", // Replace with actual image URL
+    image: i1, // Replace with actual image URL
   },
   {
     name: "Amrita University",
@@ -40,7 +41,7 @@ const universities = [
     location: "Coimbatore, Tamil Nadu",
     approvals: "UGC | NAAC A++ | NIRF 7",
     advantage: "Certification Training",
-    image: "https://via.placeholder.com/200x150", // Replace with actual image URL
+    image: i1, // Replace with actual image URL // Replace with actual image URL
   },
   {
     name: "Chandigarh University",
@@ -48,7 +49,7 @@ const universities = [
     location: "Ajitgarh, Punjab",
     approvals: "UGC | NAAC A+ | NIRF 20",
     advantage: "Harvard Certifications",
-    image: "https://via.placeholder.com/200x150", // Replace with actual image URL
+    image: i1, // Replace with actual image URL // Replace with actual image URL
   },
 ];
 

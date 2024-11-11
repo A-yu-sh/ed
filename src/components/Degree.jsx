@@ -16,6 +16,7 @@ import bjmcIcon from "../assets/7.png";
 import mjmcIcon from "../assets/1.png";
 import pgpIcon from "../assets/15.png";
 import certificateIcon from "../assets/13.png";
+import { Link } from "react-router-dom";
 
 const SubjectBoxes = () => {
   // Updated subjects array with image imports
@@ -41,11 +42,18 @@ const SubjectBoxes = () => {
     <div>
       <div className="subject-container">
         {subjects.map((subject, index) => (
-          <div key={index} className="subject-box">
-            {/* Render the image and subject name */}
-            <img src={subject.icon} alt={subject.name} className="icon" />
-            <div className="subject-name">{subject.name}</div>
-          </div>
+          <Link
+            to="/filter"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}>
+            <div key={index} className="subject-box">
+              {/* Render the image and subject name */}
+
+              <img src={subject.icon} alt={subject.name} className="icon" />
+              <div className="subject-name">{subject.name}</div>
+            </div>
+          </Link>
         ))}
       </div>
 

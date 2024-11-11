@@ -101,7 +101,7 @@ function Home() {
                     <p>NIRF Ranked Universities 2024</p>
                   </div>
                 </div>
-                <LogoSlider />
+                {/* <LogoSlider /> */}
               </div>
             </div>
           </section>

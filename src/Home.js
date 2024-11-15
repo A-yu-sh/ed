@@ -118,7 +118,6 @@ function Home() {
               gap: 20px;
               padding: 30px 20px;
               color: white;
-              margin-top: 16vh;
             }
 
             .hero-left {
@@ -127,7 +126,7 @@ function Home() {
               justify-content: center;
               padding: 20px;
               border-radius: 8px;
-
+              margin-top: 16vh;
               color: white;
             }
 
@@ -135,7 +134,7 @@ function Home() {
               display: flex;
               align-items: center;
               justify-content: start;
-              margin-top: 50px;
+              margin-top: 16vh;
               text-align: center;
             }
 

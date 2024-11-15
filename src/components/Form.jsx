@@ -214,7 +214,7 @@ const Form = () => {
         /* Header styles */
         .enquiry-header {
           text-align: center;
-          margin-top: -27px;
+          margin-top: 0vh;
           margin-bottom: 10px;
         }
 

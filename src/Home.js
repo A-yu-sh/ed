@@ -31,6 +31,7 @@ import Intro from "./components/pHD_Section/1.Intro";
 import Header from "./components/Header";
 import UnderSlider from "./components/UnderHeroSlider";
 import RespForm from "./components/Responsive/RESP_Form";
+import ContentRight from "./components/ContentRight";
 
 function Home() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -71,43 +72,7 @@ function Home() {
               <Form />
             </div>
             <div className="hero-right">
-              <div className="hero-content">
-                <h3>#India'sTopReliable</h3>
-                <h1>DISTANCE EDUCATION SCHOOL</h1>
-                <p>We Ease the Process to Achieve Distance & Online Degree</p>
-                <div className="search-box">
-                  <input
-                    type="text"
-                    placeholder="Search Course & University e.g. BA MBA MA BBA"
-                  />
-                  <button>
-                    <img src={Icon} alt="" className="s-icon" />
-                  </button>
-                </div>
-                <div className="icons">
-                  <div className="icon-box">
-                    <img src={Tlogo4} alt="Top 10 MBA Universities" />
-                    <p>Top 10 MBA Universities in India</p>
-                  </div>
-                  <div className="icon-box">
-                    <img src={Tlogo3} alt="UGC-DEB Approved Universities" />
-                    <p>UGC-DEB Approved Universities 2024</p>
-                  </div>
-                  <div className="icon-box">
-                    <img src={Tlogo2} alt="Top 10 MCA Universities" />
-                    <p>Top 10 MCA Universities in India</p>
-                  </div>
-                  <div className="icon-box">
-                    <img src={Tlogo} alt="NIRF Ranked Universities" />
-                    <p>NIRF Ranked Universities 2024</p>
-                  </div>
-                </div>
-                <div className="top-Leading">
-                  <h3>Top Leading Universities</h3>
-                </div>
-
-                <LogoSlider />
-              </div>
+              <ContentRight />
             </div>
           </section>
 

@@ -217,6 +217,13 @@ const Form = () => {
           margin-top: 0vh;
           margin-bottom: 10px;
         }
+        @media (max-width: 1200px) {
+          .enquiry-header {
+            text-align: center;
+            margin-top: 10vh;
+            margin-bottom: 10px;
+          }
+        }
 
         .enquiry-header h2 {
           font-size: 2rem;

@@ -217,7 +217,7 @@ const Form = () => {
           margin-top: 0vh;
           margin-bottom: 10px;
         }
-        @media (max-width: 1680px) {
+        @media (min-width: 1680px) {
           .enquiry-header {
             text-align: center;
             margin-top: 10vh;

@@ -126,7 +126,7 @@ function Home() {
               justify-content: center;
               padding: 20px;
               border-radius: 8px;
-              margin-top: 40px;
+              margin-top: 6vh;
               color: white;
             }
 

@@ -30,6 +30,7 @@ import { Routes, Route } from "react-router-dom";
 import Intro from "./components/pHD_Section/1.Intro";
 import Header from "./components/Header";
 import UnderSlider from "./components/UnderHeroSlider";
+import RespForm from "./components/Responsive/RESP_Form";
 
 function Home() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -110,6 +111,10 @@ function Home() {
             </div>
           </section>
 
+          <div classname="resp_Form">
+            <RespForm />
+          </div>
+
           <style jsx>{`
             .hero {
               display: grid;
@@ -126,7 +131,7 @@ function Home() {
               justify-content: center;
               padding: 20px;
               border-radius: 8px;
-              margin-top: 7vh;
+              margin-top: 6vh;
               color: white;
             }
 
@@ -305,3 +310,34 @@ function Home() {
 }
 
 export default Home;
+
+// .form-section {
+//   justify-content: center;
+// }
+
+// .form {
+//   width: 75%;
+//   background-color: #fff;
+//   padding: 30px;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
+
+// .enquiry-header {
+//   margin-top: 0;
+// }
+
+// .enquiry-header h2 {
+//   font-size: 24px;
+// }
+
+// .input-container input,
+// .input-container select {
+//   padding: 10px;
+//   font-size: 14px;
+// }
+
+// .submit-btn {
+//   padding: 10px;
+//   font-size: 14px;
+// }

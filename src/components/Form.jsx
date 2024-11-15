@@ -203,7 +203,7 @@ const Form = () => {
 
         /* Form container */
         .form {
-          width: 70%;
+          width: 75%;
           background-color: #fff;
           padding: 30px;
           border-radius: 8px;
@@ -292,9 +292,7 @@ const Form = () => {
         /* Responsive styles */
         @media (max-width: 600px) {
           .total-form {
-            padding: 10px;
-            max-width: 400%;
-            justify-content: start;
+            display: none;
           }
 
           .form-section {
@@ -302,9 +300,11 @@ const Form = () => {
           }
 
           .form {
-            width: 400%;
-            padding: 20px;
-            margin: 0 auto;
+            width: 75%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           }
 
           .enquiry-header {
@@ -324,10 +324,6 @@ const Form = () => {
           .submit-btn {
             padding: 10px;
             font-size: 14px;
-          }
-
-          .form-group {
-            margin-bottom: 12px;
           }
         }
       `}</style>

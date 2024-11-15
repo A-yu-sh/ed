@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Tlogo from "../assets/Tlogo.png";
 import Tlogo2 from "../assets/Tlogo2.png";
 import Tlogo3 from "../assets/Tlogo3.png";
@@ -6,6 +6,22 @@ import Tlogo4 from "../assets/Tlogo4.png";
 import LogoSlider from "./AutomaticSlideShow";
 
 function ContentRight() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to check screen width
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust this width as needed
+    };
+
+    // Check the screen size on component mount and on window resize
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const styles = {
     heroRight: {
       display: "flex",
@@ -20,7 +36,7 @@ function ContentRight() {
     },
     heading: {
       display: "flex",
-      justifyContent: "start",
+      justifyContent: isMobile ? "center" : "start",
       marginBottom: "10px",
       color: "#ffffff",
     },
@@ -64,6 +80,7 @@ function ContentRight() {
       borderRadius: "5px",
     },
     text: {
+      maxWidth: "25ch",
       fontSize: "12px",
       color: "white",
       borderBottom: "1px solid white",

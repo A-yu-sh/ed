@@ -187,7 +187,7 @@ const Form = () => {
           display: flex;
           justify-content: center;
           font-family: Arial, sans-serif;
-          width: 85%;
+          width: 90%;
 
           margin: 0 auto;
           padding: 20px;

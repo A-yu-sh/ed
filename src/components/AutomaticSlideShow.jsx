@@ -117,9 +117,10 @@ const LogoSlider = () => {
       position: "relative",
       padding: "5px 0",
       margin: "0 auto",
-      marginTop: "40px", // Spacing from top elements
+      marginTop: "10px", // Spacing from top elements
       borderRadius: "10px",
       backgroundColor: "white", // Added white background
+      height: "100px",
     },
     // Container for the scrolling logos
     logoContainer: {
@@ -138,6 +139,7 @@ const LogoSlider = () => {
       justifyContent: "center",
       alignItems: "center",
       height: "60px",
+      marginTop: "15px",
     },
     // Individual logo image styles
     logo: {

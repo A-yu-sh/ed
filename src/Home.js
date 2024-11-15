@@ -113,6 +113,7 @@ function Home() {
           <style jsx>{`
             .hero {
               display: grid;
+              align-items: center;
               grid-template-columns: 1fr 1fr;
               gap: 20px;
               padding: 30px 20px;

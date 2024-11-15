@@ -126,7 +126,7 @@ function Home() {
               justify-content: center;
               padding: 20px;
               border-radius: 8px;
-              margin-top: 16vh;
+              margin-top: 10vh;
               color: white;
             }
 
@@ -134,7 +134,7 @@ function Home() {
               display: flex;
               align-items: center;
               justify-content: start;
-              margin-top: 16vh;
+              margin-top: 10vh;
               text-align: center;
             }
 

@@ -681,6 +681,9 @@
   .courses-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
   }
+  .courses-grid {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 768px) {

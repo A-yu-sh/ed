@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MBA from "../assets/Course logo/MBA Logo.png";
 import MCOM from "../assets/Course logo/M Com logo.png";
 import MCA from "../assets/Course logo/MCA logo.png";
@@ -41,6 +41,77 @@ function Course() {
     },
   ];
 
+  const Bachelorcourses = [
+    {
+      id: 1,
+      subtitle: "Bachelor of Business Administration",
+      duration: "2 Year",
+      image: MBA,
+    },
+    {
+      id: 2,
+      subtitle: "Bachelor of Commerce",
+      image: MCOM,
+    },
+    {
+      id: 3,
+      subtitle: "Bachelor of Computer Application",
+      image: MCA,
+    },
+    {
+      id: 4,
+      subtitle: "Bachelor of Arts",
+      image: MA,
+    },
+    {
+      id: 5,
+      subtitle: "Bachelor of Science",
+      image: MSC,
+    },
+    {
+      id: 6,
+      subtitle: "Bachelor of Journalism & Mass Media Communications",
+      image: MJMC,
+    },
+  ];
+
+  const universities = [
+    {
+      id: 1,
+      subtitle: "SIT",
+      duration: "2 Year",
+      image: MBA,
+    },
+    {
+      id: 2,
+      subtitle: "UEM",
+      image: MCOM,
+    },
+    {
+      id: 3,
+      subtitle: "IIT-J",
+      image: MCA,
+    },
+    {
+      id: 4,
+      subtitle: "NIT-K",
+      image: MA,
+    },
+  ];
+
+  // State to toggle between courses and universities
+  const [data, setData] = useState(courses);
+
+  // Function to handle toggling
+  const handleToggle = (type) => {
+    if (type === "distance") {
+      setData(universities);
+    } else if (type === "bachelor") {
+      setData(Bachelorcourses);
+    } else {
+    }
+  };
+
   return (
     <div className="c-container">
       <div className="courses-courses-container">
@@ -48,17 +119,17 @@ function Course() {
           {/* Sidebar */}
           <div className="sidebar">
             <div className="online-courses-header">Online Courses</div>
-            <p>Distance Courses</p>
-            <p>
+            <p onClick={() => handleToggle("distance")}>Distance Courses</p>
+            <p onClick={() => handleToggle("courses")}>
               Master Courses{" "}
               <span className="duration-badge green">2 Year</span>
             </p>
-            <p>
+            <p onClick={() => handleToggle("bachelor")}>
               Bachelor Courses{" "}
               <span className="duration-badge orange">3 Year</span>
             </p>
             <p>
-              Top MBA Specialization{" "}
+              MBA Specialization{" "}
               <span className="duration-badge green">2 Year</span>
             </p>
             <p>
@@ -67,16 +138,20 @@ function Course() {
             </p>
             <p>Certificate Courses</p>
           </div>
-          {/* Courses grid */}
-          {/* <div className="courses-grid-container"> */}
+
+          {/* Courses/Universities grid */}
           <div className="courses-grid">
-            {courses.map((course) => (
-              <div key={course.id} className="course-card">
+            {data.map((item) => (
+              <div key={item.id} className="course-card">
                 <div className="course-title">
-                  <img className="course-icon" src={course.image} />
-                  <h2>{course.title}</h2>
+                  <img
+                    className="course-icon"
+                    src={item.image}
+                    alt={item.subtitle}
+                  />
+                  <h2>{item.title}</h2>
                 </div>
-                <p className="course-subtitle">{course.subtitle}</p>{" "}
+                <p className="course-subtitle">{item.subtitle}</p>{" "}
                 {/* Subtitle class applied */}
                 <div className="course-actions">
                   <button className="explore-btn">Explore</button>
@@ -85,7 +160,6 @@ function Course() {
               </div>
             ))}
           </div>
-          {/* </div> */}
         </div>
       </div>
     </div>

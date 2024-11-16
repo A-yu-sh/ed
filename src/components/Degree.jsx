@@ -118,7 +118,7 @@ const SubjectBoxes = () => {
         /* For medium screens (e.g., tablets) */
         @media (max-width: 768px) {
           .subject-container {
-            grid-template-columns: 1fr 1fr 1fr; /* Three items per row */
+            grid-template-columns: 1fr 1fr; /* Three items per row */
           }
 
           .subject-name {
@@ -135,7 +135,7 @@ const SubjectBoxes = () => {
         @media (min-width: 1024px) {
           .subject-container {
             grid-template-columns: repeat(
-              4,
+              3,
               1fr
             ); /* Four items per row on desktop */
           }

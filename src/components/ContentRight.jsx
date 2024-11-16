@@ -63,7 +63,7 @@ function ContentRight() {
       marginBottom: "30px",
     },
     searchInput: {
-      width: "70%",
+      width: "80%",
       padding: "10px",
       fontSize: "1rem",
       border: "1px solid #ccc",

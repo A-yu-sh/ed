@@ -19,7 +19,6 @@ import certificateIcon from "../assets/13.png";
 import { Link } from "react-router-dom";
 
 const SubjectBoxes = () => {
-  // Updated subjects array with image imports
   const subjects = [
     { name: "MBA", icon: mbaIcon },
     { name: "MCA", icon: mcaIcon },
@@ -46,10 +45,9 @@ const SubjectBoxes = () => {
             to="/filter"
             onClick={() => {
               window.scrollTo(0, 0);
-            }}>
-            <div key={index} className="subject-box">
-              {/* Render the image and subject name */}
-
+            }}
+            key={index}>
+            <div className="subject-box">
               <img src={subject.icon} alt={subject.name} className="icon" />
               <div className="subject-name">{subject.name}</div>
             </div>
@@ -57,96 +55,93 @@ const SubjectBoxes = () => {
         ))}
       </div>
 
-      {/* CSS styles for responsiveness */}
       <style jsx>{`
-        /* Basic Styling for Subject Boxes */
+        /* Center Grid Container */
         .subject-container {
           display: grid;
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(150px, 1fr)
-          ); /* Responsive grid */
+          justify-content: center; /* Center grid horizontally */
+          align-items: center; /* Center grid vertically */
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
           gap: 20px; /* Space between boxes */
-          padding: 20px;
+          padding: 40px; /* Add space around the grid */
+          height: 100vh; /* Full height to center vertically */
+          box-sizing: border-box; /* Include padding in height calculation */
         }
 
         .subject-box {
           background-color: #f9f9f9;
           border: 1px solid #ddd;
-          padding: 10px;
           border-radius: 8px;
           text-align: center;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease;
         }
 
         .subject-box:hover {
           transform: scale(1.05);
-          transition: transform 0.3s;
         }
 
         .icon {
-          width: 60px; /* Icon size */
-          height: 60px;
-          object-fit: cover; /* Ensure the image covers the box proportionally */
+          width: 70px;
+          height: 70px;
           margin-bottom: 10px;
+          object-fit: cover;
         }
 
         .subject-name {
-          font-size: 16px;
-          color: #333;
+          font-size: 18px;
           font-weight: bold;
+          color: #333;
         }
 
-        /* Media Queries for Responsiveness */
-
-        /* For small screens (e.g., mobile) */
+        /* Responsive Styling */
         @media (max-width: 480px) {
           .subject-container {
-            grid-template-columns: 1fr 1fr; /* Two items per row */
-          }
-
-          .subject-name {
-            font-size: 14px; /* Smaller text size on mobile */
+            grid-template-columns: 1fr 1fr;
           }
 
           .icon {
-            width: 50px; /* Smaller icons on mobile */
+            width: 50px;
             height: 50px;
           }
+
+          .subject-name {
+            font-size: 14px;
+          }
         }
 
-        /* For medium screens (e.g., tablets) */
         @media (max-width: 768px) {
           .subject-container {
-            grid-template-columns: 1fr 1fr; /* Three items per row */
-          }
-
-          .subject-name {
-            font-size: 15px; /* Slightly smaller text size on tablets */
+            grid-template-columns: 1fr 1fr 1fr;
           }
 
           .icon {
-            width: 55px; /* Slightly smaller icons on tablets */
+            width: 55px;
             height: 55px;
+          }
+
+          .subject-name {
+            font-size: 15px;
           }
         }
 
-        /* For large screens (e.g., desktop) */
         @media (min-width: 1024px) {
           .subject-container {
-            grid-template-columns: repeat(
-              3,
-              1fr
-            ); /* Four items per row on desktop */
+            grid-template-columns: repeat(5, 1fr);
           }
 
           .icon {
-            width: 70px; /* Larger icons on desktop */
-            height: 70px;
+            width: 80px;
+            height: 80px;
           }
 
           .subject-name {
-            font-size: 18px; /* Larger text size on desktop */
+            font-size: 20px;
           }
         }
       `}</style>

@@ -59,13 +59,13 @@ const SubjectBoxes = () => {
         /* Center Grid Container */
         .subject-container {
           display: grid;
-          justify-content: center; /* Center grid horizontally */
-          align-items: center; /* Center grid vertically */
+          justify-content: center;
+          align-items: center;
           grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-          gap: 20px; /* Space between boxes */
-          padding: 90px; /* Add space around the grid */
-          height: 100vh; /* Full height to center vertically */
-          box-sizing: border-box; /* Include padding in height calculation */
+          gap: 20px;
+          padding: 20px;
+          height: 100%;
+          box-sizing: border-box;
         }
 
         .subject-box {
@@ -74,7 +74,7 @@ const SubjectBoxes = () => {
           border-radius: 8px;
           text-align: center;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: -10px;
+          padding: 20px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -102,7 +102,7 @@ const SubjectBoxes = () => {
         /* Responsive Styling */
         @media (max-width: 480px) {
           .subject-container {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
           }
 
           .icon {
@@ -113,11 +113,18 @@ const SubjectBoxes = () => {
           .subject-name {
             font-size: 14px;
           }
+
+          .subject-box {
+            padding: 15px; /* Reduce padding on mobile */
+          }
         }
 
         @media (max-width: 768px) {
           .subject-container {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(
+              2,
+              1fr
+            ); /* Two boxes per row on tablets */
           }
 
           .icon {
@@ -128,11 +135,18 @@ const SubjectBoxes = () => {
           .subject-name {
             font-size: 15px;
           }
+
+          .subject-box {
+            padding: 18px;
+          }
         }
 
         @media (min-width: 1024px) {
           .subject-container {
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(
+              5,
+              1fr
+            ); /* Five boxes per row on desktop */
           }
 
           .icon {
@@ -142,6 +156,10 @@ const SubjectBoxes = () => {
 
           .subject-name {
             font-size: 20px;
+          }
+
+          .subject-box {
+            padding: 20px;
           }
         }
       `}</style>

@@ -63,7 +63,7 @@ const SubjectBoxes = () => {
           align-items: center; /* Center grid vertically */
           grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
           gap: 20px; /* Space between boxes */
-          padding: 40px; /* Add space around the grid */
+          padding: 90px; /* Add space around the grid */
           height: 100vh; /* Full height to center vertically */
           box-sizing: border-box; /* Include padding in height calculation */
         }
@@ -74,7 +74,7 @@ const SubjectBoxes = () => {
           border-radius: 8px;
           text-align: center;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 20px;
+          padding: -10px;
           display: flex;
           flex-direction: column;
           align-items: center;

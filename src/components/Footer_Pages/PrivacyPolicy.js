@@ -8,8 +8,9 @@ function Privacy() {
       padding: "20px",
       fontFamily: "Arial, sans-serif",
       color: "#333",
-      marginTop: "80px",
       lineHeight: "1.6",
+      marginTop: "100px",
+      marginBottom: "20px",
     },
     title: {
       fontSize: "24px",
@@ -31,38 +32,39 @@ function Privacy() {
     <div style={styles.container}>
       <h2 style={styles.title}>Privacy Policy</h2>
       <p>
-        The information and materials contained in{" "}
+        The information and materials available on{" "}
         <a href="https://distanceeducationcenter.com/" style={styles.link}>
           https://distanceeducationcenter.com/
         </a>{" "}
-        At Distance Education Center, we value your privacy and are committed to
-        protecting your personal information. This Privacy Policy outlines how
-        we collect, use, and protect the personal data you share with us through
-        our website and services.
+        are provided by Distance Education Center. We are committed to
+        safeguarding your privacy and ensuring the security of your personal
+        information. This Privacy Policy explains how we collect, use, and
+        protect the data you share with us while accessing our website and
+        services.
       </p>
       <p>
-        The sole purpose of{" "}
-        <span style={styles.bold}>Distanceeducationcenter.com</span>
-        use the information collected to provide and improve our services,
-        respond to your queries, process your requests, and keep you informed
-        about relevant courses and programs. We may send promotional emails,
-        updates, or newsletters, but you can opt out of these communications at
-        any time.
+        The primary purpose of{" "}
+        <span style={styles.bold}>Distanceeducationcenter.com</span> is to use
+        the information we collect to enhance our services, respond to
+        inquiries, fulfill requests, and provide updates on relevant courses and
+        programs. Occasionally, we may send newsletters or promotional
+        communications; however, you always have the option to opt out of such
+        communications.
       </p>
       <p>
-        You have the right to access, correct, or delete your personal
-        information at any time. If you wish to update or remove your
-        information, please contact us directly. You can also opt-out of
-        receiving promotional emails by following the unsubscribe instructions
-        in the communication.
+        You have full control over your personal information and can request to
+        access, modify, or delete it at any time. Should you wish to update your
+        details or remove your information from our records, please contact us
+        directly. You can also unsubscribe from promotional emails by following
+        the instructions provided in those communications.
       </p>
       <p>
-        <span style={styles.bold}>Distanceeducationcenter.com</span> is not
-        authorized to conduct exams in the name of any University or to provide
-        any document/study on behalf of any university. Any marks card,
-        certificate or any other educational document is the sole property of
-        the University, and so Distanceeducationschool.com does not have any
-        right to issue any document in the name of any University.
+        <span style={styles.bold}>Distanceeducationcenter.com</span> does not
+        conduct examinations on behalf of any university, nor does it provide
+        academic documents or materials directly from universities. Official
+        marks cards, certificates, and other educational credentials are the
+        exclusive property of their respective universities. Distance Education
+        Center is not authorized to issue any university-affiliated documents.
       </p>
     </div>
   );

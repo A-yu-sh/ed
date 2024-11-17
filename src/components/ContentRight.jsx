@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaSearch } from "react-icons/fa"; // Importing search icon from react-icons
 import Tlogo from "../assets/Tlogo.png";
 import Tlogo2 from "../assets/Tlogo2.png";
 import Tlogo3 from "../assets/Tlogo3.png";
@@ -61,23 +62,28 @@ function ContentRight() {
       justifyContent: "start",
       alignItems: "center",
       marginBottom: "30px",
+      width: "100%", // Ensure full width to align input and button together
     },
     searchInput: {
-      width: "80%",
-      padding: "10px",
+      flex: 1, // Makes the input take up the remaining space
+      padding: "10px 20px",
       fontSize: "1rem",
       border: "1px solid #ccc",
-      borderRadius: "5px",
+      borderRadius: "5px 0 0 5px", // Rounded left corner for input
       color: "#000000",
+      marginRight: "0", // Remove margin between input and button
     },
     searchButton: {
       backgroundColor: "#FF6E05",
       color: "#fff",
       border: "none",
-      padding: "10px 20px",
-      marginLeft: "10px",
+      padding: "13px 0px",
       cursor: "pointer",
-      borderRadius: "5px",
+      borderRadius: "0 5px 5px 0", // Rounded right corner for button
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "80px", // Fixed width for the button to match input height
     },
     text: {
       maxWidth: "25ch",
@@ -125,7 +131,9 @@ function ContentRight() {
             placeholder="Search Course & University"
             style={styles.searchInput}
           />
-          <button style={styles.searchButton}>Search</button>
+          <button style={styles.searchButton}>
+            <FaSearch size={20} /> {/* Search icon */}
+          </button>
         </div>
         <div style={styles.icons}>
           <div style={styles.iconBox}>

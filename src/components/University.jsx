@@ -46,7 +46,7 @@ function Course() {
     { id: 30, title: "University of Hyderabad", image: Hlogo },
   ];
 
-  const [data, setData] = useState(Distance_University);
+  const [data, setData] = useState(Online_University);
 
   // Function to handle toggling
   const handleToggle = (type) => {

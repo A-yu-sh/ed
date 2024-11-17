@@ -1,5 +1,5 @@
 import React from "react";
-// import backgroundImage from "../assets/Banner2.png";
+import backgroundImage from "../../assets/Banner2.png";
 
 function Contact() {
   return (
@@ -22,14 +22,11 @@ function Contact() {
                 placeholder="Enter Your Name"
                 style={styles.input}
               />
-              <div style={styles.inputWithFlag}>
-                <span style={styles.flagIcon}>🇮🇳</span>
-                <input
-                  type="text"
-                  placeholder="Enter Your Number"
-                  style={styles.inputFlag}
-                />
-              </div>
+              <input
+                type="text"
+                placeholder="Enter Your Number"
+                style={styles.input}
+              />
               <input
                 type="email"
                 placeholder="Enter Your Email"
@@ -117,10 +114,12 @@ const styles = {
     alignItems: "center",
     minHeight: "100vh",
     padding: "20px",
+    backgroundColor: "#f5f5f5",
     marginTop: "90px",
-    backgroundColor: "#f5f5f5", // slight background color for contrast
+    marginBottom: "20px",
   },
   backgroundImageContainer: {
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     width: "70vw",
@@ -136,6 +135,7 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     width: "80%",
+    flexWrap: "wrap", // Enables wrapping for smaller screens
   },
   formContainer: {
     backgroundColor: "#fff",
@@ -144,7 +144,7 @@ const styles = {
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
     width: "380px",
     position: "relative",
-    left: "-50px", // move form slightly outside the background
+    left: "0px",
   },
   heading: {
     fontSize: "24px",
@@ -168,25 +168,9 @@ const styles = {
     border: "1px solid #ccc",
     fontSize: "16px",
   },
-  inputWithFlag: {
-    display: "flex",
-    alignItems: "center",
-    marginBottom: "15px",
-  },
-  flagIcon: {
-    fontSize: "20px",
-    marginRight: "10px",
-  },
-  inputFlag: {
-    flex: 1,
-    padding: "10px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-    fontSize: "16px",
-  },
   checkboxContainer: {
     fontSize: "14px",
-    color: "#555",
+    color: "#ff6600",
     marginBottom: "15px",
   },
   checkbox: {
@@ -204,7 +188,7 @@ const styles = {
   contactInfo: {
     color: "#002f57",
     textAlign: "left",
-    marginLeft: "40px",
+    marginLeft: "0px",
     width: "300px",
   },
   companyName: {
@@ -225,6 +209,34 @@ const styles = {
     fontSize: "24px",
     textDecoration: "none",
     color: "#002f57",
+  },
+  // Media queries for mobile responsiveness
+  "@media (max-width: 768px)": {
+    backgroundImageContainer: {
+      width: "100vw",
+      minHeight: "100vh",
+    },
+    container: {
+      flexDirection: "column",
+      alignItems: "center",
+      width: "90%",
+    },
+    formContainer: {
+      left: "0", // Center form
+      width: "100%",
+      padding: "20px",
+    },
+    contactInfo: {
+      marginLeft: "0px",
+      marginTop: "10px",
+      textAlign: "center",
+    },
+    companyName: {
+      fontSize: "20px",
+    },
+    infoText: {
+      fontSize: "14px",
+    },
   },
 };
 

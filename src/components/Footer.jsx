@@ -191,7 +191,7 @@ function Footer() {
               onClick={() => {
                 window.scrollTo(0, 0);
               }}>
-              <a href="/disclaimer">Disclaimer</a>
+              <Link to="/disclaimer">Disclaimer</Link>
             </li>
             <li
               onClick={() => {

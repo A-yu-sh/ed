@@ -1,6 +1,6 @@
 import React from "react";
 import expertImage from "../assets/Model.png"; // Adjust path as needed
-
+import "../Global.css";
 import VCImg from "../assets/v1-removebg-preview.png";
 import LIVEImg from "../assets/live-removebg-preview.png";
 import RQImg from "../assets/call-removebg-preview.png";
@@ -19,19 +19,19 @@ const TalkToExperts = () => {
           </p>
           <div className="expert-buttons">
             <button className="btn video-call">
-              <img src={VCImg} alt="" class="t-icon" />
+              {/* <img src={VCImg} alt="" class="t-icon" /> */}
               Schedule Video Call
             </button>
             <button className="btn live-chat">
-              <img src={LIVEImg} alt="" class="t-icon" />
+              {/* <img src={LIVEImg} alt="" class="t-icon" /> */}
               Live Chat with Experts
             </button>
             <button className="btn request-callback">
-              <img src={RQImg} alt="" class="t-icon" />
+              {/* <img src={RQImg} alt="" class="t-icon" /> */}
               Request Call Back
             </button>
             <button className="btn ask-query">
-              <img src={AQImg} alt="" class="t-icon" />
+              {/* <img src={AQImg} alt="" class="t-icon" /> */}
               Ask A Query
             </button>
           </div>

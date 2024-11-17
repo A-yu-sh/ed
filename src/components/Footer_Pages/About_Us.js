@@ -7,8 +7,9 @@ function About() {
       backgroundSize: "cover",
       backgroundPosition: "center",
       padding: "50px 20px",
-      marginTop: "50px",
       color: "#333",
+      marginTop: "100px",
+      marginBottom: "20px",
     },
     container: {
       maxWidth: "800px",
@@ -97,14 +98,14 @@ function About() {
       <div style={styles.container}>
         <h2 style={styles.title}>About Us</h2>
         <p style={styles.paragraph}>
-          <span style={{ fontWeight: "bold" }}>Distance Education School</span>{" "}
-          is an India-based portal that provides expert counseling and
-          information to students for various UGC and DEB recognized
-          universities.
+          <span style={{ fontWeight: "bold" }}>Distance Education Center</span>{" "}
+          is a platform that provides guidance and information to students and
+          professionals about universities offering distance and online
+          education programs.
         </p>
 
         <h3 style={styles.subtitle}>
-          SODE (School of Online & Distance Education)
+          SODE (Universities of Online & Distance Education)
         </h3>
         <div style={styles.imageContainer}>
           <img
@@ -125,20 +126,18 @@ function About() {
         </div>
 
         <p style={styles.paragraph}>
-          The sole purpose is to connect students and working professionals with
-          top distance education universities for higher education in distance
-          mode, bridging the gap between students and universities.
+          Our goal is to connect students and working professionals with leading
+          universities for distance learning, providing them with access to
+          flexible and affordable education opportunities.
         </p>
 
-        <h3 style={styles.subtitle}>
-          Is Distance Education School Fake or Genuine?
-        </h3>
+        <h3 style={styles.subtitle}>Is Distance Education Center Reliable?</h3>
         <p style={styles.paragraph}>
-          A common question that arises is whether Distance Education School is
-          genuine. It is not per se a university and hence is not authorized to
-          provide any certificates or documents or conduct exams. It is a
-          counseling and information portal that connects students and working
-          professionals to UGC and DEB approved universities.
+          A common query is whether Distance Education Center is trustworthy.
+          While we are not a university and do not issue certificates, we act as
+          an advisory and information portal, assisting students and
+          professionals in enrolling with accredited universities offering
+          distance education programs.
         </p>
       </div>
 
@@ -150,35 +149,35 @@ function About() {
             <div style={styles.icon}>📝</div>
             <h4 style={styles.stepTitle}>Submit Form</h4>
             <p style={styles.stepDescription}>
-              Fill in and submit your application form online
+              Complete and submit your online application form.
             </p>
           </div>
           <div style={styles.step}>
             <div style={styles.icon}>👩‍💼</div>
-            <h4 style={styles.stepTitle}>Expert’s Counseling</h4>
+            <h4 style={styles.stepTitle}>Expert Guidance</h4>
             <p style={styles.stepDescription}>
-              You will receive a call from our expert counselor
+              Speak with one of our experienced counselors for advice.
             </p>
           </div>
           <div style={styles.step}>
             <div style={styles.icon}>🏛</div>
             <h4 style={styles.stepTitle}>Choose University</h4>
             <p style={styles.stepDescription}>
-              Select the course & university according to your interest
+              Select the best university and program for your goals.
             </p>
           </div>
           <div style={styles.step}>
             <div style={styles.icon}>💳</div>
-            <h4 style={styles.stepTitle}>Online Payment</h4>
+            <h4 style={styles.stepTitle}>Secure Payment</h4>
             <p style={styles.stepDescription}>
-              Make a smooth online fee submission
+              Make an easy and secure online fee payment.
             </p>
           </div>
           <div style={styles.step}>
             <div style={styles.icon}>✅</div>
-            <h4 style={styles.stepTitle}>Confirmation</h4>
+            <h4 style={styles.stepTitle}>Receive Confirmation</h4>
             <p style={styles.stepDescription}>
-              You will get an admission confirmation on your email
+              Get your admission confirmation via email.
             </p>
           </div>
         </div>

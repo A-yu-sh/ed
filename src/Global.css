@@ -1527,7 +1527,9 @@ h2 {
 .footer-section ul li {
   margin-bottom: 10px;
   font-size: 0.9rem;
-  position: relative;
+  display: flex;
+  justify-content: start;
+
   padding-left: 20px; /* Space for the '>' symbol */
 }
 

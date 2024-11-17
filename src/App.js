@@ -11,6 +11,7 @@ import Privacy from "./components/Footer_Pages/PrivacyPolicy";
 import Terms from "./components/Footer_Pages/TermsAndConditions";
 import Ubox from "./components/Convocation_SlideShow";
 import FilterPage from "./components/FilterPage";
+import Disclaimer from "./components/Footer_Pages/Disclaimer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Terms-and-Conditions" element={<Terms />} />
         <Route path="/Terms" element={<Ubox />} />
         <Route path="/filter" element={<FilterPage />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
       </Routes>
     </div>
   );

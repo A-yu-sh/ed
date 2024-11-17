@@ -91,6 +91,7 @@ function ContentRight() {
       fontSize: "12px",
       color: "white",
       borderBottom: "1px solid white",
+      textAlign: "center", // Ensure the text is centered
     },
     icons: {
       display: "grid",
@@ -102,6 +103,8 @@ function ContentRight() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      justifyContent: "center", // Ensure items are centered within the box
+      textAlign: "center", // Align text at the center
     },
     iconImage: {
       width: "80px",

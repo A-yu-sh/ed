@@ -65,7 +65,7 @@ function ContentRight() {
       width: "100%", // Ensure full width to align input and button together
     },
     searchInput: {
-      flex: 1, // Makes the input take up the remaining space
+      flex: 0, // Makes the input take up the remaining space
       padding: "10px 20px",
       fontSize: "1rem",
       border: "1px solid #ccc",

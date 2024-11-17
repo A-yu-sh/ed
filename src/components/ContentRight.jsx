@@ -37,14 +37,14 @@ function ContentRight() {
     },
     heading: {
       display: "flex",
-      justifyContent: isMobile ? "center" : "start",
+      justifyContent: "start",
       marginBottom: "10px",
       color: "#ffffff",
     },
 
     mainHeading: {
       display: "flex",
-      justifyContent: "start",
+      justifyContent: isMobile ? "center" : "start",
       fontSize: "2.5rem",
       fontWeight: "bold",
       marginBottom: "20px",
@@ -59,7 +59,7 @@ function ContentRight() {
     },
     searchBox: {
       display: "flex",
-      justifyContent: "start",
+      justifyContent: isMobile ? "center" : "start",
       alignItems: "center",
       marginBottom: "30px",
     },

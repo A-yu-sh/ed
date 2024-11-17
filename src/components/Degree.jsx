@@ -59,12 +59,11 @@ const SubjectBoxes = () => {
         /* Center Grid Container */
         .subject-container {
           display: grid;
-          justify-content: center;
-          align-items: center;
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
           gap: 20px;
-          padding: 10px;
-          height: 100%;
+          margin-left: 10px;
+          justify-content: center; /* Center the grid horizontally */
+          padding: 60px; /* Equal padding on all sides */
           box-sizing: border-box;
         }
 
@@ -122,9 +121,9 @@ const SubjectBoxes = () => {
         @media (max-width: 768px) {
           .subject-container {
             grid-template-columns: repeat(
-              2,
+              3,
               1fr
-            ); /* Two boxes per row on tablets */
+            ); /* Three boxes per row on tablets */
           }
 
           .icon {

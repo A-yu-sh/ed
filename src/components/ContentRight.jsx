@@ -37,17 +37,17 @@ function ContentRight() {
     },
     heading: {
       display: "flex",
-      justifyContent: "start",
-      marginBottom: "10px",
+      justifyContent: isMobile ? "center" : "start",
+
       color: "#ffffff",
     },
 
     mainHeading: {
       display: "flex",
       justifyContent: isMobile ? "center" : "start",
-      fontSize: "2.5rem",
+      fontSize: isMobile ? "2rem" : "2.5rem",
       fontWeight: "bold",
-      marginBottom: "20px",
+
       color: "#fff44f",
     },
     description: {

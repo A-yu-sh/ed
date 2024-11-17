@@ -229,7 +229,7 @@ function Course() {
               Master Courses{" "}
               <span className="duration-badge green">2 Year</span>
             </p>
-            <p onClick={() => handleToggle("Mastercourses")}>
+            <p onClick={() => handleToggle("bachelor")}>
               Bachelor Courses{" "}
               <span className="duration-badge orange">3 Year</span>
             </p>

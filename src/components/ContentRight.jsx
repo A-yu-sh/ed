@@ -72,7 +72,7 @@ function ContentRight() {
       borderRadius: "5px 0 0 5px", // Rounded left corner for input
       color: "#000000",
       marginRight: "0", // Remove margin between input and button
-      maxWidth: "300px", // Restrict max width for larger screens
+      maxWidth: "650px", // Restrict max width for larger screens
     },
     searchButton: {
       backgroundColor: "#FF6E05",

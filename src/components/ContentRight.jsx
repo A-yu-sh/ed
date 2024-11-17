@@ -59,19 +59,20 @@ function ContentRight() {
     },
     searchBox: {
       display: "flex",
-      justifyContent: "start",
+      justifyContent: isMobile ? "center" : "start", // Center search bar on mobile
       alignItems: "center",
       marginBottom: "30px",
       width: "100%", // Ensure full width to align input and button together
     },
     searchInput: {
-      flex: 0, // Makes the input take up the remaining space
-      padding: "10px 20px",
+      flex: 2, // Makes the input take up the remaining space
+      padding: "10px",
       fontSize: "1rem",
       border: "1px solid #ccc",
       borderRadius: "5px 0 0 5px", // Rounded left corner for input
       color: "#000000",
       marginRight: "0", // Remove margin between input and button
+      maxWidth: "300px", // Restrict max width for larger screens
     },
     searchButton: {
       backgroundColor: "#FF6E05",

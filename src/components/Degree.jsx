@@ -101,7 +101,12 @@ const SubjectBoxes = () => {
         /* Responsive Styling */
         @media (max-width: 480px) {
           .subject-container {
-            grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
+            grid-template-columns: repeat(
+              2,
+              minmax(120px, 1fr)
+            ); /* Adjust box size for smaller screens */
+            gap: 10px; /* Reduce gap between boxes */
+            padding: 30px; /* Reduce padding for mobile */
           }
 
           .icon {
@@ -114,7 +119,7 @@ const SubjectBoxes = () => {
           }
 
           .subject-box {
-            padding: 15px; /* Reduce padding on mobile */
+            padding: 15px; /* Reduce padding inside the box */
           }
         }
 
@@ -122,8 +127,9 @@ const SubjectBoxes = () => {
           .subject-container {
             grid-template-columns: repeat(
               2,
-              1fr
+              minmax(140px, 1fr)
             ); /* Three boxes per row on tablets */
+            gap: 15px;
           }
 
           .icon {

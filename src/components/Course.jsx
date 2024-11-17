@@ -7,7 +7,7 @@ import MSC from "../assets/Course logo/MSC.png";
 import MJMC from "../assets/Course logo/MJMC.png";
 
 function Course() {
-  const courses = [
+  const Online_Courses = [
     {
       id: 1,
       subtitle: "Master of Business Administration",
@@ -38,6 +38,84 @@ function Course() {
       id: 6,
       subtitle: "Master of Journalism & Mass Media Communications",
       image: MJMC,
+    },
+    {
+      id: 7,
+      subtitle: "Bachelor of Commerce",
+      image: MCOM,
+    },
+    {
+      id: 8,
+      subtitle: "Bachelor of Computer Application",
+      image: MCA,
+    },
+    {
+      id: 9,
+      subtitle: "Bachelor of Arts",
+      image: MA,
+    },
+    {
+      id: 10,
+      subtitle: "Bachelor of Journalism & Mass Media Communications",
+      image: MJMC,
+    },
+  ];
+  const Distance_Courses = [
+    {
+      id: 1,
+      subtitle: "Master of Business Administration",
+      duration: "2 Year",
+      image: MBA,
+    },
+    {
+      id: 2,
+      subtitle: "Master of Commerce",
+      image: MCOM,
+    },
+    {
+      id: 3,
+      subtitle: "Master of Computer Application",
+      image: MCA,
+    },
+    {
+      id: 4,
+      subtitle: "Master of Arts",
+      image: MA,
+    },
+    {
+      id: 5,
+      subtitle: "Master of Science",
+      image: MSC,
+    },
+    {
+      id: 6,
+      subtitle: "Master of Library and Information Science",
+      image: MJMC,
+    },
+    {
+      id: 7,
+      subtitle: "Bachelor of Commerce",
+      image: MCOM,
+    },
+    {
+      id: 8,
+      subtitle: "Bachelor of Computer Application",
+      image: MCA,
+    },
+    {
+      id: 9,
+      subtitle: "Bachelor of Arts",
+      image: MA,
+    },
+    {
+      id: 10,
+      subtitle: "Bachelor of Library and Information Science",
+      image: MJMC,
+    },
+    {
+      id: 11,
+      subtitle: "Bachelor of Business Administration",
+      image: MCA,
     },
   ];
 
@@ -73,42 +151,63 @@ function Course() {
       subtitle: "Bachelor of Journalism & Mass Media Communications",
       image: MJMC,
     },
+    {
+      id: 10,
+      subtitle: "Bachelor of Library and Information Science",
+      image: MJMC,
+    },
   ];
-
-  const universities = [
+  const Mastercourses = [
     {
       id: 1,
-      subtitle: "SIT",
+      subtitle: "Master of Business Administration",
       duration: "2 Year",
       image: MBA,
     },
     {
       id: 2,
-      subtitle: "UEM",
+      subtitle: "Master of Commerce",
       image: MCOM,
     },
     {
       id: 3,
-      subtitle: "IIT-J",
+      subtitle: "Master of Computer Application",
       image: MCA,
     },
     {
       id: 4,
-      subtitle: "NIT-K",
+      subtitle: "Master of Arts",
       image: MA,
     },
+    {
+      id: 5,
+      subtitle: "Master of Science",
+      image: MSC,
+    },
+    {
+      id: 6,
+      subtitle: "Master of Journalism & Mass Media Communications",
+      image: MJMC,
+    },
+    {
+      id: 10,
+      subtitle: "Master of Library and Information Science",
+      image: MJMC,
+    },
   ];
-
-  // State to toggle between courses and universities
-  const [data, setData] = useState(courses);
+  // State to toggle between courses
+  const [data, setData] = useState(Distance_Courses);
 
   // Function to handle toggling
   const handleToggle = (type) => {
-    if (type === "distance") {
-      setData(universities);
+    if (type === "Distance_Courses") {
+      setData(Distance_Courses);
     } else if (type === "bachelor") {
       setData(Bachelorcourses);
-    } else {
+    } else if (type === "Online_Courses") {
+      setData(Online_Courses);
+    } else if (type === "Mastercourses") {
+      setData(Mastercourses);
     }
   };
 
@@ -118,13 +217,19 @@ function Course() {
         <div className="courses-container">
           {/* Sidebar */}
           <div className="sidebar">
-            <div className="online-courses-header">Online Courses</div>
-            <p onClick={() => handleToggle("distance")}>Distance Courses</p>
-            <p onClick={() => handleToggle("courses")}>
+            <div
+              className="online-courses-header"
+              onClick={() => handleToggle("Online_Courses")}>
+              Online Courses
+            </div>
+            <p onClick={() => handleToggle("Distance_Courses")}>
+              Distance Courses
+            </p>
+            <p onClick={() => handleToggle("Distance_Courses")}>
               Master Courses{" "}
               <span className="duration-badge green">2 Year</span>
             </p>
-            <p onClick={() => handleToggle("bachelor")}>
+            <p onClick={() => handleToggle("Mastercourses")}>
               Bachelor Courses{" "}
               <span className="duration-badge orange">3 Year</span>
             </p>
@@ -149,10 +254,8 @@ function Course() {
                     src={item.image}
                     alt={item.subtitle}
                   />
-                  <h2>{item.title}</h2>
                 </div>
-                <p className="course-subtitle">{item.subtitle}</p>{" "}
-                {/* Subtitle class applied */}
+                <p className="course-subtitle">{item.subtitle}</p>
                 <div className="course-actions">
                   <button className="explore-btn">Explore</button>
                   <button className="view-btn">View Universities</button>

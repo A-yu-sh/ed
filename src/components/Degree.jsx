@@ -63,7 +63,7 @@ const SubjectBoxes = () => {
           align-items: center;
           grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
           gap: 20px;
-          padding: 20px;
+          padding: 10px;
           height: 100%;
           box-sizing: border-box;
         }

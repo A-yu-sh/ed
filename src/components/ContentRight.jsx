@@ -122,7 +122,7 @@ function ContentRight() {
         <div style={styles.searchBox}>
           <input
             type="text"
-            placeholder="Search Course & University e.g. BA MBA MA BBA"
+            placeholder="Search Course & University"
             style={styles.searchInput}
           />
           <button style={styles.searchButton}>Search</button>

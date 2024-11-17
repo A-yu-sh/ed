@@ -609,7 +609,7 @@
 /* Courses Grid Styling */
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(5, 1fr); /* 3 columns */
   gap: 10px;
   width: calc(
     100% - 270px

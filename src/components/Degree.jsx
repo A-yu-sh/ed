@@ -121,7 +121,7 @@ const SubjectBoxes = () => {
         @media (max-width: 768px) {
           .subject-container {
             grid-template-columns: repeat(
-              3,
+              2,
               1fr
             ); /* Three boxes per row on tablets */
           }

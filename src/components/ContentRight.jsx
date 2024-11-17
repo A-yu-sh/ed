@@ -4,6 +4,7 @@ import Tlogo2 from "../assets/Tlogo2.png";
 import Tlogo3 from "../assets/Tlogo3.png";
 import Tlogo4 from "../assets/Tlogo4.png";
 import LogoSlider from "./AutomaticSlideShow";
+import { FaSearch } from "react-icons/fa";
 
 function ContentRight() {
   const [isMobile, setIsMobile] = useState(false);
@@ -74,8 +75,8 @@ function ContentRight() {
       backgroundColor: "#FF6E05",
       color: "#fff",
       border: "none",
-      padding: "10px 20px",
-      marginLeft: "10px",
+      padding: "15px",
+      marginLeft: "5px",
       cursor: "pointer",
       borderRadius: "5px",
     },
@@ -125,7 +126,9 @@ function ContentRight() {
             placeholder="Search Course & University"
             style={styles.searchInput}
           />
-          <button style={styles.searchButton}>Search</button>
+          <button style={styles.searchButton}>
+            <FaSearch />
+          </button>
         </div>
         <div style={styles.icons}>
           <div style={styles.iconBox}>

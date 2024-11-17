@@ -79,6 +79,8 @@ function ContentRight() {
       marginLeft: "5px",
       cursor: "pointer",
       borderRadius: "5px",
+      display: "flex",
+      justifyContent: "center",
     },
     text: {
       maxWidth: "25ch",

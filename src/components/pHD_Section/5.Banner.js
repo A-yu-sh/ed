@@ -7,10 +7,10 @@ const Banner = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-20 container mx-auto">
         <div className="order-2 md:order-1 flex items-center justify-center">
           <div>
-            <h1 className="text-black text-3xl md:text-4xl font-bold text-center md:text-left">
+            <h1 className="text-black text-3xl md:text-4xl font-bold text-center md:text-center">
               We guarantee your PhD admission for 2024.
             </h1>
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mt-6 max-w-[80ch] text-center md:text-left">
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mt-6 max-w-[50ch] text-center md:text-center">
               Aimlay provides a streamlined and efficient PhD admission process,
               tailored to support working professionals throughout their
               academic journey. Earning a PhD (Doctor of Philosophy) requires

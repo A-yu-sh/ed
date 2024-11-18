@@ -38,16 +38,13 @@ function ContentRight() {
     heading: {
       display: "flex",
       justifyContent: isMobile ? "center" : "start",
-
       color: "#ffffff",
     },
-
     mainHeading: {
       display: "flex",
       justifyContent: isMobile ? "center" : "start",
       fontSize: isMobile ? "2rem" : "2.5rem",
       fontWeight: "bold",
-
       color: "#fff44f",
     },
     description: {
@@ -90,7 +87,6 @@ function ContentRight() {
     },
     icons: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
       gap: "20px",
       marginBottom: "20px",
     },
@@ -132,7 +128,7 @@ function ContentRight() {
             <FaSearch />
           </button>
         </div>
-        <div style={styles.icons}>
+        <div className="icons-container" style={styles.icons}>
           <div style={styles.iconBox}>
             <img
               src={Tlogo4}
@@ -171,6 +167,20 @@ function ContentRight() {
         </div>
       </div>
       <LogoSlider />
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .icons-container {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+          @media (min-width: 769px) {
+            .icons-container {
+              grid-template-columns: repeat(4, 1fr);
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }

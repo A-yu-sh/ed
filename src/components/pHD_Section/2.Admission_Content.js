@@ -4,7 +4,7 @@ import { FaGraduationCap } from "react-icons/fa";
 const Admission_Content = () => {
   return (
     <div>
-      <div className="mt-44 flex justify-center">
+      <div className="mt-20 flex justify-center">
         <h1 className="text-black text-3xl font-bold text-center sm:text-center md:text-center lg:text-center md:m-auto sm:m-auto lg:m-auto">
           With Us, PhD Admission 2024 is Guaranteed
         </h1>

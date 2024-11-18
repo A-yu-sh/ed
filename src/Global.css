@@ -1528,7 +1528,7 @@ h2 {
   margin-bottom: 10px;
   font-size: 0.9rem;
   display: flex;
-  justify-content: start;
+  justify-content: center;
 
   padding-left: 20px; /* Space for the '>' symbol */
 }
@@ -1537,9 +1537,24 @@ h2 {
 .footer-section ul li::before {
   content: "•"; /* The symbol */
   position: absolute;
-  left: 0; /* Position the symbol to the left of the text */
-  color: white; /* Same color as the text */
+
+  left: 80px; /* Position the symbol to the left of the text */
+  color: rgb(255, 255, 255); /* Same color as the text */
   font-size: 1rem; /* Adjust size of the symbol if needed */
+}
+
+@media (min-width: 768px) {
+  .footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: start;
+    padding-left: 20px; /* Space for the '>' symbol */
+  }
+
+  .footer-section ul li::before {
+    display: none; /* Adjust size of the symbol if needed */
+  }
 }
 
 .footer-section ul li a {
@@ -2333,6 +2348,7 @@ p {
 /* Adjust spacing for text elements */
 .experts-text h1 {
   font-size: 35px;
+  margin-top: -5px;
 }
 
 .experts-text h2 {
@@ -2341,6 +2357,65 @@ p {
 
 .experts-text p {
   font-size: 20px;
+}
+/* Responsive for Mobile Devices */
+@media (max-width: 768px) {
+  .experts-text h1 {
+    font-size: 25px; /* Smaller font size for mobile */
+    margin-top: -5px;
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .experts-text h2 {
+    font-size: 30px; /* Adjust heading size */
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .experts-text p {
+    font-size: 16px; /* Smaller paragraph font */
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .expert-buttons {
+    grid-template-columns: 1fr; /* Single column layout for buttons */
+    gap: 0.8rem; /* Adjust spacing between buttons */
+    text-align: center;
+  }
+
+  .expert-buttons button {
+    width: 100%; /* Full width buttons */
+    padding: 12px; /* Increase padding for touchscreens */
+    font-size: 14px;
+  }
+
+  .experts-image {
+    height: 250px; /* Reduce image height */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Add spacing above the image */
+    display: flex;
+    justify-content: center;
+  }
+
+  .experts-image img {
+    max-height: 100%; /* Ensure image scales within container */
+    max-width: 100%;
+    object-fit: contain;
+    transform: scale(1); /* Remove scaling for mobile */
+  }
+
+  .talk-to-experts {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 1rem; /* Reduce padding for smaller screens */
+    text-align: center;
+  }
+
+  .content-overlay {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    gap: 20px; /* Add spacing between text and image */
+  }
 }
 
 /* Buttons in a 2x2 grid */

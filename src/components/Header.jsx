@@ -103,7 +103,7 @@ function Header() {
           }
           .compare-btn {
             padding: 10px 15px;
-            background-color: #ffa500;
+            background-color: #ff6600;
             color: white;
             border: none;
             border-radius: 4px;

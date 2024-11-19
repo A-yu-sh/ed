@@ -5,45 +5,116 @@ import JMIimage from "../assets/GOVT logo/jamia-millia-islamia-logo-hd-png-vecto
 import AUimage from "../assets/GOVT logo/Andhra University.jpg";
 import MCUimage from "../assets/GOVT logo/Mizoram_University_logo.png";
 import Hlogo from "../assets/GOVT logo/University_of_Hyderabad_Logo.png";
+import { Link } from "react-router-dom";
 
 function Course() {
   const Online_University = [
-    { id: 1, title: "Acharya Nagarjuna", image: ANimage },
-    { id: 2, title: "Aligarh Muslim", image: AMimage },
-    { id: 3, title: "Andhra University", image: AUimage },
-    { id: 4, title: "Jamia-Milia-Islamia University", image: JMIimage },
-    { id: 5, title: "Mizoram Central University", image: MCUimage },
-    { id: 6, title: "Sambalpur University", image: ANimage },
-    { id: 7, title: "University of Hyderabad", image: Hlogo },
-    { id: 8, title: "Amrita University", image: ANimage },
-    { id: 9, title: "Jain University", image: AMimage },
-    { id: 10, title: "Chandigarh University", image: AUimage },
-    { id: 11, title: "DPU University", image: JMIimage },
+    { id: 1, title: "Acharya Nagarjuna", image: ANimage, clicked: "/filter" },
+    { id: 2, title: "Aligarh Muslim", image: AMimage, clicked: "/filter" },
+    { id: 3, title: "Andhra University", image: AUimage, clicked: "/filter" },
+    {
+      id: 4,
+      title: "Jamia-Milia-Islamia University",
+      image: JMIimage,
+      clicked: "/filter",
+    },
+    {
+      id: 5,
+      title: "Mizoram Central University",
+      image: MCUimage,
+      clicked: "/filter",
+    },
+    {
+      id: 6,
+      title: "Sambalpur University",
+      image: ANimage,
+      clicked: "/filter",
+    },
+    {
+      id: 7,
+      title: "University of Hyderabad",
+      image: Hlogo,
+      clicked: "/filter",
+    },
+    { id: 8, title: "Amrita University", image: ANimage, clicked: "/filter" },
+    { id: 9, title: "Jain University", image: AMimage, clicked: "/filter" },
+    {
+      id: 10,
+      title: "Chandigarh University",
+      image: AUimage,
+      clicked: "/filter",
+    },
+    { id: 11, title: "DPU University", image: JMIimage, clicked: "/filter" },
     { id: 12, title: "Amity University", image: MCUimage },
-    { id: 13, title: "Mangalayatan University", image: ANimage },
-    { id: 14, title: "Manipal College", image: Hlogo },
-    { id: 15, title: "SGVU University", image: AUimage },
-    { id: 16, title: "Sharda University", image: JMIimage },
-    { id: 17, title: "Shobhit University", image: MCUimage },
-    { id: 18, title: "SMU University", image: ANimage },
+    {
+      id: 13,
+      title: "Mangalayatan University",
+      image: ANimage,
+      clicked: "/filter",
+    },
+    { id: 14, title: "Manipal College", image: Hlogo, clicked: "/filter" },
+    { id: 15, title: "SGVU University", image: AUimage, clicked: "/filter" },
+    { id: 16, title: "Sharda University", image: JMIimage, clicked: "/filter" },
+    {
+      id: 17,
+      title: "Shobhit University",
+      image: MCUimage,
+      clicked: "/filter",
+    },
+    { id: 18, title: "SMU University", image: ANimage, clicked: "/filter" },
   ];
 
   const Distance_University = [
-    { id: 19, title: "Lovely Professional University", image: ANimage },
-    { id: 20, title: "Shohbit University", image: AMimage },
-    { id: 21, title: "Mangalayatan University", image: AUimage },
-    { id: 22, title: "Suresh Gyan Vihar", image: JMIimage },
-    { id: 23, title: "Swami Vivekananda University", image: MCUimage },
+    {
+      id: 19,
+      title: "Lovely Professional University",
+      image: ANimage,
+      clicked: "/filter",
+    },
+    { id: 20, title: "Shohbit University", image: AMimage, clicked: "/filter" },
+    {
+      id: 21,
+      title: "Mangalayatan University",
+      image: AUimage,
+      clicked: "/filter",
+    },
+    { id: 22, title: "Suresh Gyan Vihar", image: JMIimage, clicked: "/filter" },
+    {
+      id: 23,
+      title: "Swami Vivekananda University",
+      image: MCUimage,
+      clicked: "/filter",
+    },
   ];
 
   const Govt_University = [
-    { id: 24, title: "Acharya Nagarjuna", image: ANimage },
-    { id: 25, title: "Aligarh Muslim", image: AMimage },
+    { id: 24, title: "Acharya Nagarjuna", image: ANimage, clicked: "/filter" },
+    { id: 25, title: "Aligarh Muslim", image: AMimage, clicked: "/filter" },
     { id: 26, title: "Andhra University", image: AUimage },
-    { id: 27, title: "Jamia-Milia-Islamia University", image: JMIimage },
-    { id: 28, title: "Mizoram Central University", image: MCUimage },
-    { id: 29, title: "Sambalpur University", image: ANimage },
-    { id: 30, title: "University of Hyderabad", image: Hlogo },
+    {
+      id: 27,
+      title: "Jamia-Milia-Islamia University",
+      image: JMIimage,
+      clicked: "/filter",
+    },
+    {
+      id: 28,
+      title: "Mizoram Central University",
+      image: MCUimage,
+      clicked: "/filter",
+    },
+    {
+      id: 29,
+      title: "Sambalpur University",
+      image: ANimage,
+      clicked: "/filter",
+    },
+    {
+      id: 30,
+      title: "University of Hyderabad",
+      image: Hlogo,
+      clicked: "/filter",
+    },
   ];
 
   const [data, setData] = useState(Online_University);
@@ -91,7 +162,9 @@ function Course() {
                 <p className="univ-subtitle">{course.title}</p>
                 <div className="course-actions">
                   <button className="explore-btn">Explore</button>
-                  <button className="view-btn">View Universities</button>
+                  <Link to={course.clicked} className="view-btn">
+                    View Universities
+                  </Link>
                 </div>
               </div>
             ))}

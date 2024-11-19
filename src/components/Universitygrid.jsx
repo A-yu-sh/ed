@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import JuImage from "../assets/Acharya Nagarjuna.jpg";
-import VGUImage from "../assets/Aligarh Muslim.jpg";
+import JuImage from "../assets/Goverment University image/Goverment University image/Acharya Nagarjuna.png";
+import VGUImage from "../assets/Goverment University image/Goverment University image/Aligarh Muslim.png";
 import DUImage from "../assets/Jamia-Milia-Islamia.jpg";
 import AmityImage from "../assets/Andhra University.jpg";
 import AmritaImage2 from "../assets/Mizoram Central University.png";
-import HONImage from "../assets/University of Hyderabad.png";
+import HONImage from "../assets/Goverment University image/Goverment University image/University of Hyderabad.png";
 import SImage from "../assets/Sambalpur.png";
 import PCImage from "../assets/Amrita university Sixe Fix.png";
 import PC2Image from "../assets/JU.jpeg";
@@ -18,13 +18,16 @@ import PC8Image from "../assets/SGVU University.png";
 import PC9Image from "../assets/Sharda University.png";
 import PC10Image from "../assets/Shobhit University.png";
 import PC11Image from "../assets/SMU Collage.png";
+import PC12Image from "../assets/Goverment University image/Private University  Image/LPU University.png";
+import PC13Image from "../assets/Goverment University image/Private University  Image/UPES  university.png";
 
 const universities = [
   { name: "Acharya Nagarjuna University", image: JuImage },
   { name: "Aligarh Muslim University", image: VGUImage },
   { name: "Jamia University", image: DUImage },
   { name: "Andhra University", image: AmityImage },
-  { name: "University of Hyderabad", image: AmritaImage2 },
+  { name: "Mizoram University", image: AmritaImage2 },
+  { name: "University of Hyderabad", image: HONImage },
   { name: "Sambalpur University", image: SImage },
   { name: "Amrita University", image: PCImage },
   { name: "Jain University", image: PC2Image },
@@ -37,6 +40,9 @@ const universities = [
   { name: "Sharda University", image: PC9Image },
   { name: "Shobhit University", image: PC10Image },
   { name: "SMU University", image: PC11Image },
+
+  { name: "UPES University", image: PC13Image },
+  { name: "Lovely Professional University", image: PC12Image },
 ];
 
 const UniversityGrid = ({ onCompareClick }) => {

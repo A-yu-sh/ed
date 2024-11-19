@@ -3,14 +3,14 @@ import React from "react";
 const Disclaimer = () => {
   const styles = {
     container: {
-      backgroundColor: " #4caf50", // Green background
+      backgroundColor: "#00b956", // Updated to green background
       color: "#333",
       minHeight: "100vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      padding: "20px",
       marginTop: "90px",
+      padding: "20px",
     },
     content: {
       backgroundColor: "#fff",
@@ -47,7 +47,6 @@ const Disclaimer = () => {
         </div>
         <ul style={styles.bulletList}>
           <li style={styles.bulletItem}>
-            {" "}
             Distance Education Centers provide flexible, accessible learning
             options for students who wish to pursue education outside of the
             traditional classroom environment. These centers cater to a wide

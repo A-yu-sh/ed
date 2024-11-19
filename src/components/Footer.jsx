@@ -155,7 +155,13 @@ function Footer() {
         <div className="flw-container">
           <ul className="footer-links">
             <li>
-              <a href="/home">Home</a>
+              <Link
+                to="/"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}>
+                Home
+              </Link>
             </li>
             <li
               onClick={() => {
@@ -167,7 +173,7 @@ function Footer() {
               onClick={() => {
                 window.scrollTo(0, 0);
               }}>
-              <a href="/blogs">Blogs</a>
+              <Link to="/blog">Blogs</Link>
             </li>
             <li
               onClick={() => {

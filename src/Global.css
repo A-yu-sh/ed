@@ -1530,15 +1530,13 @@ h2 {
   font-size: 0.9rem;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 
   padding-left: 20px; /* Space for the '>' symbol */
 }
 
 /* Add '>' before each list item */
 .footer-section ul li::before {
-  content: "•"; /* The symbol */
-  position: absolute;
-
   left: 80px; /* Position the symbol to the left of the text */
   color: rgb(255, 255, 255); /* Same color as the text */
   font-size: 1rem; /* Adjust size of the symbol if needed */
@@ -1550,6 +1548,7 @@ h2 {
     font-size: 0.9rem;
     display: flex;
     justify-content: start;
+    text-decoration: none;
     padding-left: 20px; /* Space for the '>' symbol */
   }
 
@@ -1683,6 +1682,11 @@ h2 {
   }
 
   .footer-section ul li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  .footer-section ul li {
+    text-decoration: none;
     font-size: 0.8rem;
   }
 

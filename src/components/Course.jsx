@@ -232,6 +232,147 @@ function Course() {
       clicked: "/filter",
     },
   ];
+  const MBACOURSE = [
+    {
+      id: 1,
+      subtitle: "General Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 2,
+      subtitle: "Finance Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 3,
+      subtitle: "Marketing Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 4,
+      subtitle: "Human Resource Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 5,
+      subtitle: "Operation Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 6,
+      subtitle: "Information Technology",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 7,
+      subtitle: "Healthcare and Hospital Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 8,
+      subtitle: "Data Analytics",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 9,
+      subtitle: "Business Analytics",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 10,
+      subtitle: "Supply Chain Management",
+      duration: "2 Year",
+      clicked: "/filter",
+    },
+    {
+      id: 11,
+      subtitle: "International Business",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 12,
+      subtitle: "Project Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 13,
+      subtitle: "Hospitality Management",
+      duration: "2 Year",
+      clicked: "/filter",
+    },
+    {
+      id: 14,
+      subtitle: "International Finance",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 15,
+      subtitle: "Retail Management",
+      duration: "2 Year",
+      clicked: "/filter",
+    },
+    {
+      id: 16,
+      subtitle: "Logistics and Supply Chain Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+    {
+      id: 17,
+      subtitle: "Fintech Management",
+      duration: "2 Year",
+    },
+    {
+      id: 18,
+      subtitle: "Data Science and Analytics",
+      duration: "2 Year",
+      clicked: "/filter",
+    },
+    {
+      id: 19,
+      subtitle: "IT and Fintech Management",
+      duration: "2 Year",
+      clicked: "/filter",
+    },
+    {
+      id: 20,
+      subtitle: "Banking and Finance Management",
+      duration: "2 Year",
+      clicked: "/filter",
+    },
+    {
+      id: 21,
+      subtitle: "Marketing and HR Management",
+      duration: "2 Year",
+
+      clicked: "/filter",
+    },
+  ];
   // State to toggle between courses
   const [data, setData] = useState(Distance_Courses);
 
@@ -245,6 +386,8 @@ function Course() {
       setData(Online_Courses);
     } else if (type === "Mastercourses") {
       setData(Mastercourses);
+    } else if (type === "mba") {
+      setData(MBACOURSE);
     }
   };
 
@@ -262,7 +405,7 @@ function Course() {
             <p onClick={() => handleToggle("Distance_Courses")}>
               Distance Courses
             </p>
-            <p onClick={() => handleToggle("Distance_Courses")}>
+            <p onClick={() => handleToggle("Mastercourses")}>
               Master Courses{" "}
               <span className="duration-badge green">2 Year</span>
             </p>
@@ -270,7 +413,7 @@ function Course() {
               Bachelor Courses{" "}
               <span className="duration-badge orange">3 Year</span>
             </p>
-            <p>
+            <p onClick={() => handleToggle("mba")}>
               MBA Specialization{" "}
               <span className="duration-badge green">2 Year</span>
             </p>

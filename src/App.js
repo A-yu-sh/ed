@@ -12,6 +12,10 @@ import Terms from "./components/Footer_Pages/TermsAndConditions";
 import Ubox from "./components/Convocation_SlideShow";
 import FilterPage from "./components/FilterPage";
 import Disclaimer from "./components/Footer_Pages/Disclaimer";
+import UGCIntro from "./components/UGC/1.Intro";
+import DoctorateIntro from "./components/Doctorate/1.Intro";
+import ThesisIntro from "./components/Thesis/1.Intro";
+import Blog from "./components/Footer_Pages/Blogs";
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
         <Route path="/Terms" element={<Ubox />} />
         <Route path="/filter" element={<FilterPage />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/ugc" element={<UGCIntro />} />
+        <Route path="/honorary-doctorate" element={<DoctorateIntro />} />
+        <Route path="/thesis" element={<ThesisIntro />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </div>
   );

@@ -164,16 +164,26 @@ function Header() {
               flex-direction: column;
               width: 100%;
             }
-            .mobile-dropdown-content {
-              padding: 10px;
-              margin-top: 5px;
-              border-radius: 4px;
-            }
-            .mobile-dropdown-content p {
-              text-align: start;
-              margin: 8px 0;
-              border-bottom: 1px solid #ccc;
-            }
+           
+.mobile-dropdown-content {
+text-align: start;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.mobile-dropdown-content a {
+  text-align: start;
+  margin: 8px 0;
+
+  text-decoration: none;
+  color: #333;
+}
+
+.mobile-dropdown-content a:hover {
+  color: #007BFF; /* Change to your desired hover color */
+
+}
             .close-mobile-menu {
               align-self: flex-end;
               cursor: pointer;
@@ -353,11 +363,48 @@ function Header() {
                 </button>
                 {activeMobileDropdown === "MBA" && (
                   <div className="mobile-dropdown-content">
-                    <p>MBA in Marketing</p>
-                    <p>MBA in Finance</p>
-                    <p>MBA in Human Resource Management</p>
-                    <p>MBA in Entrepreneurship</p>
-                    <p>MBA in Insurance</p>
+                    <Link to="/filter">General Management</Link>
+                    <br />
+                    <Link to="/filter">Finance Management</Link>
+                    <br />
+                    <Link to="/filter">Marketing Management</Link>
+                    <br />
+                    <Link to="/filter">Human Resource Management</Link>
+                    <br />
+                    <Link to="/filter">Operation Management</Link>
+                    <br />
+                    <Link to="/filter">Information Technology</Link>
+                    <br />
+                    <Link to="/filter">Healthcare and Hospital Management</Link>
+                    <br />
+                    <Link to="/filter">Data Analytics</Link>
+                    <br />
+                    <Link to="/filter">Business Analytics</Link>
+                    <br />
+                    <Link to="/filter">Supply Chain Management</Link>
+                    <br />
+                    <Link to="/filter">International Business</Link>
+                    <br />
+                    <Link to="/filter">Project Management</Link>
+                    <br />
+                    <Link to="/filter">Hospitality Management</Link>
+                    <br />
+                    <Link to="/filter">International Finance</Link>
+                    <br />
+                    <Link to="/filter">Retail Management</Link>
+                    <br />
+                    <Link to="/filter">
+                      Logistics and Supply Chain Management
+                    </Link>
+                    <br />
+                    <Link to="/filter">Fintech Management</Link>
+                    <br />
+                    <Link to="/filter">Data Science and Analytics</Link>
+                    <br />
+                    <Link to="/filter">Banking and Finance Management</Link>
+                    <br />
+                    <Link to="/filter">Marketing and HR Management</Link>
+                    <br />
                   </div>
                 )}
               </li>

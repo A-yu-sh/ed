@@ -70,11 +70,10 @@ const LogoSlider = () => {
     i25,
   ];
 
-  // Number of logos visible at once in the slider
-  const itemsPerView = 4;
+  // Number of logos visible at once in the slider (default 4)
+  const [itemsPerView, setItemsPerView] = useState(4);
 
   // Create an extended array by adding first few logos at the end
-  // This creates the illusion of infinite scrolling
   const extendedLogos = [...logos, ...logos.slice(0, itemsPerView)];
 
   /**
@@ -83,14 +82,8 @@ const LogoSlider = () => {
    */
   const handleTransitionEnd = useCallback(() => {
     if (currentIndex >= logos.length) {
-      // Temporarily disable transition
       setIsTransitioning(true);
-
-      // Reset to the start
       setCurrentIndex(0);
-
-      // Re-enable transition after a brief delay
-      // This prevents visible jumping when resetting
       setTimeout(() => setIsTransitioning(false), 50);
     }
   }, [currentIndex, logos.length]);
@@ -104,8 +97,23 @@ const LogoSlider = () => {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }, 2000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(timer);
+  }, []);
+
+  // Set itemsPerView based on the screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setItemsPerView(2); // 2 items on mobile devices
+      } else {
+        setItemsPerView(4); // Default to 4 items
+      }
+    };
+
+    handleResize(); // Call initially
+    window.addEventListener("resize", handleResize); // Add event listener for resize
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
   }, []);
 
   // Styling configuration object
@@ -132,7 +140,7 @@ const LogoSlider = () => {
     },
     // Individual logo wrapper styles
     logoWrapper: {
-      minWidth: `${100 / itemsPerView}%`, // Each wrapper takes up 1/4 of the container
+      minWidth: `${100 / itemsPerView}%`, // Each wrapper takes up 1/2 or 1/4 of the container
       padding: "0 5px",
       boxSizing: "border-box",
       display: "flex",

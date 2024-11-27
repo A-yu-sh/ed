@@ -61,159 +61,220 @@ const UniversityGrid = ({ onCompareClick }) => {
   }, []);
 
   const displayedUniversities =
-    showMore || !isMobile ? universities : universities.slice(0, 5);
+    showMore || !isMobile ? universities : universities.slice(0, 6);
 
   return (
     <div className="university-grid">
       <style>
         {`
-        .compare{
-        background: #FF6E05;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-            margin-top: 1rem;
-        }
-          .university-grid {
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            background-color: #f8f9fa;
-          }
+  /* General Styles (unchanged) */
+.compare {
+  background: #FF6E05;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  margin-top: 1rem;
+}
 
-          .university-grid h1 {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-          }
+.university-grid {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  text-align: center;
+}
 
-          .university-grid p {
-            text-align: center;
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-          }
+.university-grid h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+      display:flex;
+    justify-content:center;
+}
 
-          .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-          }
+.university-grid p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
-          .grid-item {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1.5rem;
-            position: relative;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-          }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 60px;
+  box-sizing: border-box;
+}
 
-          .grid-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-          }
+.grid-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
 
-          .university-image {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-          }
+.grid-item:hover {
+  transform: scale(1.05);
+}
 
-          .grid-item:hover .university-image {
-            transform: scale(1.05);
-          }
+.university-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-          .view-more-button {
-            background: #FF6E05;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-            margin-top: 1rem;
-          }
+.grid-item:hover .university-image {
+  transform: scale(1.1);
+}
 
-          .view-more-button:hover {
-            background: #0056b3;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-          }
+.text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
 
-          @media (max-width: 1200px) {
-            .grid-container {
-              grid-template-columns: repeat(3, 1fr);
-            }
-          }
+.view-more-button,
+.compare-button-container .compare {
+  background: #FF6E05;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+}
 
-          @media (max-width: 768px) {
-            .university-grid {
-              padding: 1rem;
-            }
+.view-more-button:hover,
+.compare-button-container .compare:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
 
-            .university-grid h1 {
-              font-size: 2rem;
-            }
+/* Mobile (Below 480px) */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(160px, 1fr)); /* Two cards per row */
+    gap: 20px;
+    padding: 0 10px;
+    justify-items: center;
+  }
 
-            .grid-container {
-              grid-template-columns: 1fr;
-              display: flex;
-              justify-content: center;
-            }
+  .university-image {
+    width: 300px;
+    height: 300px;
+  }
 
-            .grid-item {
-              padding: 1.5rem 1rem;
-            }
+  .text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 
-            .university-image {
-              width: 150px;
-              height: 150px;
-            }
-          }
+  .grid-item {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 
-          @media (max-width: 480px) {
-            .grid-container {
-              grid-template-columns: 1fr;
-              display: flex;
-              justify-content: center;
-            }
+/* Tablet (800px to 1200px) */
+@media (min-width: 800px) and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); /* Three cards per row */
+    gap: 25px;
+    padding: 40px; /* Less padding to fit more on the screen */
+    display:flex;
+    justify-content:center;
+  }
 
-            .university-image {
-              width: 200px;
-              height: 200px;
-            }
-          }
-        `}
+  .university-image {
+    width: 600px; /* Slightly bigger image */
+    height: 600px;
+  }
+
+  .text {
+    font-size: 16px; /* Slightly smaller text for more space */
+  }
+
+  .grid-item {
+    padding: 18px; /* Smaller padding inside cards */
+  }
+}
+
+@media (width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 15px;
+              display:flex;
+    justify-content:center;
+
+  }
+
+  .university-image {
+    width: 500px;
+    height: 500px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .grid-item {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .university-image {
+    width: 800px;
+    height: 800px;
+  }
+
+  .text {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+  `}
       </style>
 
       <h1>Online & Distance Education Universities</h1>
@@ -230,7 +291,7 @@ const UniversityGrid = ({ onCompareClick }) => {
               alt={university.name}
               className="university-image"
             />
-            <h4 className="text">{university.name}</h4>
+            <h4 className="text">{}</h4>
           </div>
         ))}
       </div>

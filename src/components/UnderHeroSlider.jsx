@@ -62,6 +62,7 @@ const UnderSlider = () => {
       borderRadius: "12px",
       backgroundColor: "transparent",
     },
+
     logoContainer: {
       display: "flex",
       transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
@@ -85,10 +86,24 @@ const UnderSlider = () => {
       borderRadius: "8px",
       boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
     },
+    h1: {
+      fontSize: "2rem",
+      fontWeight: "bold",
+      color: "#333",
+      textAlign: "center",
+      marginBottom: "20px",
+      lineHeight: "1.4",
+      letterSpacing: "0.5px",
+      textTransform: "uppercase",
+    },
   };
 
   return (
     <div style={style.sliderContainer}>
+      <h1 style={style.h1}>
+        Celebrating the proud moment of achieving a PhD at the convocation
+        ceremony.
+      </h1>
       <div style={style.logoContainer} onTransitionEnd={handleTransitionEnd}>
         {extendedLogos.map((logo, index) => (
           <div key={index} style={style.logoWrapper}>

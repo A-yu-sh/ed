@@ -43,14 +43,14 @@ function ContentRight() {
     mainHeading: {
       display: "flex",
       justifyContent: isMobile ? "center" : "start",
-      fontSize: isMobile ? "2rem" : "2.5rem",
+      fontSize: isMobile ? "1.1rem" : "2.5rem",
       fontWeight: "bold",
       color: "#fff44f",
     },
     description: {
       display: "flex",
-      justifyContent: "start",
-      fontSize: "1rem",
+      justifyContent: isMobile ? "center" : "start",
+      fontSize: isMobile ? "0.7rem" : "1rem",
       marginBottom: "20px",
       color: "#ffffff",
     },
@@ -62,7 +62,7 @@ function ContentRight() {
     },
     searchInput: {
       width: "80%",
-      padding: "10px",
+      padding: isMobile ? "5px" : "10px",
       fontSize: "1rem",
       border: "1px solid #ccc",
       borderRadius: "5px 0px 0px 5px",
@@ -72,7 +72,7 @@ function ContentRight() {
       backgroundColor: "#FF6E05",
       color: "#fff",
       border: "none",
-      padding: "15px",
+      padding: isMobile ? "10px" : "15px",
       marginLeft: "0px",
       cursor: "pointer",
       borderRadius: "0px 5px 5px 0px",
@@ -96,8 +96,8 @@ function ContentRight() {
       alignItems: "center",
     },
     iconImage: {
-      width: "80px",
-      height: "80px",
+      width: "50px",
+      height: "50px",
       marginBottom: "10px",
     },
     topLeading: {

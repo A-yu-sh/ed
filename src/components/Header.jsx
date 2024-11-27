@@ -279,29 +279,46 @@ text-align: start;
                 </button>
                 {activeMobileDropdown === "online" && (
                   <div className="mobile-dropdown-content">
-                    <Link to="/filter">Master of Business Administration</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Business Administration
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Commerce</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Commerce
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Computer Application</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Computer Application
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Arts</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Arts
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Science</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Science
+                    </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Master of Journalism & Mass Media Communications
                     </Link>
                     <br />
 
-                    <Link to="/filter">Bachelor of Commerce</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Commerce
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Computer Application</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Computer Application
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Arts</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Arts
+                    </Link>
                     <br />
-
-                    <p>Bachelor of Journalism & Mass Media Communications</p>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Journalism & Mass Media Communications
+                    </Link>
                   </div>
                 )}
               </li>
@@ -318,32 +335,48 @@ text-align: start;
                 </button>
                 {activeMobileDropdown === "Distance-Courses" && (
                   <div className="mobile-dropdown-content">
-                    <Link to="/filter">Master of Business Administration</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Business Administration
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Commerce</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Commerce
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Computer Application</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Computer Application
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Arts</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Arts
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Science</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Science
+                    </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Master of Library and Information Science
                     </Link>
                     <br />
 
-                    <Link to="/filter">Bachelor of Commerce</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Commerce
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Computer Application</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Computer Application
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Arts</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Arts
+                    </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Bachelor of Library and Information Science
                     </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Bachelor of Business Administration
                     </Link>
                     <br />
@@ -362,17 +395,27 @@ text-align: start;
                 </button>
                 {activeMobileDropdown === "master-courses" && (
                   <div className="mobile-dropdown-content">
-                    <Link to="/filter">Master of Business Administration</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Business Administration
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Commerce</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Commerce
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Computer Application</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Computer Application
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Arts</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Arts
+                    </Link>
                     <br />
-                    <Link to="/filter">Master of Science</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Master of Science
+                    </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Master of Journalism & Mass Media Communications
                     </Link>
                     <br />
@@ -392,18 +435,26 @@ text-align: start;
                 </button>
                 {activeMobileDropdown === "bachelor-courses" && (
                   <div className="mobile-dropdown-content">
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Bachelor of Business Administration
                     </Link>
-                    <Link to="/filter">Bachelor of Commerce</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Commerce
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Computer Application</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Computer Application
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Arts</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Arts
+                    </Link>
                     <br />
-                    <Link to="/filter">Bachelor of Science</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Bachelor of Science
+                    </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Bachelor of Journalism & Mass Media Communications
                     </Link>
                     <br />
@@ -422,47 +473,85 @@ text-align: start;
                 </button>
                 {activeMobileDropdown === "MBA" && (
                   <div className="mobile-dropdown-content">
-                    <Link to="/filter">General Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      General Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Finance Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Finance Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Marketing Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Marketing Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Human Resource Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Human Resource Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Operation Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Operation Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Information Technology</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Information Technology
+                    </Link>
                     <br />
-                    <Link to="/filter">Healthcare and Hospital Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Healthcare and Hospital Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Data Analytics</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Data Analytics
+                    </Link>
                     <br />
-                    <Link to="/filter">Business Analytics</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Business Analytics
+                    </Link>
                     <br />
-                    <Link to="/filter">Supply Chain Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Supply Chain Management
+                    </Link>
                     <br />
-                    <Link to="/filter">International Business</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      International Business
+                    </Link>
                     <br />
-                    <Link to="/filter">Project Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Project Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Hospitality Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Hospitality Management
+                    </Link>
                     <br />
-                    <Link to="/filter">International Finance</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      International Finance
+                    </Link>
                     <br />
-                    <Link to="/filter">Retail Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Retail Management
+                    </Link>
                     <br />
-                    <Link to="/filter">
+                    <Link onClick={toggleMobileMenu} to="/filter">
                       Logistics and Supply Chain Management
                     </Link>
                     <br />
-                    <Link to="/filter">Fintech Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Fintech Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Data Science and Analytics</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Data Science and Analytics
+                    </Link>
                     <br />
-                    <Link to="/filter">Banking and Finance Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Banking and Finance Management
+                    </Link>
                     <br />
-                    <Link to="/filter">Marketing and HR Management</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Marketing and HR Management
+                    </Link>
                     <br />
                   </div>
                 )}
@@ -479,17 +568,29 @@ text-align: start;
                 </button>
                 {activeMobileDropdown === "university" && (
                   <div className="mobile-dropdown-content">
-                    <Link to="/filter">Jamia Milia Islamia</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Jamia Milia Islamia
+                    </Link>
                     <br />
-                    <Link to="/filter">Aligar Muslim University</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Aligar Muslim University
+                    </Link>
                     <br />
-                    <Link to="/filter">University of Hyderabad</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      University of Hyderabad
+                    </Link>
                     <br />
-                    <Link to="/filter">Acharya Nagarjuna University</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Acharya Nagarjuna University
+                    </Link>
                     <br />
-                    <Link to="/filter">Andhra University</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Andhra University
+                    </Link>
                     <br />
-                    <Link to="/filter">Sambalpur University</Link>
+                    <Link onClick={toggleMobileMenu} to="/filter">
+                      Sambalpur University
+                    </Link>
                     <br />
                   </div>
                 )}

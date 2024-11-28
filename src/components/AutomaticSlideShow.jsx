@@ -59,7 +59,6 @@ const LogoSlider = () => {
     i14,
     i15,
     i16,
-    i17,
     i18,
     i19,
     i20,

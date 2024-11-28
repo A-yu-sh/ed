@@ -330,6 +330,30 @@ logoImage {
     width: 30%; /* Adjust width for very small devices */
   }
 }
+/* Mobile-specific styles for h1 and p alignment */
+@media (max-width: 768px) {
+  .university-grid h1,
+  .university-grid p {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.5rem;
+    vertical-align: middle; /* Align text vertically */
+  }
+
+  .university-grid h1 {
+    font-size: 1rem; /* Slightly larger font for h1 */
+    font-weight: 700;
+  }
+
+  .university-grid p {
+    font-size: 0.5rem; /* Smaller font for p */
+    color: #666;
+  }
+
+  .university-grid {
+    text-align: center; /* Center-align text */
+  }
+}
 
   `}
       </style>

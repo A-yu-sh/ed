@@ -10,8 +10,103 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
+      <style>
+        {`
+          .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            padding: 20px;
+            box-sizing: border-box;
+          }
+
+          .footer-section {
+            flex: 1 1 calc(25% - 20px);
+            margin: 10px;
+          }
+
+          .footer-container ul {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0;
+            margin: 0;
+          }
+
+          .footer-container ul li {
+            position: relative;
+            padding-left: 20px; /* Add space for custom bullet */
+            margin-bottom: 8px;
+          }
+
+          .footer-container ul li::before {
+            content: '>'; /* Use a custom symbol or character for the bullet */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 16px; /* Adjust size as needed */
+            color: #ffffff; /* Set color for the bullet */
+          }
+
+          .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+          }
+
+          /* Responsive styles */
+          @media (max-width: 768px) {
+            .footer-container {
+              flex-direction: column;
+            }
+
+            .footer-section {
+              flex: 1 1 100%;
+              margin: 10px 0;
+            }
+
+            .footer-section ul,
+            .footer-section h4 {
+              text-align: left;
+              padding-left: 15px; /* Ensure content aligns to the left */
+            }
+          }
+
+          @media (max-width: 480px) {
+            .footer-section ul li {
+              font-size: 14px;
+                            text-align: left;
+
+            }
+
+            .footer-section h4 {
+              font-size: 16px;
+            }
+          }
+            .footer-container ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-container ul li {
+  position: relative;
+  padding-left: 20px; /* Add space for the custom bullet */
+  margin-bottom: 8px;
+  line-height: 1.6; /* Adjust for proper spacing between lines */
+  font-size: 16px; /* Adjust for a clean, readable size */
+}
+
+.footer-container ul li::before {
+  content: '>'; /* Custom symbol for bullet */
+  position: absolute;
+  left: 0; /* Align bullet to the left */
+  top: 50%;
+  transform: translateY(-50%); /* Center bullet vertically */
+  font-size: 16px; /* Match font size of the text */
+}
+        `}
+      </style>
+
       <div className="footer-container">
-        {/* First section: Online & Distance Universities */}
+        {/* Sections */}
         <div className="footer-section">
           <h4>Online & Distance Universities</h4>
           <ul>
@@ -32,7 +127,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Second section: Distance Courses */}
         <div className="footer-section">
           <h4>Distance Courses</h4>
           <ul>
@@ -52,7 +146,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Third section: Online Courses */}
         <div className="footer-section">
           <h4>Online Courses</h4>
           <ul>
@@ -69,16 +162,8 @@ function Footer() {
             <li>Online BSC Course</li>
             <li>Online BJMC Course</li>
           </ul>
-
-          {/* Added Online & Distance Diploma Courses Section */}
-          <h4>Online & Distance Diploma Courses</h4>
-          <ul>
-            <li>PGP Courses</li>
-            <li>Certificate Course</li>
-          </ul>
         </div>
 
-        {/* Fourth section: Online & Distance MBA Courses */}
         <div className="footer-section">
           <h4>Online & Distance MBA Courses</h4>
           <ul>
@@ -98,7 +183,6 @@ function Footer() {
           </ul>
         </div>
       </div>
-
       <div className="footer-social-links">
         <div style={{ display: "flex", justifyContent: "center", gap: "15px" }}>
           <a
@@ -163,58 +247,31 @@ function Footer() {
                 Home
               </Link>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <Link to="/about-us">About Us</Link>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <Link to="/blog">Blogs</Link>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <Link to="/contact">Contact Us</Link>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <a href="/pay-online">Pay Online</a>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <a href="/reviews">Reviews</a>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <Link to="/disclaimer">Disclaimer</Link>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <a href="/refund-policy">Refund Policy</a>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <Link to="/Privacy-Policy">Privacy Policy</Link>
             </li>
-            <li
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}>
+            <li>
               <Link to="/Terms-and-Conditions">Terms & Conditions</Link>
             </li>
           </ul>
@@ -225,8 +282,8 @@ function Footer() {
         </div>
       </div>
 
+      {/* Footer Bottom */}
       <div className="footer-bottom">
-        {/* <p>&copy; 2024 SODE Counseling Services LLP</p> */}
         <p>&copy; 2024 Distance Education Center. All Rights Reserved.</p>
       </div>
     </footer>

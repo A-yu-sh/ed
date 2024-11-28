@@ -135,7 +135,7 @@ function ContentRight() {
               alt="Top 10 MBA Universities"
               style={styles.iconImage}
             />
-            <p style={styles.text}>Top 10 Distance Universities</p>
+            <p style={styles.text}>Top 10 MBA Universities in India</p>
           </div>
           <div style={styles.iconBox}>
             <img
@@ -151,9 +151,7 @@ function ContentRight() {
               alt="Top 10 MCA Universities"
               style={styles.iconImage}
             />
-            <p style={styles.text}>
-              Top &nbsp;10&nbsp; Online&nbsp; Universities&nbsp;{" "}
-            </p>
+            <p style={styles.text}>Top 10 MCA Universities in India</p>
           </div>
           <div style={styles.iconBox}>
             <img

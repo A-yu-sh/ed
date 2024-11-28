@@ -83,22 +83,7 @@ const universities = [
     advantage: "Certification Training",
     image: i1,
   },
-  {
-    name: "Amity University",
-    fee: "42,500/- Semester",
-    location: "Noida, Uttar Pradesh",
-    approvals: "UGC | NRIF 32 | NAAC A+",
-    advantage: "Industry Mentorship",
-    image: i1,
-  },
-  {
-    name: "Amrita University",
-    fee: "35,000/- Semester",
-    location: "Coimbatore, Tamil Nadu",
-    approvals: "UGC | NAAC A++ | NIRF 7",
-    advantage: "Certification Training",
-    image: i1,
-  },
+
   // Add more universities as needed...
 ];
 
@@ -226,9 +211,7 @@ const FilterPage = () => {
                 style={{
                   ...styles.image,
                   backgroundImage: `url(${uni.image})`,
-                }}>
-                <div style={styles.mode}>Online Mode</div>
-              </div>
+                }}></div>
               <div style={styles.details}>
                 <h2 style={styles.uniName}>{uni.name}</h2>
                 <p style={styles.info}>
@@ -262,13 +245,34 @@ const styles = {
     fontFamily: "Arial, sans-serif",
     marginTop: "90px",
   },
+  checkboxContainer: {
+    display: "flex",
+    flexDirection: "row", // Default layout: vertical
+    justifyContent: "center",
+    gap: "10px", // Adds space between each checkbox
+    padding: "10px 0", // Adds vertical padding around the group
+  },
+  "@media (max-width: 480px)": {
+    // For screens wider than 768px
+    checkboxContainer: {
+      display: "grid",
+      gridTemplateColumns: "3",
+      justifyContent: "center",
+      gap: "10px", // Adds space between each checkbox
+      padding: "10px 0", // Adds vertical padding around the group
+    },
+  },
+
   sidebar: {
     marginTop: "90px",
+    position: "fixed",
   },
   searchBar: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    position: "fixed",
+    width: "100vw",
     padding: "10px 20px",
     backgroundColor: "#f1f1f1",
     borderBottom: "1px solid #ddd",
@@ -310,7 +314,8 @@ const styles = {
   grid: {
     display: "grid",
     gap: "20px",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    marginTop: "50px",
   },
   card: {
     border: "1px solid #ddd",

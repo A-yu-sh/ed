@@ -36,7 +36,7 @@ import i13 from "../assets/University logo Folder/Manipal logo.png";
 import i14 from "../assets/University logo Folder/Mizoram University Logo.png";
 import i15 from "../assets/University logo Folder/SGVU logo.png";
 import i16 from "../assets/University logo Folder/SMU logo.png";
-import i17 from "../assets/University logo Folder/Sambalpur University (A+) logo.jpeg";
+import i17 from "../assets/University logo Folder/Sambalpur_University.png";
 import i18 from "../assets/University logo Folder/Sharda University Logo.png";
 import i19 from "../assets/University logo Folder/Shobhit University Logo.png";
 import i20 from "../assets/University logo Folder/Shooline Logo.png";

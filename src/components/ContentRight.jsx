@@ -61,7 +61,7 @@ function ContentRight() {
       marginBottom: "30px",
     },
     searchInput: {
-      width: "80%",
+      width: isMobile ? "80%" : "88%",
       padding: isMobile ? "5px" : "10px",
       fontSize: "1rem",
       border: "1px solid #ccc",
@@ -122,7 +122,7 @@ function ContentRight() {
     <div style={styles.heroRight}>
       <div style={styles.heroContent}>
         <h3 style={styles.heading}>#India'sTopReliable</h3>
-        <h1 style={styles.mainHeading}>DISTANCE EDUCATION SCHOOL</h1>
+        <h1 style={styles.mainHeading}>DISTANCE EDUCATION CENTRE</h1>
         <p style={styles.description}>
           We Ease the Process to Achieve Distance & Online Degree
         </p>

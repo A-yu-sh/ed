@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Sidebar from "./SideBar";
-import i1 from "../assets/Aligarh Muslim.jpg";
+import i1 from "../assets/Aligarh Muslim.jpg"; // Replace with actual image URLs
+import { FaSearch, FaFilter } from "react-icons/fa"; // Install react-icons if not done
 
 const universities = [
   {
@@ -9,7 +9,7 @@ const universities = [
     location: "Noida, Uttar Pradesh",
     approvals: "UGC | NRIF 32 | NAAC A+",
     advantage: "Industry Mentorship",
-    image: i1, // Replace with actual image URL
+    image: i1,
   },
   {
     name: "Amrita University",
@@ -17,15 +17,7 @@ const universities = [
     location: "Coimbatore, Tamil Nadu",
     approvals: "UGC | NAAC A++ | NIRF 7",
     advantage: "Certification Training",
-    image: i1, // Replace with actual image URL
-  },
-  {
-    name: "Chandigarh University",
-    fee: "30,000/- Semester",
-    location: "Ajitgarh, Punjab",
-    approvals: "UGC | NAAC A+ | NIRF 20",
-    advantage: "Harvard Certifications",
-    image: i1, // Replace with actual image URL
+    image: i1,
   },
   {
     name: "Amity University",
@@ -33,7 +25,7 @@ const universities = [
     location: "Noida, Uttar Pradesh",
     approvals: "UGC | NRIF 32 | NAAC A+",
     advantage: "Industry Mentorship",
-    image: i1, // Replace with actual image URL
+    image: i1,
   },
   {
     name: "Amrita University",
@@ -41,15 +33,7 @@ const universities = [
     location: "Coimbatore, Tamil Nadu",
     approvals: "UGC | NAAC A++ | NIRF 7",
     advantage: "Certification Training",
-    image: i1, // Replace with actual image URL // Replace with actual image URL
-  },
-  {
-    name: "Chandigarh University",
-    fee: "30,000/- Semester",
-    location: "Ajitgarh, Punjab",
-    approvals: "UGC | NAAC A+ | NIRF 20",
-    advantage: "Harvard Certifications",
-    image: i1, // Replace with actual image URL // Replace with actual image URL
+    image: i1,
   },
   {
     name: "Amity University",
@@ -57,7 +41,7 @@ const universities = [
     location: "Noida, Uttar Pradesh",
     approvals: "UGC | NRIF 32 | NAAC A+",
     advantage: "Industry Mentorship",
-    image: i1, // Replace with actual image URL
+    image: i1,
   },
   {
     name: "Amrita University",
@@ -65,146 +49,238 @@ const universities = [
     location: "Coimbatore, Tamil Nadu",
     approvals: "UGC | NAAC A++ | NIRF 7",
     advantage: "Certification Training",
-    image: i1, // Replace with actual image URL // Replace with actual image URL
+    image: i1,
   },
   {
-    name: "Chandigarh University",
-    fee: "30,000/- Semester",
-    location: "Ajitgarh, Punjab",
-    approvals: "UGC | NAAC A+ | NIRF 20",
-    advantage: "Harvard Certifications",
-    image: i1, // Replace with actual image URL // Replace with actual image URL
+    name: "Amity University",
+    fee: "42,500/- Semester",
+    location: "Noida, Uttar Pradesh",
+    approvals: "UGC | NRIF 32 | NAAC A+",
+    advantage: "Industry Mentorship",
+    image: i1,
   },
+  {
+    name: "Amrita University",
+    fee: "35,000/- Semester",
+    location: "Coimbatore, Tamil Nadu",
+    approvals: "UGC | NAAC A++ | NIRF 7",
+    advantage: "Certification Training",
+    image: i1,
+  },
+  // Add more universities as needed...
 ];
 
 const FilterPage = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [selectedFilters, setSelectedFilters] = useState({});
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+
+  const handleCheckboxChange = (filterCategory, value) => {
+    setSelectedFilters((prevFilters) => ({
+      ...prevFilters,
+      [filterCategory]: {
+        ...(prevFilters[filterCategory] || {}),
+        [value]: !prevFilters[filterCategory]?.[value],
+      },
+    }));
+  };
 
   return (
     <div style={styles.container}>
-      <Sidebar />
+      {/* Search Bar */}
+      <div style={styles.searchBar}>
+        <input
+          type="text"
+          placeholder="Search universities..."
+          style={styles.searchInput}
+        />
+        <FaSearch style={styles.searchIcon} />
+        <FaFilter
+          style={styles.filterIcon}
+          onClick={() => setIsSidebarVisible(!isSidebarVisible)}
+        />
+      </div>
+
+      {/* Sidebar (Hidden on mobile unless toggled) */}
       <div
         style={{
           ...styles.sidebar,
-          display: isSidebarOpen ? "block" : "none",
+          display: isSidebarVisible ? "block" : "none",
         }}>
-        <button
-          onClick={() => setIsSidebarOpen(false)}
-          style={styles.closeSidebar}>
-          X
-        </button>
         <h2>Filter by Mode</h2>
         <div style={styles.checkboxContainer}>
-          <label>
-            <input type="checkbox" /> Distance Mode
-          </label>
-          <label>
-            <input type="checkbox" /> Online Mode
-          </label>
+          {["Distance Mode", "Online Mode"].map((mode) => (
+            <label key={mode}>
+              <input
+                type="checkbox"
+                onChange={() => handleCheckboxChange("mode", mode)}
+              />{" "}
+              {mode}
+            </label>
+          ))}
         </div>
-        <h2>Filter by Course</h2>
+
+        <h2 style={styles.text}>Filter by Course</h2>
         <div style={styles.checkboxContainer}>
-          <label>
-            <input type="checkbox" /> MCA
-          </label>
-          <label>
-            <input type="checkbox" /> MBA
-          </label>
-          {/* Add other courses as necessary */}
+          {[
+            "BA",
+            "BCom",
+            "BCA",
+            "BBA",
+            "BSC",
+            "BJMC",
+            "BLIS",
+            "MA",
+            "MBA",
+            "EMBA",
+            "MCA",
+          ].map((course) => (
+            <label key={course}>
+              <input
+                type="checkbox"
+                onChange={() => handleCheckboxChange("course", course)}
+              />{" "}
+              {course}
+            </label>
+          ))}
+        </div>
+
+        <h2>Filter by University</h2>
+        <div style={styles.checkboxContainer}>
+          {[
+            "Sikkim Manipal University",
+            "DY Patil University",
+            "Shobhit University",
+            "IGNOU",
+            "Vivekananda Global University",
+            "Shoolini University",
+            "Sharda University",
+            "Amity University",
+            "Amrita University",
+          ].map((university) => (
+            <label key={university}>
+              <input
+                type="checkbox"
+                onChange={() => handleCheckboxChange("university", university)}
+              />{" "}
+              {university}
+            </label>
+          ))}
         </div>
       </div>
 
       {/* Main Content */}
       <div style={styles.mainContent}>
-        {universities.map((uni, index) => (
-          <div key={index} style={styles.card}>
-            <div
-              style={{ ...styles.image, backgroundImage: `url(${uni.image})` }}>
-              <div style={styles.mode}>Online Mode</div>
+        <h1 style={styles.title}>Online & Distance Education Universities</h1>
+        <div style={styles.grid}>
+          {universities.map((uni, index) => (
+            <div key={index} style={styles.card}>
+              <div
+                style={{
+                  ...styles.image,
+                  backgroundImage: `url(${uni.image})`,
+                }}>
+                <div style={styles.mode}>Online Mode</div>
+              </div>
+              <div style={styles.details}>
+                <h2 style={styles.uniName}>{uni.name}</h2>
+                <p style={styles.info}>
+                  <strong>MCA Course Fee:</strong> {uni.fee}
+                </p>
+                <p style={styles.info}>
+                  <strong>Location:</strong> {uni.location}
+                </p>
+                <p style={styles.info}>
+                  <strong>Approvals:</strong> {uni.approvals}
+                </p>
+                <p style={styles.info}>
+                  <strong>Advantage:</strong> {uni.advantage}
+                </p>
+                <div style={styles.buttons}>
+                  <button style={styles.knowMoreButton}>Know More</button>
+                  <button style={styles.getHelpButton}>Get Help</button>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
+// CSS in JS with responsive design
 const styles = {
   container: {
-    display: "flex",
-    flexDirection: "row",
     fontFamily: "Arial, sans-serif",
-    position: "relative",
+    marginTop: "60px",
     marginTop: "100px",
   },
-  sidebar: {
-    width: "20%",
-    padding: "20px",
-    backgroundColor: "#f7f7f7",
-    borderRight: "1px solid #ddd",
-    position: "fixed",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    zIndex: 1000,
-    display: "block",
-    overflowY: "auto",
+  text: {
+    marginTop: "60px",
   },
-  closeSidebar: {
-    display: "none",
-    background: "none",
-    border: "none",
-    fontSize: "1.5em",
-    fontWeight: "bold",
-    cursor: "pointer",
-    marginTop: "50px",
-  },
-  openSidebar: {
-    display: "none",
-    background: "#007bff",
-    color: "#fff",
-    padding: "10px 15px",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    position: "absolute",
-    top: "10px",
-    left: "10px",
-    zIndex: 1000,
-  },
-  checkboxContainer: {
+
+  searchBar: {
     display: "flex",
-    flexDirection: "column",
-    marginBottom: "20px",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "10px 20px",
+    backgroundColor: "#f1f1f1",
+    borderBottom: "1px solid #ddd",
+  },
+  searchInput: {
+    flex: 1,
+    padding: "8px",
+    border: "1px solid #ddd",
+    borderRadius: "5px",
+    marginRight: "10px",
+  },
+  searchIcon: {
+    fontSize: "18px",
+    color: "#555",
+    cursor: "pointer",
+  },
+  filterIcon: {
+    fontSize: "18px",
+    color: "#555",
+    cursor: "pointer",
+  },
+  sidebar: {
+    position: "fixed",
+    top: "60px",
+    left: 0,
+    width: "100%",
+    height: "auto",
+    backgroundColor: "#f7f7f7",
+    borderBottom: "1px solid #ddd",
+    padding: "20px",
+    overflowY: "auto",
+    marginTop: "100px",
+    zIndex: 10,
+    transition: "all 0.3s ease-in-out", // For smooth transition
   },
   mainContent: {
-    flex: 1,
-    marginLeft: "0%",
+    marginLeft: "0",
     padding: "20px",
-    display: "flex",
-    flexDirection: "column",
+    width: "100%",
+  },
+  grid: {
+    display: "grid",
+    gap: "20px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
   },
   card: {
-    display: "flex",
     border: "1px solid #ddd",
     borderRadius: "8px",
-    margin: "10px 0",
-    marginTop: "30px",
     overflow: "hidden",
-    flexDirection: "column",
-    "@media(min-width: 600px)": {
-      flexDirection: "row",
-    },
+    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+    backgroundColor: "#fff",
   },
   image: {
     width: "100%",
-    height: "200px",
+    height: "150px",
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
-    "@media(min-width: 600px)": {
-      width: "30%",
-    },
   },
   mode: {
     position: "absolute",
@@ -217,60 +293,61 @@ const styles = {
     fontSize: "0.8em",
   },
   details: {
-    padding: "10px",
-    width: "100%",
+    padding: "15px",
   },
   uniName: {
     fontSize: "1.2em",
     color: "#d9534f",
-  },
-  info: {
-    margin: "5px 0",
-    color: "#555",
+    marginBottom: "10px",
   },
   buttons: {
     display: "flex",
-    gap: "10px",
-    marginTop: "10px",
+    justifyContent: "space-between",
   },
   knowMoreButton: {
-    padding: "8px 15px",
-    backgroundColor: "#28a745",
+    backgroundColor: "#d9534f",
     color: "#fff",
+    padding: "8px 16px",
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
   },
   getHelpButton: {
-    padding: "8px 15px",
-    backgroundColor: "#0275d8",
+    backgroundColor: "#28a745",
     color: "#fff",
+    padding: "8px 16px",
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
   },
-};
 
-// Media queries for responsive behavior
-Object.assign(styles, {
-  "@media(max-width: 768px)": {
+  // Responsive design (mobile first)
+  "@media (max-width: 768px)": {
     sidebar: {
       width: "100%",
-      position: "fixed",
-      zIndex: 1000,
-      display: "none",
+      position: "relative",
+      display: "block",
+      zIndex: 1,
+      height: "100%",
+      top: "0",
+      border: "none",
     },
     mainContent: {
-      marginLeft: "0",
+      marginLeft: 0,
       width: "100%",
     },
-    openSidebar: {
-      display: "block",
+    grid: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "10px",
     },
-    closeSidebar: {
-      display: "block",
+    card: {
+      width: "90%",
+      maxWidth: "500px",
+      marginBottom: "15px",
     },
   },
-});
+};
 
 export default FilterPage;

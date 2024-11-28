@@ -151,7 +151,9 @@ function ContentRight() {
               alt="Top 10 MCA Universities"
               style={styles.iconImage}
             />
-            <p style={styles.text}>Top 10 MCA Universities</p>
+            <p style={styles.text}>
+              Top &nbsp;10&nbsp; Online&nbsp; Universities&nbsp;{" "}
+            </p>
           </div>
           <div style={styles.iconBox}>
             <img

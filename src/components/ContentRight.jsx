@@ -108,6 +108,14 @@ function ContentRight() {
       fontWeight: "bold",
       marginTop: "40px",
     },
+    "@media(max-width:480px)": {
+      text: {
+        maxWidth: "16ch",
+        fontSize: "12px",
+        color: "white",
+        borderBottom: "1px solid white",
+      },
+    },
   };
 
   return (

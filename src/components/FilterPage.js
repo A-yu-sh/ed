@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import i1 from "../assets/Aligarh Muslim.jpg"; // Replace with actual image URLs
 import { FaSearch, FaFilter } from "react-icons/fa"; // Install react-icons if not done
 
@@ -67,10 +67,43 @@ const universities = [
     advantage: "Certification Training",
     image: i1,
   },
+  {
+    name: "Amity University",
+    fee: "42,500/- Semester",
+    location: "Noida, Uttar Pradesh",
+    approvals: "UGC | NRIF 32 | NAAC A+",
+    advantage: "Industry Mentorship",
+    image: i1,
+  },
+  {
+    name: "Amrita University",
+    fee: "35,000/- Semester",
+    location: "Coimbatore, Tamil Nadu",
+    approvals: "UGC | NAAC A++ | NIRF 7",
+    advantage: "Certification Training",
+    image: i1,
+  },
+  {
+    name: "Amity University",
+    fee: "42,500/- Semester",
+    location: "Noida, Uttar Pradesh",
+    approvals: "UGC | NRIF 32 | NAAC A+",
+    advantage: "Industry Mentorship",
+    image: i1,
+  },
+  {
+    name: "Amrita University",
+    fee: "35,000/- Semester",
+    location: "Coimbatore, Tamil Nadu",
+    approvals: "UGC | NAAC A++ | NIRF 7",
+    advantage: "Certification Training",
+    image: i1,
+  },
   // Add more universities as needed...
 ];
 
 const FilterPage = () => {
+  const [isPhone, setIsPhone] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({});
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
@@ -83,6 +116,20 @@ const FilterPage = () => {
       },
     }));
   };
+
+  useEffect(() => {
+    // Function to check screen width
+    const checkScreenSize = () => {
+      setIsPhone(window.innerWidth <= 768); // Adjust this width as needed
+    };
+
+    // Check the screen size on component mount and on window resize
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   return (
     <div style={styles.container}>
@@ -104,6 +151,7 @@ const FilterPage = () => {
       <div
         style={{
           ...styles.sidebar,
+          height: isPhone ? "100vh" : "auto",
           display: isSidebarVisible ? "block" : "none",
         }}>
         <h2>Filter by Mode</h2>
@@ -119,7 +167,7 @@ const FilterPage = () => {
           ))}
         </div>
 
-        <h2 style={styles.text}>Filter by Course</h2>
+        <h2>Filter by Course</h2>
         <div style={styles.checkboxContainer}>
           {[
             "BA",
@@ -212,13 +260,11 @@ const FilterPage = () => {
 const styles = {
   container: {
     fontFamily: "Arial, sans-serif",
-    marginTop: "60px",
-    marginTop: "100px",
+    marginTop: "90px",
   },
-  text: {
-    marginTop: "60px",
+  sidebar: {
+    marginTop: "90px",
   },
-
   searchBar: {
     display: "flex",
     justifyContent: "space-between",
@@ -249,17 +295,15 @@ const styles = {
     top: "60px",
     left: 0,
     width: "100%",
-    height: "auto",
     backgroundColor: "#f7f7f7",
     borderBottom: "1px solid #ddd",
     padding: "20px",
     overflowY: "auto",
-    marginTop: "100px",
     zIndex: 10,
-    transition: "all 0.3s ease-in-out", // For smooth transition
+    marginTop: "90px",
+    transition: "all 0.3s ease-in-out",
   },
   mainContent: {
-    marginLeft: "0",
     padding: "20px",
     width: "100%",
   },
@@ -319,34 +363,6 @@ const styles = {
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
-  },
-
-  // Responsive design (mobile first)
-  "@media (max-width: 768px)": {
-    sidebar: {
-      width: "100%",
-      position: "relative",
-      display: "block",
-      zIndex: 1,
-      height: "100%",
-      top: "0",
-      border: "none",
-    },
-    mainContent: {
-      marginLeft: 0,
-      width: "100%",
-    },
-    grid: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: "10px",
-    },
-    card: {
-      width: "90%",
-      maxWidth: "500px",
-      marginBottom: "15px",
-    },
   },
 };
 

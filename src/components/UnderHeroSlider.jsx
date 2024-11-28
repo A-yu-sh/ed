@@ -100,7 +100,7 @@ const UnderSlider = () => {
 
   return (
     <div style={style.sliderContainer}>
-      <h1 style={style.h1}>Celebrating a proud PhD achievement.</h1>
+      <h1 style={style.h1}>Celebrating a proud PhD achievement</h1>
       <div style={style.logoContainer} onTransitionEnd={handleTransitionEnd}>
         {extendedLogos.map((logo, index) => (
           <div key={index} style={style.logoWrapper}>

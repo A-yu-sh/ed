@@ -20,29 +20,53 @@ import PC10Image from "../assets/Shobhit University.png";
 import PC11Image from "../assets/SMU Collage.png";
 import PC12Image from "../assets/Goverment University image/Private University  Image/LPU University.png";
 import PC13Image from "../assets/Goverment University image/Private University  Image/UPES  university.png";
+import i1 from "../assets/University logo Folder/Acharya Nagarjuna University logo.jpeg";
+import i2 from "../assets/University logo Folder/Aligarh Mushlim University logo.png";
+import i3 from "../assets/University logo Folder/Amity University Logo.png";
+import i4 from "../assets/University logo Folder/Amrita university logo.png";
+import i5 from "../assets/University logo Folder/AndhraUniversitylogo.png";
+import i6 from "../assets/University logo Folder/Chindagar University Logo.png";
+import i7 from "../assets/University logo Folder/DPU University Logo.png";
+import i8 from "../assets/University logo Folder/Ignou logo.png";
+import i9 from "../assets/University logo Folder/Jain logo.png";
+import i10 from "../assets/University logo Folder/Jamia University (A) logo.png";
+import i11 from "../assets/University logo Folder/LPU logo.png";
+import i12 from "../assets/University logo Folder/Mangalayatan University Logo.png";
+import i13 from "../assets/University logo Folder/Manipal logo.png";
+import i14 from "../assets/University logo Folder/Mizoram University Logo.png";
+import i15 from "../assets/University logo Folder/SGVU logo.png";
+import i16 from "../assets/University logo Folder/SMU logo.png";
+import i17 from "../assets/University logo Folder/Sambalpur University (A+) logo.jpeg";
+import i18 from "../assets/University logo Folder/Sharda University Logo.png";
+import i19 from "../assets/University logo Folder/Shobhit University Logo.png";
+import i20 from "../assets/University logo Folder/Shooline Logo.png";
+import i21 from "../assets/University logo Folder/UPES University Logo.png";
+import i22 from "../assets/University logo Folder/University of Hyderabad  Online Courses (A) logo.jpeg";
+import i23 from "../assets/University logo Folder/Uttranchal University Logo.png";
+import i24 from "../assets/University logo Folder/VGU Logo.png";
+import i25 from "../assets/University logo Folder/Vignans University Logo.png";
 
 const universities = [
-  { name: "Acharya Nagarjuna University", image: JuImage },
-  { name: "Aligarh Muslim University", image: VGUImage },
-  { name: "Jamia University", image: DUImage },
-  { name: "Andhra University", image: AmityImage },
-  { name: "Mizoram University", image: AmritaImage2 },
-  { name: "University of Hyderabad", image: HONImage },
-  { name: "Sambalpur University", image: SImage },
-  { name: "Amrita University", image: PCImage },
-  { name: "Jain University", image: PC2Image },
-  { name: "Chandigarh University", image: PC3Image2 },
-  { name: "DPU University", image: PC4Image },
-  { name: "Amity University", image: PC5Image },
-  { name: "Mangalayatan University", image: PC6Image },
-  { name: "Manipal College", image: PC7Image },
-  { name: "SGVU University", image: PC8Image },
-  { name: "Sharda University", image: PC9Image },
-  { name: "Shobhit University", image: PC10Image },
-  { name: "SMU University", image: PC11Image },
-
-  { name: "UPES University", image: PC13Image },
-  { name: "Lovely Professional University", image: PC12Image },
+  { name: "Acharya Nagarjuna University", image: JuImage, logo: i1 },
+  { name: "Aligarh Muslim University", image: VGUImage, logo: i2 },
+  { name: "Jamia University", image: DUImage, logo: i10 },
+  { name: "Andhra University", image: AmityImage, logo: i5 },
+  { name: "Mizoram University", image: AmritaImage2, logo: i14 },
+  { name: "University of Hyderabad", image: HONImage, logo: i22 },
+  { name: "Sambalpur University", image: SImage, logo: i17 },
+  { name: "Amrita University", image: PCImage, logo: i4 },
+  { name: "Jain University", image: PC2Image, logo: i9 },
+  { name: "Chandigarh University", image: PC3Image2, logo: i6 },
+  { name: "DPU University", image: PC4Image, logo: i7 },
+  { name: "Amity University", image: PC5Image, logo: i3 },
+  { name: "Mangalayatan University", image: PC6Image, logo: i12 },
+  { name: "Manipal College", image: PC7Image, logo: i13 },
+  { name: "SGVU University", image: PC8Image, logo: i15 },
+  { name: "Sharda University", image: PC9Image, logo: i18 },
+  { name: "Shobhit University", image: PC10Image, logo: i19 },
+  { name: "SMU University", image: PC11Image, logo: i16 },
+  { name: "UPES University", image: PC13Image, logo: i21 },
+  { name: "Lovely Professional University", image: PC12Image, logo: i11 },
 ];
 
 const UniversityGrid = ({ onCompareClick }) => {
@@ -122,7 +146,7 @@ const UniversityGrid = ({ onCompareClick }) => {
 }
 
 .grid-item {
-  background-color: #f9f9f9;
+  background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
@@ -274,6 +298,39 @@ const UniversityGrid = ({ onCompareClick }) => {
   }
 }
 
+/* Base styles for the logo */
+logoImage {
+  max-width: 100%; /* Makes the image responsive */
+  height: auto;    /* Maintains the aspect ratio */
+  display: block;  /* Removes any extra white space below the image */
+  margin: 0 auto;  /* Centers the logo */
+}
+
+/* Media queries for different devices */
+@media (max-width: 1200px) {
+  logoImage {
+    width: 60%; /* Adjust width for large tablets or smaller laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  logoImage {
+    width: 50%; /* Adjust width for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  logoImage {
+    width: 40%; /* Adjust width for mobile phones */
+  }
+}
+
+@media (max-width: 320px) {
+  logoImage {
+    width: 30%; /* Adjust width for very small devices */
+  }
+}
+
   `}
       </style>
 
@@ -291,7 +348,7 @@ const UniversityGrid = ({ onCompareClick }) => {
               alt={university.name}
               className="university-image"
             />
-            <h4 className="text">{}</h4>
+            <img src={university.logo} className={university.logoImage} />
           </div>
         ))}
       </div>

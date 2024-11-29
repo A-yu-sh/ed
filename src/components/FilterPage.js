@@ -203,7 +203,6 @@ const FilterPage = () => {
 
       {/* Main Content */}
       <div style={styles.mainContent}>
-        <h1 style={styles.title}>Online & Distance Education Universities</h1>
         <div style={styles.grid}>
           {universities.map((uni, index) => (
             <div key={index} style={styles.card}>
@@ -226,10 +225,6 @@ const FilterPage = () => {
                 <p style={styles.info}>
                   <strong>Advantage:</strong> {uni.advantage}
                 </p>
-                <div style={styles.buttons}>
-                  <button style={styles.knowMoreButton}>Know More</button>
-                  <button style={styles.getHelpButton}>Get Help</button>
-                </div>
               </div>
             </div>
           ))}
